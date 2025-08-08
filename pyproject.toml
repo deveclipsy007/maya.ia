@@ -1,0 +1,43 @@
+[project]
+name = "maya-agno"
+version = "0.1.0"
+description = "Maya (Hopecann) — Agno multi-agent + FastAPI + Supabase + Google Calendar/Meet + Payments + WhatsApp (Evolution API)"
+requires-python = ">=3.11"
+
+dependencies = [
+  "agno>=0.2.0",
+  "fastapi>=0.112.0",
+  "uvicorn[standard]>=0.30.0",
+  "google-api-python-client>=2.133.0",
+  "google-auth>=2.33.0",
+  "supabase>=2.6.0",
+  "python-dotenv>=1.0.1",
+  "requests>=2.32.2",
+  "pydantic>=2.8.2",
+  "openai>=1.30.0",
+  "psycopg[binary]>=3.2.0",
+]
+
+[tool.uv]
+dev-dependencies = ["httpx>=0.27.0", "pytest>=8.2.0"]
+
+# Explicit setuptools configuration for flat multi-package layout
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = [
+  "agents",
+  "api",
+  "api.routes",
+  "services",
+  "tools",
+  "tools.payments",
+  "tools.messaging",
+]
+exclude = [
+  "data*",
+  "db*",
+  "prompts*",
+]

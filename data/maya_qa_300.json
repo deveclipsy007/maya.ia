@@ -1,0 +1,4720 @@
+{
+  "agent": "Maya",
+  "version": "1.0.0",
+  "generated_at": "2025-08-09T05:24:52.854440",
+  "source_spec": "maya_super_spec.json",
+  "count": 300,
+  "qa": [
+    {
+      "id": "MAYA-QA-179",
+      "audience": "medico",
+      "intent": "doctor_agenda",
+      "category": "doctor_agenda",
+      "question": "Como remarcar um paciente?",
+      "answer": "Selecione a consulta e escolha um novo slot. Eu notifico o paciente na hora.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_agenda",
+        "doctor_agenda",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-154",
+      "audience": "paciente",
+      "intent": "booking_basics",
+      "category": "booking_basics",
+      "question": "É possível filtrar por especialidade?",
+      "answer": "Sim. Diga a especialidade (ex.: Clínico Geral, Neurologia). Eu busco no Supabase e trago opções.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "booking_basics",
+        "booking_basics",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-182",
+      "audience": "medico",
+      "intent": "doctor_agenda",
+      "category": "doctor_agenda",
+      "question": "Consigo limitar número de atendimentos por dia?",
+      "answer": "Sim. Defina um teto diário e eu bloqueio o excedente.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_agenda",
+        "doctor_agenda",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-054",
+      "audience": "paciente",
+      "intent": "meet_and_notifications",
+      "category": "meet_and_notifications",
+      "question": "Vocês mandam lembrete?",
+      "answer": "Sim. Enviamos lembrete no dia da consulta com o link do Meet.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "meet_and_notifications",
+        "meet_and_notifications"
+      ]
+    },
+    {
+      "id": "MAYA-QA-178",
+      "audience": "medico",
+      "intent": "doctor_compliance_misc",
+      "category": "doctor_compliance_misc",
+      "question": "Como atualizar meu CRM no cadastro?",
+      "answer": "Envie o novo número/documento e eu atualizo após validação.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_compliance_misc",
+        "doctor_compliance_misc",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-074",
+      "audience": "medico",
+      "intent": "doctor_onboarding",
+      "category": "doctor_onboarding",
+      "question": "Posso pausar meu perfil?",
+      "answer": "Sim. Posso deixá-lo invisível temporariamente sem perder configurações.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_onboarding",
+        "doctor_onboarding"
+      ]
+    },
+    {
+      "id": "MAYA-QA-204",
+      "audience": "paciente",
+      "intent": "payments",
+      "category": "payments",
+      "question": "Há taxa adicional?",
+      "answer": "Não cobramos taxa extra além do valor informado pelo médico.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "payments",
+        "payments",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-238",
+      "audience": "medico",
+      "intent": "doctor_onboarding",
+      "category": "doctor_onboarding",
+      "question": "Como defino meu valor de sessão?",
+      "answer": "Você informa o valor (R$) e eu mostro a média da plataforma para referência. Pode alterar quando quiser.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_onboarding",
+        "doctor_onboarding",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-041",
+      "audience": "paciente",
+      "intent": "reschedule_cancel_refund",
+      "category": "reschedule_cancel_refund",
+      "question": "Quero remarcar minha consulta",
+      "answer": "Sem problema. Vou listar novos horários do mesmo médico ou de outro se preferir.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "reschedule_cancel_refund",
+        "reschedule_cancel_refund"
+      ]
+    },
+    {
+      "id": "MAYA-QA-096",
+      "audience": "medico",
+      "intent": "doctor_docs_finance_chat",
+      "category": "doctor_docs_finance_chat",
+      "question": "Como acompanho pagamentos das minhas consultas?",
+      "answer": "No painel financeiro você vê status (criado, pago, reembolsado) e repasses.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_docs_finance_chat",
+        "doctor_docs_finance_chat"
+      ]
+    },
+    {
+      "id": "MAYA-QA-166",
+      "audience": "medico",
+      "intent": "doctor_docs_finance_chat",
+      "category": "doctor_docs_finance_chat",
+      "question": "Como falar com o paciente depois?",
+      "answer": "Abra o chat pós-consulta. Mensagens ficam registradas no prontuário resumido.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_docs_finance_chat",
+        "doctor_docs_finance_chat",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-293",
+      "audience": "paciente",
+      "intent": "account",
+      "category": "account",
+      "question": "Posso atualizar meu e-mail?",
+      "answer": "Pode. Diga 'Atualizar e-mail: novo@exemplo.com' e eu atualizo no Supabase para você.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "account",
+        "account",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-026",
+      "audience": "paciente",
+      "intent": "availability",
+      "category": "availability",
+      "question": "Agenda do fim de semana está aberta?",
+      "answer": "Depende do médico. Vou checar e retorno com a disponibilidade.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "availability",
+        "availability"
+      ]
+    },
+    {
+      "id": "MAYA-QA-217",
+      "audience": "ambos",
+      "intent": "integrations_data",
+      "category": "integrations_data",
+      "question": "Como integram o Google Meet?",
+      "answer": "Criamos a sala via API ao confirmar o pagamento e anexamos o link à consulta.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "integrations_data",
+        "integrations_data",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-258",
+      "audience": "paciente",
+      "intent": "reschedule_cancel_refund",
+      "category": "reschedule_cancel_refund",
+      "question": "Quero cancelar minha sessão",
+      "answer": "Certo. Vou localizar seu agendamento ativo e confirmar o cancelamento com reembolso, se aplicável.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "reschedule_cancel_refund",
+        "reschedule_cancel_refund",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-285",
+      "audience": "medico",
+      "intent": "doctor_docs_finance_chat",
+      "category": "doctor_docs_finance_chat",
+      "question": "Como emitir atestado?",
+      "answer": "Selecione 'Atestado', informe dias e CID (opcional). Envio ao paciente automaticamente.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_docs_finance_chat",
+        "doctor_docs_finance_chat",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-129",
+      "audience": "paciente",
+      "intent": "meet_and_notifications",
+      "category": "meet_and_notifications",
+      "question": "O médico não entrou na sala",
+      "answer": "Eu notifico o médico e acompanho. Se precisar, abrimos nova sala em minutos.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "meet_and_notifications",
+        "meet_and_notifications",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-144",
+      "audience": "medico",
+      "intent": "doctor_docs_finance_chat",
+      "category": "doctor_docs_finance_chat",
+      "question": "Como emitir laudo?",
+      "answer": "Na consulta, clique em 'Laudo' e preencha. Eu salvo e envio ao paciente.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_docs_finance_chat",
+        "doctor_docs_finance_chat",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-037",
+      "audience": "paciente",
+      "intent": "payments",
+      "category": "payments",
+      "question": "Meu pagamento caiu mas não recebi confirmação",
+      "answer": "Vou checar o webhook do provedor. Se estiver 'paid', confirmo manualmente e envio o link do Meet.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "payments",
+        "payments"
+      ]
+    },
+    {
+      "id": "MAYA-QA-222",
+      "audience": "paciente",
+      "intent": "booking_basics",
+      "category": "booking_basics",
+      "question": "Vocês têm clínica geral?",
+      "answer": "Temos, sim. Posso te mostrar os clínicos com agenda mais próxima.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "booking_basics",
+        "booking_basics",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-091",
+      "audience": "medico",
+      "intent": "doctor_docs_finance_chat",
+      "category": "doctor_docs_finance_chat",
+      "question": "Como emitir laudo?",
+      "answer": "Na consulta, clique em 'Laudo' e preencha. Eu salvo e envio ao paciente.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_docs_finance_chat",
+        "doctor_docs_finance_chat"
+      ]
+    },
+    {
+      "id": "MAYA-QA-202",
+      "audience": "medico",
+      "intent": "doctor_agenda",
+      "category": "doctor_agenda",
+      "question": "O paciente não compareceu. O que faço?",
+      "answer": "Marque como 'no_show'. A política de reembolso não se aplica salvo exceção aprovada.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_agenda",
+        "doctor_agenda",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-250",
+      "audience": "medico",
+      "intent": "doctor_agenda",
+      "category": "agenda_lote",
+      "question": "Consigo criar horários em lote?",
+      "answer": "Sim. Informe dias, faixa de horário e duração. Eu gero os slots automaticamente.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_agenda",
+        "agenda_lote",
+        "synthetic",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-016",
+      "audience": "paciente",
+      "intent": "booking_basics",
+      "category": "booking_basics",
+      "question": "Tem médico hoje ainda?",
+      "answer": "Vou checar horários livres de última hora e te envio as opções disponíveis.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "booking_basics",
+        "booking_basics"
+      ]
+    },
+    {
+      "id": "MAYA-QA-241",
+      "audience": "paciente",
+      "intent": "booking_basics",
+      "category": "booking_basics",
+      "question": "Atendem menores de idade?",
+      "answer": "Sim, com responsável legal. Vou precisar do CPF do responsável no cadastro.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "booking_basics",
+        "booking_basics",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-203",
+      "audience": "paciente",
+      "intent": "reschedule_cancel_refund",
+      "category": "reschedule_cancel_refund",
+      "question": "Quanto tempo leva o reembolso?",
+      "answer": "Após solicitado, o provedor retorna em até 7 dias úteis, variando por método.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "reschedule_cancel_refund",
+        "reschedule_cancel_refund",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-023",
+      "audience": "paciente",
+      "intent": "availability",
+      "category": "availability",
+      "question": "Consigo agendar para hoje?",
+      "answer": "Se houver slot livre, sim. Vou verificar os horários do dia.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "availability",
+        "availability"
+      ]
+    },
+    {
+      "id": "MAYA-QA-010",
+      "audience": "paciente",
+      "intent": "account",
+      "category": "account",
+      "question": "Como excluo minha conta?",
+      "answer": "Solicite 'Excluir conta'. Eu abro um ticket e removo seus dados conforme LGPD, exceto registros legais obrigatórios.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "account",
+        "account"
+      ]
+    },
+    {
+      "id": "MAYA-QA-075",
+      "audience": "medico",
+      "intent": "doctor_onboarding",
+      "category": "doctor_onboarding",
+      "question": "Quais documentos preciso enviar?",
+      "answer": "CRM ativo, documento com foto e, se aplicável, comprovante de especialidade.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_onboarding",
+        "doctor_onboarding"
+      ]
+    },
+    {
+      "id": "MAYA-QA-198",
+      "audience": "ambos",
+      "intent": "platform_support",
+      "category": "seguranca",
+      "question": "Como vocês tratam CPF no chat?",
+      "answer": "Solicito apenas quando necessário e mascaro nas mensagens. Registro o consentimento conforme LGPD.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "platform_support",
+        "seguranca",
+        "synthetic",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-092",
+      "audience": "medico",
+      "intent": "doctor_docs_finance_chat",
+      "category": "doctor_docs_finance_chat",
+      "question": "Como emitir receita?",
+      "answer": "Use 'Receita'. Eu gero o PDF com seus dados e assino digitalmente quando habilitado.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_docs_finance_chat",
+        "doctor_docs_finance_chat"
+      ]
+    },
+    {
+      "id": "MAYA-QA-171",
+      "audience": "paciente",
+      "intent": "account",
+      "category": "account",
+      "question": "Posso atualizar meu e-mail?",
+      "answer": "Pode. Diga 'Atualizar e-mail: novo@exemplo.com' e eu atualizo no Supabase para você.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "account",
+        "account",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-009",
+      "audience": "paciente",
+      "intent": "account",
+      "category": "account",
+      "question": "Quais dados mínimos para começar?",
+      "answer": "Nome completo, CPF e telefone. E-mail é recomendado para receber documentos.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "account",
+        "account"
+      ]
+    },
+    {
+      "id": "MAYA-QA-001",
+      "audience": "paciente",
+      "intent": "account",
+      "category": "account",
+      "question": "Como crio minha conta como paciente?",
+      "answer": "No site ou WhatsApp, informe nome completo, CPF e telefone. Eu valido no Supabase e crio seu usuário em segundos.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "account",
+        "account"
+      ]
+    },
+    {
+      "id": "MAYA-QA-297",
+      "audience": "paciente",
+      "intent": "account",
+      "category": "account",
+      "question": "Vocês pedem foto de documento?",
+      "answer": "Somente se houver divergência de dados. Eu peço pelo WhatsApp e armazeno de forma criptografada.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "account",
+        "account",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-187",
+      "audience": "paciente",
+      "intent": "reschedule_cancel_refund",
+      "category": "reschedule_cancel_refund",
+      "question": "Quero adiantar o horário",
+      "answer": "Verifico slots anteriores no mesmo dia e ajusto se houver espaço.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "reschedule_cancel_refund",
+        "reschedule_cancel_refund",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-103",
+      "audience": "medico",
+      "intent": "doctor_compliance_misc",
+      "category": "doctor_compliance_misc",
+      "question": "Como reporto um incidente de segurança?",
+      "answer": "Relate pelo painel; eu abro ticket crítico e aciono o time de segurança.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_compliance_misc",
+        "doctor_compliance_misc"
+      ]
+    },
+    {
+      "id": "MAYA-QA-085",
+      "audience": "medico",
+      "intent": "doctor_agenda",
+      "category": "doctor_agenda",
+      "question": "Posso bloquear férias?",
+      "answer": "Sim. Envie o período de férias e eu fecho todos os slots automaticamente.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_agenda",
+        "doctor_agenda"
+      ]
+    },
+    {
+      "id": "MAYA-QA-295",
+      "audience": "medico",
+      "intent": "doctor_compliance_misc",
+      "category": "doctor_compliance_misc",
+      "question": "Posso delegar acesso à minha secretária?",
+      "answer": "Sim, crie um acesso auxiliar com permissões limitadas.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_compliance_misc",
+        "doctor_compliance_misc",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-050",
+      "audience": "paciente",
+      "intent": "reschedule_cancel_refund",
+      "category": "reschedule_cancel_refund",
+      "question": "Como acompanho o status do meu reembolso?",
+      "answer": "Pergunte 'Status do reembolso'. Eu retorno com o status atual e o valor.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "reschedule_cancel_refund",
+        "reschedule_cancel_refund"
+      ]
+    },
+    {
+      "id": "MAYA-QA-161",
+      "audience": "paciente",
+      "intent": "payments",
+      "category": "payments",
+      "question": "Quais formas de pagamento aceitam?",
+      "answer": "Aceitamos cartão e PIX via asaas, pagarme. Envio um link seguro para concluir.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "payments",
+        "payments",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-019",
+      "audience": "paciente",
+      "intent": "booking_basics",
+      "category": "booking_basics",
+      "question": "Atendem telemedicina apenas?",
+      "answer": "Nosso fluxo principal é online via Google Meet. Quando houver presencial, eu aviso a opção.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "booking_basics",
+        "booking_basics"
+      ]
+    },
+    {
+      "id": "MAYA-QA-039",
+      "audience": "paciente",
+      "intent": "payments",
+      "category": "payments",
+      "question": "Posso pagar por boleto?",
+      "answer": "No momento não. Oferecemos PIX e cartão para confirmação imediata.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "payments",
+        "payments"
+      ]
+    },
+    {
+      "id": "MAYA-QA-099",
+      "audience": "medico",
+      "intent": "doctor_docs_finance_chat",
+      "category": "doctor_docs_finance_chat",
+      "question": "Como atualizo meu preço por especialidade?",
+      "answer": "Você pode definir preço por agenda ou por especialidade. Posso aplicar em massa.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_docs_finance_chat",
+        "doctor_docs_finance_chat"
+      ]
+    },
+    {
+      "id": "MAYA-QA-151",
+      "audience": "medico",
+      "intent": "doctor_docs_finance_chat",
+      "category": "doctor_docs_finance_chat",
+      "question": "Quero baixar relatórios mensais",
+      "answer": "Gero CSV/Excel com suas consultas, valores e status.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_docs_finance_chat",
+        "doctor_docs_finance_chat",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-143",
+      "audience": "paciente",
+      "intent": "meet_and_notifications",
+      "category": "meet_and_notifications",
+      "question": "O link do Meet deu erro",
+      "answer": "Gero um novo link de sala e envio para você e para o médico.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "meet_and_notifications",
+        "meet_and_notifications",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-232",
+      "audience": "ambos",
+      "intent": "integrations_data",
+      "category": "integrations_data",
+      "question": "Onde ficam os dados?",
+      "answer": "Dados operacionais no Supabase (Postgres) e estado de sessão no SQLite do Agno.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "integrations_data",
+        "integrations_data",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-292",
+      "audience": "paciente",
+      "intent": "medical_records_privacy_feedback",
+      "category": "medical_records_privacy_feedback",
+      "question": "Onde vejo minhas receitas e laudos?",
+      "answer": "Em 'Meus Documentos' no portal. Também posso te enviar por WhatsApp sob verificação de CPF.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "medical_records_privacy_feedback",
+        "medical_records_privacy_feedback",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-194",
+      "audience": "paciente",
+      "intent": "availability",
+      "category": "availability",
+      "question": "Consigo agendar para hoje?",
+      "answer": "Se houver slot livre, sim. Vou verificar os horários do dia.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "availability",
+        "availability",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-081",
+      "audience": "medico",
+      "intent": "doctor_agenda",
+      "category": "doctor_agenda",
+      "question": "Como abro novos horários?",
+      "answer": "Use 'Disponibilizar horários' no painel. Posso criar em lote (ex.: seg/qua/sex das 14h às 18h).",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_agenda",
+        "doctor_agenda"
+      ]
+    },
+    {
+      "id": "MAYA-QA-196",
+      "audience": "ambos",
+      "intent": "integrations_data",
+      "category": "integrations_data",
+      "question": "Quero corrigir um dado errado do meu cadastro",
+      "answer": "Me informe o campo correto e eu atualizo com auditoria do change-log.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "integrations_data",
+        "integrations_data",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-069",
+      "audience": "paciente",
+      "intent": "medical_records_privacy_feedback",
+      "category": "medical_records_privacy_feedback",
+      "question": "Posso alterar o nome exibido?",
+      "answer": "Sim. Atualizo 'nome social' e mantenho o nome legal para fins fiscais.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "medical_records_privacy_feedback",
+        "medical_records_privacy_feedback"
+      ]
+    },
+    {
+      "id": "MAYA-QA-256",
+      "audience": "paciente",
+      "intent": "meet_and_notifications",
+      "category": "meet_and_notifications",
+      "question": "Vocês mandam lembrete?",
+      "answer": "Sim. Enviamos lembrete no dia da consulta com o link do Meet.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "meet_and_notifications",
+        "meet_and_notifications",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-105",
+      "audience": "medico",
+      "intent": "doctor_compliance_misc",
+      "category": "doctor_compliance_misc",
+      "question": "Posso delegar acesso à minha secretária?",
+      "answer": "Sim, crie um acesso auxiliar com permissões limitadas.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_compliance_misc",
+        "doctor_compliance_misc"
+      ]
+    },
+    {
+      "id": "MAYA-QA-136",
+      "audience": "paciente",
+      "intent": "reschedule_cancel_refund",
+      "category": "reschedule_cancel_refund",
+      "question": "Quero cancelar minha atendimento",
+      "answer": "Certo. Vou localizar seu agendamento ativo e confirmar o cancelamento com reembolso, se aplicável.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "reschedule_cancel_refund",
+        "reschedule_cancel_refund",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-132",
+      "audience": "ambos",
+      "intent": "platform_support",
+      "category": "platform_support",
+      "question": "Como funciona o registro de logs?",
+      "answer": "Cada ação gera um trace_id e é gravada na tabela interaction_logs para auditoria.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "platform_support",
+        "platform_support",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-275",
+      "audience": "paciente",
+      "intent": "book_appointment",
+      "category": "booking_fluxo",
+      "question": "Quais são os passos para concluir meu agendamento?",
+      "answer": "Eu confirmo seus dados, mostro médicos e valores, gero o link de pagamento e, ao aprovar, envio o link do Meet.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "book_appointment",
+        "booking_fluxo",
+        "synthetic",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-211",
+      "audience": "paciente",
+      "intent": "meet_and_notifications",
+      "category": "meet_and_notifications",
+      "question": "Consigo falar com o médico depois?",
+      "answer": "Sim, abro um chat pós-consulta para dúvidas rápidas.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "meet_and_notifications",
+        "meet_and_notifications",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-212",
+      "audience": "medico",
+      "intent": "doctor_docs_finance_chat",
+      "category": "doctor_docs_finance_chat",
+      "question": "Posso editar um documento emitido?",
+      "answer": "Você pode gerar uma nova versão e invalidar a anterior. Eu notifico o paciente.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_docs_finance_chat",
+        "doctor_docs_finance_chat",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-185",
+      "audience": "medico",
+      "intent": "doctor_agenda",
+      "category": "doctor_agenda",
+      "question": "Como fechar um horário específico?",
+      "answer": "Informe a data e eu marco como indisponível, mantendo os demais slots ativos.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_agenda",
+        "doctor_agenda",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-015",
+      "audience": "paciente",
+      "intent": "booking_basics",
+      "category": "booking_basics",
+      "question": "Vocês têm clínica geral?",
+      "answer": "Temos, sim. Posso te mostrar os clínicos com agenda mais próxima.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "booking_basics",
+        "booking_basics"
+      ]
+    },
+    {
+      "id": "MAYA-QA-017",
+      "audience": "paciente",
+      "intent": "booking_basics",
+      "category": "booking_basics",
+      "question": "Vocês atendem convênio?",
+      "answer": "Atendemos particular. Você pode solicitar nota fiscal para reembolso com seu plano, se aplicável.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "booking_basics",
+        "booking_basics"
+      ]
+    },
+    {
+      "id": "MAYA-QA-253",
+      "audience": "medico",
+      "intent": "doctor_agenda",
+      "category": "doctor_agenda",
+      "question": "Preciso ajustar a duração da consulta",
+      "answer": "Você pode definir a duração padrão (ex.: 20/30/45 minutos) e aplicar aos próximos slots.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_agenda",
+        "doctor_agenda",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-289",
+      "audience": "paciente",
+      "intent": "reschedule_cancel_refund",
+      "category": "reschedule_cancel_refund",
+      "question": "Minha consulta foi cancelada pelo médico",
+      "answer": "Sinto muito! Posso remarcar de preferência sua ou iniciar reembolso imediato.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "reschedule_cancel_refund",
+        "reschedule_cancel_refund",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-059",
+      "audience": "paciente",
+      "intent": "meet_and_notifications",
+      "category": "meet_and_notifications",
+      "question": "Recebo arquivos depois da consulta?",
+      "answer": "Sim. Enviamos documentos pertinentes no pós-consulta.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "meet_and_notifications",
+        "meet_and_notifications"
+      ]
+    },
+    {
+      "id": "MAYA-QA-236",
+      "audience": "medico",
+      "intent": "doctor_docs_finance_chat",
+      "category": "documentos",
+      "question": "Como invalido uma receita emitida por engano?",
+      "answer": "Emita uma nova versão e marque a anterior como inválida. Eu notifico o paciente.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_docs_finance_chat",
+        "documentos",
+        "synthetic",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-169",
+      "audience": "paciente",
+      "intent": "payments",
+      "category": "payments",
+      "question": "Meu pagamento caiu mas não recebi confirmação",
+      "answer": "Vou checar o webhook do provedor. Se estiver 'paid', confirmo manualmente e envio o link do Meet.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "payments",
+        "payments",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-207",
+      "audience": "paciente",
+      "intent": "account",
+      "category": "account",
+      "question": "Preciso de conta para agendar?",
+      "answer": "Sim. O agendamento exige login para vincular sua consulta ao seu CPF e enviar o link do Meet.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "account",
+        "account",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-045",
+      "audience": "paciente",
+      "intent": "reschedule_cancel_refund",
+      "category": "reschedule_cancel_refund",
+      "question": "Posso trocar de médico sem cancelar?",
+      "answer": "Sim, via remarcação. Eu movo o pagamento para o novo agendamento quando possível.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "reschedule_cancel_refund",
+        "reschedule_cancel_refund"
+      ]
+    },
+    {
+      "id": "MAYA-QA-068",
+      "audience": "paciente",
+      "intent": "medical_records_privacy_feedback",
+      "category": "medical_records_privacy_feedback",
+      "question": "Quero falar com humano",
+      "answer": "Sem drama. Abro um ticket e te conecto ao suporte em horário comercial.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "medical_records_privacy_feedback",
+        "medical_records_privacy_feedback"
+      ]
+    },
+    {
+      "id": "MAYA-QA-278",
+      "audience": "paciente",
+      "intent": "availability",
+      "category": "availability",
+      "question": "Posso entrar na fila de espera?",
+      "answer": "Sim. Te coloco em fila e priorizo quando aparecer um horário compatível.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "availability",
+        "availability",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-083",
+      "audience": "medico",
+      "intent": "doctor_agenda",
+      "category": "doctor_agenda",
+      "question": "Como remarcar um paciente?",
+      "answer": "Selecione a consulta e escolha um novo slot. Eu notifico o paciente na hora.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_agenda",
+        "doctor_agenda"
+      ]
+    },
+    {
+      "id": "MAYA-QA-048",
+      "audience": "paciente",
+      "intent": "reschedule_cancel_refund",
+      "category": "reschedule_cancel_refund",
+      "question": "Quero adiantar o horário",
+      "answer": "Verifico slots anteriores no mesmo dia e ajusto se houver espaço.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "reschedule_cancel_refund",
+        "reschedule_cancel_refund"
+      ]
+    },
+    {
+      "id": "MAYA-QA-294",
+      "audience": "paciente",
+      "intent": "booking_basics",
+      "category": "booking_basics",
+      "question": "Tem médico hoje ainda?",
+      "answer": "Vou checar horários livres de última hora e te envio as opções disponíveis.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "booking_basics",
+        "booking_basics",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-114",
+      "audience": "ambos",
+      "intent": "integrations_data",
+      "category": "integrations_data",
+      "question": "Quero corrigir um dado errado do meu cadastro",
+      "answer": "Me informe o campo correto e eu atualizo com auditoria do change-log.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "integrations_data",
+        "integrations_data"
+      ]
+    },
+    {
+      "id": "MAYA-QA-183",
+      "audience": "medico",
+      "intent": "doctor_docs_finance_chat",
+      "category": "doctor_docs_finance_chat",
+      "question": "Como emitir receita?",
+      "answer": "Use 'Receita'. Eu gero o PDF com seus dados e assino digitalmente quando habilitado.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_docs_finance_chat",
+        "doctor_docs_finance_chat",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-029",
+      "audience": "paciente",
+      "intent": "availability",
+      "category": "availability",
+      "question": "Como vejo todos os horários do mês?",
+      "answer": "Te envio um resumo com os dias e faixas disponíveis do médico escolhido.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "availability",
+        "availability"
+      ]
+    },
+    {
+      "id": "MAYA-QA-038",
+      "audience": "paciente",
+      "intent": "payments",
+      "category": "payments",
+      "question": "PIX não compensou",
+      "answer": "Alguns PIX demoram até 10 minutos. Se passar disso, eu valido no provedor e reemito o comprovante.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "payments",
+        "payments"
+      ]
+    },
+    {
+      "id": "MAYA-QA-134",
+      "audience": "paciente",
+      "intent": "meet_and_notifications",
+      "category": "meet_and_notifications",
+      "question": "Vocês mandam lembrete?",
+      "answer": "Sim. Enviamos lembrete no dia da consulta com o link do Meet.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "meet_and_notifications",
+        "meet_and_notifications",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-003",
+      "audience": "paciente",
+      "intent": "account",
+      "category": "account",
+      "question": "Esqueci minha senha. E agora?",
+      "answer": "Use 'Esqueci a senha' na web ou me peça no WhatsApp. Eu envio um link seguro por SMS/e-mail.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "account",
+        "account"
+      ]
+    },
+    {
+      "id": "MAYA-QA-115",
+      "audience": "ambos",
+      "intent": "integrations_data",
+      "category": "integrations_data",
+      "question": "Qual o SLA para respostas humanas?",
+      "answer": "Atendimento em até 1 dia útil, casos críticos com prioridade imediata.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "integrations_data",
+        "integrations_data"
+      ]
+    },
+    {
+      "id": "MAYA-QA-109",
+      "audience": "ambos",
+      "intent": "platform_support",
+      "category": "platform_support",
+      "question": "Quais canais de notificação vocês usam?",
+      "answer": "WhatsApp e e-mail, com lembretes no dia da consulta.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "platform_support",
+        "platform_support"
+      ]
+    },
+    {
+      "id": "MAYA-QA-061",
+      "audience": "paciente",
+      "intent": "medical_records_privacy_feedback",
+      "category": "medical_records_privacy_feedback",
+      "question": "Onde vejo minhas receitas e laudos?",
+      "answer": "Em 'Meus Documentos' no portal. Também posso te enviar por WhatsApp sob verificação de CPF.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "medical_records_privacy_feedback",
+        "medical_records_privacy_feedback"
+      ]
+    },
+    {
+      "id": "MAYA-QA-288",
+      "audience": "medico",
+      "intent": "doctor_docs_finance_chat",
+      "category": "doctor_docs_finance_chat",
+      "question": "Como falar com o paciente depois?",
+      "answer": "Abra o chat pós-consulta. Mensagens ficam registradas no prontuário resumido.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_docs_finance_chat",
+        "doctor_docs_finance_chat",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-135",
+      "audience": "ambos",
+      "intent": "platform_support",
+      "category": "platform_support",
+      "question": "Quais canais de notificação vocês usam?",
+      "answer": "WhatsApp e e-mail, com lembretes no dia da consulta.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "platform_support",
+        "platform_support",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-157",
+      "audience": "medico",
+      "intent": "doctor_onboarding",
+      "category": "doctor_onboarding",
+      "question": "Posso atender apenas certos dias?",
+      "answer": "Claro. Cadastre disponibilidade apenas nos dias/horários que deseja.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_onboarding",
+        "doctor_onboarding",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-053",
+      "audience": "paciente",
+      "intent": "meet_and_notifications",
+      "category": "meet_and_notifications",
+      "question": "O link do Meet deu erro",
+      "answer": "Gero um novo link de sala e envio para você e para o médico.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "meet_and_notifications",
+        "meet_and_notifications"
+      ]
+    },
+    {
+      "id": "MAYA-QA-150",
+      "audience": "paciente",
+      "intent": "availability",
+      "category": "availability",
+      "question": "Tem horário no período da manhã?",
+      "answer": "Posso filtrar por manhã. Preferência entre 8h e 12h?",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "availability",
+        "availability",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-159",
+      "audience": "paciente",
+      "intent": "booking_basics",
+      "category": "booking_basics",
+      "question": "Quero marcar uma atendimento",
+      "answer": "Perfeito. Qual especialidade você prefere ou quer ver a lista de médicos disponíveis?",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "booking_basics",
+        "booking_basics",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-025",
+      "audience": "paciente",
+      "intent": "availability",
+      "category": "availability",
+      "question": "Quero um horário após as {time}",
+      "answer": "Busco opções a partir das {time} e retorno com até cinco alternativas.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [
+        "{time}"
+      ],
+      "tags": [
+        "availability",
+        "availability"
+      ]
+    },
+    {
+      "id": "MAYA-QA-210",
+      "audience": "paciente",
+      "intent": "medical_records_privacy_feedback",
+      "category": "medical_records_privacy_feedback",
+      "question": "Quero falar com humano",
+      "answer": "Sem drama. Abro um ticket e te conecto ao suporte em horário comercial.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "medical_records_privacy_feedback",
+        "medical_records_privacy_feedback",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-002",
+      "audience": "paciente",
+      "intent": "account",
+      "category": "account",
+      "question": "Preciso de conta para agendar?",
+      "answer": "Sim. O agendamento exige login para vincular sua consulta ao seu CPF e enviar o link do Meet.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "account",
+        "account"
+      ]
+    },
+    {
+      "id": "MAYA-QA-201",
+      "audience": "paciente",
+      "intent": "payments",
+      "category": "payments",
+      "question": "PIX não compensou",
+      "answer": "Alguns PIX demoram até 10 minutos. Se passar disso, eu valido no provedor e reemito o comprovante.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "payments",
+        "payments",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-116",
+      "audience": "paciente",
+      "intent": "book_appointment",
+      "category": "booking_fluxo",
+      "question": "Quais são os passos para concluir meu agendamento?",
+      "answer": "Eu confirmo seus dados, mostro médicos e valores, gero o link de pagamento e, ao aprovar, envio o link do Meet.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "book_appointment",
+        "booking_fluxo",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "MAYA-QA-191",
+      "audience": "paciente",
+      "intent": "payments",
+      "category": "payments",
+      "question": "Posso pagar por boleto?",
+      "answer": "No momento não. Oferecemos PIX e cartão para confirmação imediata.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "payments",
+        "payments",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-077",
+      "audience": "medico",
+      "intent": "doctor_onboarding",
+      "category": "doctor_onboarding",
+      "question": "Como recebo os pagamentos?",
+      "answer": "Pagamentos caem no provedor e repassamos conforme contrato. Você vê relatórios no painel do médico.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_onboarding",
+        "doctor_onboarding"
+      ]
+    },
+    {
+      "id": "MAYA-QA-206",
+      "audience": "medico",
+      "intent": "doctor_docs_finance_chat",
+      "category": "doctor_docs_finance_chat",
+      "question": "Erro no link do Meet da minha sessão",
+      "answer": "Eu reemito a sala e atualizo o convite para ambos.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_docs_finance_chat",
+        "doctor_docs_finance_chat",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-291",
+      "audience": "paciente",
+      "intent": "payments",
+      "category": "payments",
+      "question": "Meu pagamento caiu mas não recebi confirmação",
+      "answer": "Vou checar o webhook do provedor. Se estiver 'paid', confirmo manualmente e envio o link do Meet.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "payments",
+        "payments",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-034",
+      "audience": "paciente",
+      "intent": "payments",
+      "category": "payments",
+      "question": "Posso pagar depois?",
+      "answer": "O horário só é confirmado após o pagamento. Posso segurar por alguns minutos enquanto você paga.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "payments",
+        "payments"
+      ]
+    },
+    {
+      "id": "MAYA-QA-131",
+      "audience": "medico",
+      "intent": "doctor_agenda",
+      "category": "doctor_agenda",
+      "question": "Preciso ajustar a duração da atendimento",
+      "answer": "Você pode definir a duração padrão (ex.: 20/30/45 minutos) e aplicar aos próximos slots.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_agenda",
+        "doctor_agenda",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-146",
+      "audience": "medico",
+      "intent": "doctor_onboarding",
+      "category": "doctor_onboarding",
+      "question": "Posso atuar só por telemedicina?",
+      "answer": "Sim. Nosso fluxo padrão é online.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_onboarding",
+        "doctor_onboarding",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-257",
+      "audience": "ambos",
+      "intent": "platform_support",
+      "category": "platform_support",
+      "question": "Quais canais de notificação vocês usam?",
+      "answer": "WhatsApp e e-mail, com lembretes no dia da consulta.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "platform_support",
+        "platform_support",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-024",
+      "audience": "paciente",
+      "intent": "availability",
+      "category": "availability",
+      "question": "Quero o primeiro horário de {date}",
+      "answer": "Ok. Vou reservar o primeiro slot livre nessa data e te enviar o checkout.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [
+        "{date}"
+      ],
+      "tags": [
+        "availability",
+        "availability"
+      ]
+    },
+    {
+      "id": "MAYA-QA-177",
+      "audience": "paciente",
+      "intent": "support_refund",
+      "category": "reembolso_status",
+      "question": "Como acompanho meu reembolso por aqui?",
+      "answer": "Basta pedir 'Status do reembolso'. Eu retorno o status atual e previsão.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "support_refund",
+        "reembolso_status",
+        "synthetic",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-184",
+      "audience": "paciente",
+      "intent": "medical_records_privacy_feedback",
+      "category": "medical_records_privacy_feedback",
+      "question": "Como atualizo meus dados médicos?",
+      "answer": "Me diga o que mudou (alergias, medicamentos) e eu atualizo sua ficha para o médico ver.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "medical_records_privacy_feedback",
+        "medical_records_privacy_feedback",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-247",
+      "audience": "paciente",
+      "intent": "payments",
+      "category": "payments",
+      "question": "Como recebo nota fiscal?",
+      "answer": "Após a consulta, emitimos a NF e enviamos por e-mail cadastrado.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "payments",
+        "payments",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-044",
+      "audience": "paciente",
+      "intent": "reschedule_cancel_refund",
+      "category": "reschedule_cancel_refund",
+      "question": "Quanto tempo leva o reembolso?",
+      "answer": "Após solicitado, o provedor retorna em até 7 dias úteis, variando por método.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "reschedule_cancel_refund",
+        "reschedule_cancel_refund"
+      ]
+    },
+    {
+      "id": "MAYA-QA-049",
+      "audience": "paciente",
+      "intent": "reschedule_cancel_refund",
+      "category": "reschedule_cancel_refund",
+      "question": "O médico atrasou. O que faço?",
+      "answer": "Eu notifico o médico e te atualizo. Se passar de 20min, posso remarcar ou reembolsar.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "reschedule_cancel_refund",
+        "reschedule_cancel_refund"
+      ]
+    },
+    {
+      "id": "MAYA-QA-086",
+      "audience": "medico",
+      "intent": "doctor_agenda",
+      "category": "doctor_agenda",
+      "question": "Quero ver minhas próximas consultas",
+      "answer": "Aqui está a lista das próximas com nome do paciente, horário e link do Meet.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_agenda",
+        "doctor_agenda"
+      ]
+    },
+    {
+      "id": "MAYA-QA-274",
+      "audience": "paciente",
+      "intent": "account",
+      "category": "account",
+      "question": "Como excluo minha conta?",
+      "answer": "Solicite 'Excluir conta'. Eu abro um ticket e removo seus dados conforme LGPD, exceto registros legais obrigatórios.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "account",
+        "account",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-073",
+      "audience": "medico",
+      "intent": "doctor_onboarding",
+      "category": "doctor_onboarding",
+      "question": "Como funciona a aprovação?",
+      "answer": "Checamos CRM e documentos. Ao aprovar, sua agenda aparece para pacientes.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_onboarding",
+        "doctor_onboarding"
+      ]
+    },
+    {
+      "id": "MAYA-QA-060",
+      "audience": "paciente",
+      "intent": "meet_and_notifications",
+      "category": "meet_and_notifications",
+      "question": "Consigo falar com o médico depois?",
+      "answer": "Sim, abro um chat pós-consulta para dúvidas rápidas.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "meet_and_notifications",
+        "meet_and_notifications"
+      ]
+    },
+    {
+      "id": "MAYA-QA-158",
+      "audience": "paciente",
+      "intent": "booking_basics",
+      "category": "booking_basics",
+      "question": "Vocês atendem convênio?",
+      "answer": "Atendemos particular. Você pode solicitar nota fiscal para reembolso com seu plano, se aplicável.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "booking_basics",
+        "booking_basics",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-128",
+      "audience": "medico",
+      "intent": "doctor_agenda",
+      "category": "agenda_lote",
+      "question": "Consigo criar horários em lote?",
+      "answer": "Sim. Informe dias, faixa de horário e duração. Eu gero os slots automaticamente.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_agenda",
+        "agenda_lote",
+        "synthetic",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-190",
+      "audience": "medico",
+      "intent": "doctor_agenda",
+      "category": "doctor_agenda",
+      "question": "Quero ver minhas próximas atendimentos",
+      "answer": "Aqui está a lista das próximas com nome do paciente, horário e link do Meet.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_agenda",
+        "doctor_agenda",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-113",
+      "audience": "ambos",
+      "intent": "integrations_data",
+      "category": "integrations_data",
+      "question": "Como pedem consentimento de dados?",
+      "answer": "Solicito aceite explícito em primeira interação e registro a data/hora.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "integrations_data",
+        "integrations_data"
+      ]
+    },
+    {
+      "id": "MAYA-QA-036",
+      "audience": "paciente",
+      "intent": "payments",
+      "category": "payments",
+      "question": "Posso dividir no cartão?",
+      "answer": "Depende do provedor e do valor. No checkout você verá as opções de parcelamento disponíveis.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "payments",
+        "payments"
+      ]
+    },
+    {
+      "id": "MAYA-QA-012",
+      "audience": "paciente",
+      "intent": "booking_basics",
+      "category": "booking_basics",
+      "question": "Como funciona o agendamento?",
+      "answer": "Você escolhe o médico, eu gero o link de pagamento e, após confirmado, envio o link do Google Meet.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "booking_basics",
+        "booking_basics"
+      ]
+    },
+    {
+      "id": "MAYA-QA-107",
+      "audience": "ambos",
+      "intent": "platform_support",
+      "category": "platform_support",
+      "question": "Como funciona o registro de logs?",
+      "answer": "Cada ação gera um trace_id e é gravada na tabela interaction_logs para auditoria.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "platform_support",
+        "platform_support"
+      ]
+    },
+    {
+      "id": "MAYA-QA-266",
+      "audience": "medico",
+      "intent": "doctor_docs_finance_chat",
+      "category": "doctor_docs_finance_chat",
+      "question": "Como emitir laudo?",
+      "answer": "Na consulta, clique em 'Laudo' e preencha. Eu salvo e envio ao paciente.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_docs_finance_chat",
+        "doctor_docs_finance_chat",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-162",
+      "audience": "paciente",
+      "intent": "reschedule_cancel_refund",
+      "category": "reschedule_cancel_refund",
+      "question": "Quero remarcar minha consulta",
+      "answer": "Sem problema. Vou listar novos horários do mesmo médico ou de outro se preferir.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "reschedule_cancel_refund",
+        "reschedule_cancel_refund",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-228",
+      "audience": "paciente",
+      "intent": "post_consult_chat",
+      "category": "pos_consulta",
+      "question": "Tenho dúvidas sobre a receita",
+      "answer": "Abro o chat com seu médico para esclarecer e, se necessário, emitir nova receita.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "post_consult_chat",
+        "pos_consulta",
+        "synthetic",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-252",
+      "audience": "paciente",
+      "intent": "medical_records_privacy_feedback",
+      "category": "medical_records_privacy_feedback",
+      "question": "Como peço segunda via de receita?",
+      "answer": "Posso solicitar ao médico. Em alguns casos, é necessária nova avaliação.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "medical_records_privacy_feedback",
+        "medical_records_privacy_feedback",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-076",
+      "audience": "medico",
+      "intent": "doctor_onboarding",
+      "category": "doctor_onboarding",
+      "question": "Posso atender apenas certos dias?",
+      "answer": "Claro. Cadastre disponibilidade apenas nos dias/horários que deseja.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_onboarding",
+        "doctor_onboarding"
+      ]
+    },
+    {
+      "id": "MAYA-QA-094",
+      "audience": "medico",
+      "intent": "doctor_docs_finance_chat",
+      "category": "doctor_docs_finance_chat",
+      "question": "Posso editar um documento emitido?",
+      "answer": "Você pode gerar uma nova versão e invalidar a anterior. Eu notifico o paciente.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_docs_finance_chat",
+        "doctor_docs_finance_chat"
+      ]
+    },
+    {
+      "id": "MAYA-QA-265",
+      "audience": "paciente",
+      "intent": "meet_and_notifications",
+      "category": "meet_and_notifications",
+      "question": "O convite do Meet deu erro",
+      "answer": "Gero um novo link de sala e envio para você e para o médico.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "meet_and_notifications",
+        "meet_and_notifications",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-173",
+      "audience": "medico",
+      "intent": "doctor_compliance_misc",
+      "category": "doctor_compliance_misc",
+      "question": "Posso delegar acesso à minha secretária?",
+      "answer": "Sim, crie um acesso auxiliar com permissões limitadas.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_compliance_misc",
+        "doctor_compliance_misc",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-176",
+      "audience": "medico",
+      "intent": "doctor_agenda",
+      "category": "doctor_agenda",
+      "question": "Posso bloquear férias?",
+      "answer": "Sim. Envie o período de férias e eu fecho todos os slots automaticamente.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_agenda",
+        "doctor_agenda",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-124",
+      "audience": "paciente",
+      "intent": "reschedule_cancel_refund",
+      "category": "reschedule_cancel_refund",
+      "question": "É possível trocar de médico sem cancelar?",
+      "answer": "Sim, via remarcação. Eu movo o pagamento para o novo agendamento quando possível.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "reschedule_cancel_refund",
+        "reschedule_cancel_refund",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-240",
+      "audience": "paciente",
+      "intent": "payments",
+      "category": "payments",
+      "question": "Recebi um link de pagamento. É confiável?",
+      "answer": "Sim. O link é gerado por nosso provedor oficial e contém seu CPF e ID da consulta de forma segura.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "payments",
+        "payments",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-046",
+      "audience": "paciente",
+      "intent": "reschedule_cancel_refund",
+      "category": "reschedule_cancel_refund",
+      "question": "Minha consulta foi cancelada pelo médico",
+      "answer": "Sinto muito! Posso remarcar de preferência sua ou iniciar reembolso imediato.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "reschedule_cancel_refund",
+        "reschedule_cancel_refund"
+      ]
+    },
+    {
+      "id": "MAYA-QA-268",
+      "audience": "medico",
+      "intent": "doctor_onboarding",
+      "category": "doctor_onboarding",
+      "question": "É possível atuar só por telemedicina?",
+      "answer": "Sim. Nosso fluxo padrão é online.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_onboarding",
+        "doctor_onboarding",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-180",
+      "audience": "ambos",
+      "intent": "platform_support",
+      "category": "platform_support",
+      "question": "Como denunciar abuso na plataforma?",
+      "answer": "Abra um ticket e marque como 'crítico'. A equipe de segurança assume o caso.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "platform_support",
+        "platform_support",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-118",
+      "audience": "paciente",
+      "intent": "support_refund",
+      "category": "reembolso_status",
+      "question": "Como acompanho meu reembolso por aqui?",
+      "answer": "Basta pedir 'Status do reembolso'. Eu retorno o status atual e previsão.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "support_refund",
+        "reembolso_status",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "MAYA-QA-093",
+      "audience": "medico",
+      "intent": "doctor_docs_finance_chat",
+      "category": "doctor_docs_finance_chat",
+      "question": "Como emitir atestado?",
+      "answer": "Selecione 'Atestado', informe dias e CID (opcional). Envio ao paciente automaticamente.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_docs_finance_chat",
+        "doctor_docs_finance_chat"
+      ]
+    },
+    {
+      "id": "MAYA-QA-111",
+      "audience": "ambos",
+      "intent": "integrations_data",
+      "category": "integrations_data",
+      "question": "Como integram o Google Meet?",
+      "answer": "Criamos a sala via API ao confirmar o pagamento e anexamos o link à consulta.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "integrations_data",
+        "integrations_data"
+      ]
+    },
+    {
+      "id": "MAYA-QA-163",
+      "audience": "medico",
+      "intent": "doctor_docs_finance_chat",
+      "category": "doctor_docs_finance_chat",
+      "question": "Como emitir atestado?",
+      "answer": "Selecione 'Atestado', informe dias e CID (opcional). Envio ao paciente automaticamente.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_docs_finance_chat",
+        "doctor_docs_finance_chat",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-126",
+      "audience": "ambos",
+      "intent": "integrations_data",
+      "category": "integrations_data",
+      "question": "Como pedem consentimento de dados?",
+      "answer": "Solicito aceite explícito em primeira interação e registro a data/hora.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "integrations_data",
+        "integrations_data",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-199",
+      "audience": "medico",
+      "intent": "doctor_compliance_misc",
+      "category": "doctor_compliance_misc",
+      "question": "Posso recusar um paciente?",
+      "answer": "Casos excepcionais podem ser redirecionados, mantendo cordialidade e registro do motivo.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_compliance_misc",
+        "doctor_compliance_misc",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-259",
+      "audience": "paciente",
+      "intent": "availability",
+      "category": "availability",
+      "question": "Vocês confirmam horário automaticamente?",
+      "answer": "A confirmação ocorre após o pagamento aprovado. Antes disso o horário fica em pré-reserva por alguns minutos.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "availability",
+        "availability",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-088",
+      "audience": "medico",
+      "intent": "doctor_agenda",
+      "category": "doctor_agenda",
+      "question": "Como crio consultas particulares",
+      "answer": "Crie um slot privado e compartilhe o link direto com o paciente.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_agenda",
+        "doctor_agenda"
+      ]
+    },
+    {
+      "id": "MAYA-QA-130",
+      "audience": "paciente",
+      "intent": "medical_records_privacy_feedback",
+      "category": "medical_records_privacy_feedback",
+      "question": "Como peço segunda via de receita?",
+      "answer": "Posso solicitar ao médico. Em alguns casos, é necessária nova avaliação.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "medical_records_privacy_feedback",
+        "medical_records_privacy_feedback",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-188",
+      "audience": "medico",
+      "intent": "doctor_docs_finance_chat",
+      "category": "doctor_docs_finance_chat",
+      "question": "Como atualizo meu preço por especialidade?",
+      "answer": "Você pode definir preço por agenda ou por especialidade. Posso aplicar em massa.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_docs_finance_chat",
+        "doctor_docs_finance_chat",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-255",
+      "audience": "ambos",
+      "intent": "platform_support",
+      "category": "platform_support",
+      "question": "Quero falar com suporte",
+      "answer": "Te conecto ao time humano agora mesmo em horário comercial.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "platform_support",
+        "platform_support",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-215",
+      "audience": "paciente",
+      "intent": "account",
+      "category": "account",
+      "question": "Quais dados mínimos para começar?",
+      "answer": "Nome completo, CPF e telefone. E-mail é recomendado para receber documentos.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "account",
+        "account",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-224",
+      "audience": "medico",
+      "intent": "doctor_docs_finance_chat",
+      "category": "doctor_docs_finance_chat",
+      "question": "O paciente pediu reembolso. Como proceder?",
+      "answer": "Eu inicio o processo e notifico você. Se necessário, peço sua confirmação de cancelamento.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_docs_finance_chat",
+        "doctor_docs_finance_chat",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-089",
+      "audience": "medico",
+      "intent": "doctor_agenda",
+      "category": "doctor_agenda",
+      "question": "Consigo limitar número de consultas por dia?",
+      "answer": "Sim. Defina um teto diário e eu bloqueio o excedente.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_agenda",
+        "doctor_agenda"
+      ]
+    },
+    {
+      "id": "MAYA-QA-296",
+      "audience": "paciente",
+      "intent": "availability",
+      "category": "availability",
+      "question": "Quero o primeiro horário de {date}",
+      "answer": "Ok. Vou reservar o primeiro slot livre nessa data e te enviar o checkout.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [
+        "{date}"
+      ],
+      "tags": [
+        "availability",
+        "availability",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-233",
+      "audience": "paciente",
+      "intent": "meet_and_notifications",
+      "category": "meet_and_notifications",
+      "question": "Posso mudar o e-mail para receber o link?",
+      "answer": "Claro. Atualizo seu e-mail e reenvio os convites imediatamente.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "meet_and_notifications",
+        "meet_and_notifications",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-031",
+      "audience": "paciente",
+      "intent": "payments",
+      "category": "payments",
+      "question": "Quais formas de pagamento aceitam?",
+      "answer": "Aceitamos cartão e PIX via asaas, pagarme. Envio um link seguro para concluir.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "payments",
+        "payments"
+      ]
+    },
+    {
+      "id": "MAYA-QA-280",
+      "audience": "paciente",
+      "intent": "booking_basics",
+      "category": "booking_basics",
+      "question": "Vocês atendem convênio?",
+      "answer": "Atendemos particular. Você pode solicitar nota fiscal para reembolso com seu plano, se aplicável.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "booking_basics",
+        "booking_basics",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-027",
+      "audience": "paciente",
+      "intent": "availability",
+      "category": "availability",
+      "question": "Quero ser avisado quando abrir vaga",
+      "answer": "Ativo um alerta e te notifico pelo WhatsApp assim que houver cancelamento ou nova vaga.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "availability",
+        "availability"
+      ]
+    },
+    {
+      "id": "MAYA-QA-063",
+      "audience": "paciente",
+      "intent": "medical_records_privacy_feedback",
+      "category": "medical_records_privacy_feedback",
+      "question": "Meus dados ficam seguros?",
+      "answer": "Sim. LGPD: minimizamos dados, registramos consentimento e criptografamos informações sensíveis.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "medical_records_privacy_feedback",
+        "medical_records_privacy_feedback"
+      ]
+    },
+    {
+      "id": "MAYA-QA-221",
+      "audience": "paciente",
+      "intent": "booking_basics",
+      "category": "booking_basics",
+      "question": "Quanto tempo dura a consulta?",
+      "answer": "Em média 30 minutos, variando por especialidade e caso.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "booking_basics",
+        "booking_basics",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-020",
+      "audience": "paciente",
+      "intent": "booking_basics",
+      "category": "booking_basics",
+      "question": "Quanto tempo dura a consulta?",
+      "answer": "Em média 30 minutos, variando por especialidade e caso.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "booking_basics",
+        "booking_basics"
+      ]
+    },
+    {
+      "id": "MAYA-QA-051",
+      "audience": "paciente",
+      "intent": "meet_and_notifications",
+      "category": "meet_and_notifications",
+      "question": "Onde recebo o link do Meet?",
+      "answer": "Aqui no WhatsApp e por e-mail, assim que o pagamento for confirmado.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "meet_and_notifications",
+        "meet_and_notifications"
+      ]
+    },
+    {
+      "id": "MAYA-QA-102",
+      "audience": "medico",
+      "intent": "doctor_compliance_misc",
+      "category": "doctor_compliance_misc",
+      "question": "Posso recusar um paciente?",
+      "answer": "Casos excepcionais podem ser redirecionados, mantendo cordialidade e registro do motivo.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_compliance_misc",
+        "doctor_compliance_misc"
+      ]
+    },
+    {
+      "id": "MAYA-QA-097",
+      "audience": "medico",
+      "intent": "doctor_docs_finance_chat",
+      "category": "doctor_docs_finance_chat",
+      "question": "O paciente pediu reembolso. Como proceder?",
+      "answer": "Eu inicio o processo e notifico você. Se necessário, peço sua confirmação de cancelamento.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_docs_finance_chat",
+        "doctor_docs_finance_chat"
+      ]
+    },
+    {
+      "id": "MAYA-QA-148",
+      "audience": "medico",
+      "intent": "doctor_compliance_misc",
+      "category": "doctor_compliance_misc",
+      "question": "Como reporto um incidente de segurança?",
+      "answer": "Relate pelo painel; eu abro ticket crítico e aciono o time de segurança.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_compliance_misc",
+        "doctor_compliance_misc",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-299",
+      "audience": "paciente",
+      "intent": "support_refund",
+      "category": "reembolso_status",
+      "question": "Como acompanho meu reembolso por aqui?",
+      "answer": "Basta pedir 'Status do reembolso'. Eu retorno o status atual e previsão.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "support_refund",
+        "reembolso_status",
+        "synthetic",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-218",
+      "audience": "medico",
+      "intent": "doctor_agenda",
+      "category": "doctor_agenda",
+      "question": "Como crio atendimentos particulares",
+      "answer": "Crie um slot privado e compartilhe o link direto com o paciente.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_agenda",
+        "doctor_agenda",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-149",
+      "audience": "medico",
+      "intent": "doctor_onboarding",
+      "category": "doctor_onboarding",
+      "question": "Consigo emitir NF pelo sistema?",
+      "answer": "A nota do paciente é emitida pela plataforma. Seu repasse é consolidado no painel financeiro.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_onboarding",
+        "doctor_onboarding",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-028",
+      "audience": "paciente",
+      "intent": "availability",
+      "category": "availability",
+      "question": "Posso entrar na fila de espera?",
+      "answer": "Sim. Te coloco em fila e priorizo quando aparecer um horário compatível.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "availability",
+        "availability"
+      ]
+    },
+    {
+      "id": "MAYA-QA-080",
+      "audience": "medico",
+      "intent": "doctor_onboarding",
+      "category": "doctor_onboarding",
+      "question": "Como alterar minha bio e foto?",
+      "answer": "Envie a atualização e eu altero seu perfil imediatamente.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_onboarding",
+        "doctor_onboarding"
+      ]
+    },
+    {
+      "id": "MAYA-QA-279",
+      "audience": "medico",
+      "intent": "doctor_onboarding",
+      "category": "doctor_onboarding",
+      "question": "Posso atender apenas certos dias?",
+      "answer": "Claro. Cadastre disponibilidade apenas nos dias/horários que deseja.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_onboarding",
+        "doctor_onboarding",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-175",
+      "audience": "paciente",
+      "intent": "account",
+      "category": "account",
+      "question": "Vocês pedem foto de documento?",
+      "answer": "Somente se houver divergência de dados. Eu peço pelo WhatsApp e armazeno de forma criptografada.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "account",
+        "account",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-168",
+      "audience": "paciente",
+      "intent": "account",
+      "category": "account",
+      "question": "Como confirmo que minha conta foi criada?",
+      "answer": "Você receberá uma mensagem de boas-vindas e poderá ver 'Minhas Consultas' com status vazio ou agendamentos ativos.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "account",
+        "account",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-156",
+      "audience": "paciente",
+      "intent": "availability",
+      "category": "availability",
+      "question": "É possível entrar na fila de espera?",
+      "answer": "Sim. Te coloco em fila e priorizo quando aparecer um horário compatível.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "availability",
+        "availability",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-254",
+      "audience": "ambos",
+      "intent": "platform_support",
+      "category": "platform_support",
+      "question": "Como funciona o registro de logs?",
+      "answer": "Cada ação gera um trace_id e é gravada na tabela interaction_logs para auditoria.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "platform_support",
+        "platform_support",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-095",
+      "audience": "medico",
+      "intent": "doctor_docs_finance_chat",
+      "category": "doctor_docs_finance_chat",
+      "question": "Como falar com o paciente depois?",
+      "answer": "Abra o chat pós-consulta. Mensagens ficam registradas no prontuário resumido.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_docs_finance_chat",
+        "doctor_docs_finance_chat"
+      ]
+    },
+    {
+      "id": "MAYA-QA-066",
+      "audience": "paciente",
+      "intent": "medical_records_privacy_feedback",
+      "category": "medical_records_privacy_feedback",
+      "question": "Como peço atestado?",
+      "answer": "O médico pode emitir durante ou após a consulta. Posso abrir um pedido ao profissional.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "medical_records_privacy_feedback",
+        "medical_records_privacy_feedback"
+      ]
+    },
+    {
+      "id": "MAYA-QA-227",
+      "audience": "paciente",
+      "intent": "medical_records_privacy_feedback",
+      "category": "medical_records_privacy_feedback",
+      "question": "Como peço atestado?",
+      "answer": "O médico pode emitir durante ou após a consulta. Posso abrir um pedido ao profissional.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "medical_records_privacy_feedback",
+        "medical_records_privacy_feedback",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-056",
+      "audience": "paciente",
+      "intent": "meet_and_notifications",
+      "category": "meet_and_notifications",
+      "question": "Posso entrar pelo celular?",
+      "answer": "Sim, o Meet funciona em celular e computador. Recomendo conexão estável e fones.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "meet_and_notifications",
+        "meet_and_notifications"
+      ]
+    },
+    {
+      "id": "MAYA-QA-220",
+      "audience": "medico",
+      "intent": "doctor_agenda",
+      "category": "doctor_agenda",
+      "question": "Como abro novos horários?",
+      "answer": "Use 'Disponibilizar horários' no painel. Posso criar em lote (ex.: seg/qua/sex das 14h às 18h).",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_agenda",
+        "doctor_agenda",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-030",
+      "audience": "paciente",
+      "intent": "availability",
+      "category": "availability",
+      "question": "Vocês confirmam horário automaticamente?",
+      "answer": "A confirmação ocorre após o pagamento aprovado. Antes disso o horário fica em pré-reserva por alguns minutos.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "availability",
+        "availability"
+      ]
+    },
+    {
+      "id": "MAYA-QA-234",
+      "audience": "medico",
+      "intent": "doctor_onboarding",
+      "category": "doctor_onboarding",
+      "question": "Quais documentos preciso enviar?",
+      "answer": "CRM ativo, documento com foto e, se aplicável, comprovante de especialidade.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_onboarding",
+        "doctor_onboarding",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-122",
+      "audience": "ambos",
+      "intent": "platform_support",
+      "category": "seguranca",
+      "question": "Como vocês tratam CPF no chat?",
+      "answer": "Solicito apenas quando necessário e mascaro nas mensagens. Registro o consentimento conforme LGPD.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "platform_support",
+        "seguranca",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "MAYA-QA-287",
+      "audience": "paciente",
+      "intent": "account",
+      "category": "account",
+      "question": "Consigo trocar o telefone cadastrado?",
+      "answer": "Sim. Confiro seu CPF e atualizo o celular vinculado à sua conta.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "account",
+        "account",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-062",
+      "audience": "paciente",
+      "intent": "medical_records_privacy_feedback",
+      "category": "medical_records_privacy_feedback",
+      "question": "Como atualizo meus dados médicos?",
+      "answer": "Me diga o que mudou (alergias, medicamentos) e eu atualizo sua ficha para o médico ver.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "medical_records_privacy_feedback",
+        "medical_records_privacy_feedback"
+      ]
+    },
+    {
+      "id": "MAYA-QA-286",
+      "audience": "paciente",
+      "intent": "medical_records_privacy_feedback",
+      "category": "medical_records_privacy_feedback",
+      "question": "Meus dados ficam seguros?",
+      "answer": "Sim. LGPD: minimizamos dados, registramos consentimento e criptografamos informações sensíveis.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "medical_records_privacy_feedback",
+        "medical_records_privacy_feedback",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-225",
+      "audience": "paciente",
+      "intent": "booking_basics",
+      "category": "booking_basics",
+      "question": "Como funciona o agendamento?",
+      "answer": "Você escolhe o médico, eu gero o link de pagamento e, após confirmado, envio o link do Google Meet.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "booking_basics",
+        "booking_basics",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-006",
+      "audience": "paciente",
+      "intent": "account",
+      "category": "account",
+      "question": "Como confirmo que minha conta foi criada?",
+      "answer": "Você receberá uma mensagem de boas-vindas e poderá ver 'Minhas Consultas' com status vazio ou agendamentos ativos.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "account",
+        "account"
+      ]
+    },
+    {
+      "id": "MAYA-QA-052",
+      "audience": "paciente",
+      "intent": "meet_and_notifications",
+      "category": "meet_and_notifications",
+      "question": "Não recebi o link do Meet",
+      "answer": "Vou reenviar o link agora e confirmar no seu e-mail também.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "meet_and_notifications",
+        "meet_and_notifications"
+      ]
+    },
+    {
+      "id": "MAYA-QA-064",
+      "audience": "paciente",
+      "intent": "medical_records_privacy_feedback",
+      "category": "medical_records_privacy_feedback",
+      "question": "Quero avaliar o médico",
+      "answer": "Envie sua avaliação de 1 a 5 estrelas e um comentário. Eu registro e notifico a equipe.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "medical_records_privacy_feedback",
+        "medical_records_privacy_feedback"
+      ]
+    },
+    {
+      "id": "MAYA-QA-237",
+      "audience": "paciente",
+      "intent": "medical_records_privacy_feedback",
+      "category": "medical_records_privacy_feedback",
+      "question": "É possível alterar o nome exibido?",
+      "answer": "Sim. Atualizo 'nome social' e mantenho o nome legal para fins fiscais.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "medical_records_privacy_feedback",
+        "medical_records_privacy_feedback",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-262",
+      "audience": "ambos",
+      "intent": "platform_support",
+      "category": "platform_support",
+      "question": "Erro de pagamento não chegou via webhook",
+      "answer": "Posso reconciliar consultando diretamente o provedor e atualizar o status manualmente.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "platform_support",
+        "platform_support",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-248",
+      "audience": "ambos",
+      "intent": "integrations_data",
+      "category": "integrations_data",
+      "question": "Como pedem consentimento de dados?",
+      "answer": "Solicito aceite explícito em primeira interação e registro a data/hora.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "integrations_data",
+        "integrations_data",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-018",
+      "audience": "paciente",
+      "intent": "booking_basics",
+      "category": "booking_basics",
+      "question": "Atendem menores de idade?",
+      "answer": "Sim, com responsável legal. Vou precisar do CPF do responsável no cadastro.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "booking_basics",
+        "booking_basics"
+      ]
+    },
+    {
+      "id": "MAYA-QA-167",
+      "audience": "paciente",
+      "intent": "reschedule_cancel_refund",
+      "category": "reschedule_cancel_refund",
+      "question": "Minha sessão foi cancelada pelo médico",
+      "answer": "Sinto muito! Posso remarcar de preferência sua ou iniciar reembolso imediato.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "reschedule_cancel_refund",
+        "reschedule_cancel_refund",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-058",
+      "audience": "paciente",
+      "intent": "meet_and_notifications",
+      "category": "meet_and_notifications",
+      "question": "Posso gravar a consulta?",
+      "answer": "Somente com consentimento do médico. A gravação não fica salva na plataforma.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "meet_and_notifications",
+        "meet_and_notifications"
+      ]
+    },
+    {
+      "id": "MAYA-QA-090",
+      "audience": "medico",
+      "intent": "doctor_agenda",
+      "category": "doctor_agenda",
+      "question": "Como vejo histórico do paciente antes da consulta?",
+      "answer": "Abra a ficha do paciente; eu mostro notas, alergias e consultas anteriores.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_agenda",
+        "doctor_agenda"
+      ]
+    },
+    {
+      "id": "MAYA-QA-014",
+      "audience": "paciente",
+      "intent": "booking_basics",
+      "category": "booking_basics",
+      "question": "Quanto custa a consulta?",
+      "answer": "O valor aparece junto ao nome do médico. Posso listar agora os profissionais e respectivos valores.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "booking_basics",
+        "booking_basics"
+      ]
+    },
+    {
+      "id": "MAYA-QA-139",
+      "audience": "paciente",
+      "intent": "meet_and_notifications",
+      "category": "meet_and_notifications",
+      "question": "Posso gravar a atendimento?",
+      "answer": "Somente com consentimento do médico. A gravação não fica salva na plataforma.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "meet_and_notifications",
+        "meet_and_notifications",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-290",
+      "audience": "paciente",
+      "intent": "account",
+      "category": "account",
+      "question": "Como confirmo que minha conta foi criada?",
+      "answer": "Você receberá uma mensagem de boas-vindas e poderá ver 'Minhas Consultas' com status vazio ou agendamentos ativos.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "account",
+        "account",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-005",
+      "audience": "paciente",
+      "intent": "account",
+      "category": "account",
+      "question": "Consigo trocar o telefone cadastrado?",
+      "answer": "Sim. Confiro seu CPF e atualizo o celular vinculado à sua conta.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "account",
+        "account"
+      ]
+    },
+    {
+      "id": "MAYA-QA-284",
+      "audience": "paciente",
+      "intent": "reschedule_cancel_refund",
+      "category": "reschedule_cancel_refund",
+      "question": "Quero remarcar minha atendimento",
+      "answer": "Sem problema. Vou listar novos horários do mesmo médico ou de outro se preferir.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "reschedule_cancel_refund",
+        "reschedule_cancel_refund",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-021",
+      "audience": "paciente",
+      "intent": "availability",
+      "category": "availability",
+      "question": "Quais horários o Dr. {doctor_name} tem?",
+      "answer": "Vou buscar a agenda do {doctor_name} e te mostro os próximos slots disponíveis.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [
+        "{doctor_name}"
+      ],
+      "tags": [
+        "availability",
+        "availability"
+      ]
+    },
+    {
+      "id": "MAYA-QA-065",
+      "audience": "paciente",
+      "intent": "medical_records_privacy_feedback",
+      "category": "medical_records_privacy_feedback",
+      "question": "Posso exportar meus dados?",
+      "answer": "Pode solicitar a exportação via 'Baixar meus dados'. Envio um arquivo seguro por e-mail.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "medical_records_privacy_feedback",
+        "medical_records_privacy_feedback"
+      ]
+    },
+    {
+      "id": "MAYA-QA-251",
+      "audience": "paciente",
+      "intent": "meet_and_notifications",
+      "category": "meet_and_notifications",
+      "question": "O médico não entrou na sala",
+      "answer": "Eu notifico o médico e acompanho. Se precisar, abrimos nova sala em minutos.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "meet_and_notifications",
+        "meet_and_notifications",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-193",
+      "audience": "medico",
+      "intent": "doctor_onboarding",
+      "category": "doctor_onboarding",
+      "question": "Como funciona a aprovação?",
+      "answer": "Checamos CRM e documentos. Ao aprovar, sua agenda aparece para pacientes.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_onboarding",
+        "doctor_onboarding",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-072",
+      "audience": "medico",
+      "intent": "doctor_onboarding",
+      "category": "doctor_onboarding",
+      "question": "Como defino meu valor de consulta?",
+      "answer": "Você informa o valor (R$) e eu mostro a média da plataforma para referência. Pode alterar quando quiser.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_onboarding",
+        "doctor_onboarding"
+      ]
+    },
+    {
+      "id": "MAYA-QA-270",
+      "audience": "medico",
+      "intent": "doctor_compliance_misc",
+      "category": "doctor_compliance_misc",
+      "question": "Como reporto um incidente de segurança?",
+      "answer": "Relate pelo painel; eu abro ticket crítico e aciono o time de segurança.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_compliance_misc",
+        "doctor_compliance_misc",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-261",
+      "audience": "paciente",
+      "intent": "meet_and_notifications",
+      "category": "meet_and_notifications",
+      "question": "É possível gravar a atendimento?",
+      "answer": "Somente com consentimento do médico. A gravação não fica salva na plataforma.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "meet_and_notifications",
+        "meet_and_notifications",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-235",
+      "audience": "paciente",
+      "intent": "support_payment",
+      "category": "pagamento_erro",
+      "question": "Meu cartão foi recusado, o que faço?",
+      "answer": "Tente outro cartão ou PIX. Se insistir, eu gero um novo link e abro suporte técnico.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "support_payment",
+        "pagamento_erro",
+        "synthetic",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-208",
+      "audience": "medico",
+      "intent": "doctor_onboarding",
+      "category": "doctor_onboarding",
+      "question": "Quero me cadastrar como médico",
+      "answer": "Bem-vindo! Envie nome completo, CRM, especialidade e preço da consulta. A aprovação ocorre em até 24h.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_onboarding",
+        "doctor_onboarding",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-117",
+      "audience": "paciente",
+      "intent": "support_payment",
+      "category": "pagamento_erro",
+      "question": "Meu cartão foi recusado, o que faço?",
+      "answer": "Tente outro cartão ou PIX. Se insistir, eu gero um novo link e abro suporte técnico.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "support_payment",
+        "pagamento_erro",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "MAYA-QA-055",
+      "audience": "paciente",
+      "intent": "meet_and_notifications",
+      "category": "meet_and_notifications",
+      "question": "Posso mudar o e-mail para receber o link?",
+      "answer": "Claro. Atualizo seu e-mail e reenvio os convites imediatamente.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "meet_and_notifications",
+        "meet_and_notifications"
+      ]
+    },
+    {
+      "id": "MAYA-QA-084",
+      "audience": "medico",
+      "intent": "doctor_agenda",
+      "category": "doctor_agenda",
+      "question": "O paciente não compareceu. O que faço?",
+      "answer": "Marque como 'no_show'. A política de reembolso não se aplica salvo exceção aprovada.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_agenda",
+        "doctor_agenda"
+      ]
+    },
+    {
+      "id": "MAYA-QA-098",
+      "audience": "medico",
+      "intent": "doctor_docs_finance_chat",
+      "category": "doctor_docs_finance_chat",
+      "question": "Quero baixar relatórios mensais",
+      "answer": "Gero CSV/Excel com suas consultas, valores e status.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_docs_finance_chat",
+        "doctor_docs_finance_chat"
+      ]
+    },
+    {
+      "id": "MAYA-QA-067",
+      "audience": "paciente",
+      "intent": "medical_records_privacy_feedback",
+      "category": "medical_records_privacy_feedback",
+      "question": "Como peço segunda via de receita?",
+      "answer": "Posso solicitar ao médico. Em alguns casos, é necessária nova avaliação.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "medical_records_privacy_feedback",
+        "medical_records_privacy_feedback"
+      ]
+    },
+    {
+      "id": "MAYA-QA-013",
+      "audience": "paciente",
+      "intent": "booking_basics",
+      "category": "booking_basics",
+      "question": "Posso filtrar por especialidade?",
+      "answer": "Sim. Diga a especialidade (ex.: Clínico Geral, Neurologia). Eu busco no Supabase e trago opções.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "booking_basics",
+        "booking_basics"
+      ]
+    },
+    {
+      "id": "MAYA-QA-047",
+      "audience": "paciente",
+      "intent": "reschedule_cancel_refund",
+      "category": "reschedule_cancel_refund",
+      "question": "Não compareci. Tenho direito a reembolso?",
+      "answer": "Em 'no_show' normalmente não há reembolso, mas posso abrir exceção para análise do suporte.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "reschedule_cancel_refund",
+        "reschedule_cancel_refund"
+      ]
+    },
+    {
+      "id": "MAYA-QA-276",
+      "audience": "paciente",
+      "intent": "booking_basics",
+      "category": "booking_basics",
+      "question": "Posso filtrar por especialidade?",
+      "answer": "Sim. Diga a especialidade (ex.: Clínico Geral, Neurologia). Eu busco no Supabase e trago opções.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "booking_basics",
+        "booking_basics",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-035",
+      "audience": "paciente",
+      "intent": "payments",
+      "category": "payments",
+      "question": "Há taxa adicional?",
+      "answer": "Não cobramos taxa extra além do valor informado pelo médico.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "payments",
+        "payments"
+      ]
+    },
+    {
+      "id": "MAYA-QA-273",
+      "audience": "medico",
+      "intent": "doctor_docs_finance_chat",
+      "category": "doctor_docs_finance_chat",
+      "question": "Quero baixar relatórios mensais",
+      "answer": "Gero CSV/Excel com suas consultas, valores e status.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_docs_finance_chat",
+        "doctor_docs_finance_chat",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-165",
+      "audience": "paciente",
+      "intent": "account",
+      "category": "account",
+      "question": "Consigo trocar o telefone cadastrado?",
+      "answer": "Sim. Confiro seu CPF e atualizo o celular vinculado à sua conta.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "account",
+        "account",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-022",
+      "audience": "paciente",
+      "intent": "availability",
+      "category": "availability",
+      "question": "Tem horário no período da manhã?",
+      "answer": "Posso filtrar por manhã. Preferência entre 8h e 12h?",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "availability",
+        "availability"
+      ]
+    },
+    {
+      "id": "MAYA-QA-223",
+      "audience": "paciente",
+      "intent": "account",
+      "category": "account",
+      "question": "É possível ter mais de um CPF na mesma conta?",
+      "answer": "Não. A conta é individual e vinculada a um único CPF por segurança e histórico médico.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "account",
+        "account",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-269",
+      "audience": "medico",
+      "intent": "doctor_onboarding",
+      "category": "doctor_onboarding",
+      "question": "Como alterar minha bio e foto?",
+      "answer": "Envie a atualização e eu altero seu perfil imediatamente.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_onboarding",
+        "doctor_onboarding",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-145",
+      "audience": "paciente",
+      "intent": "availability",
+      "category": "availability",
+      "question": "Quero um horário após as {time}",
+      "answer": "Busco opções a partir das {time} e retorno com até cinco alternativas.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [
+        "{time}"
+      ],
+      "tags": [
+        "availability",
+        "availability",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-152",
+      "audience": "paciente",
+      "intent": "account",
+      "category": "account",
+      "question": "Como excluo minha conta?",
+      "answer": "Solicite 'Excluir conta'. Eu abro um ticket e removo seus dados conforme LGPD, exceto registros legais obrigatórios.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "account",
+        "account",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-101",
+      "audience": "medico",
+      "intent": "doctor_compliance_misc",
+      "category": "doctor_compliance_misc",
+      "question": "Posso gravar a consulta?",
+      "answer": "Gravação só com consentimento mútuo e em conformidade com LGPD.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_compliance_misc",
+        "doctor_compliance_misc"
+      ]
+    },
+    {
+      "id": "MAYA-QA-007",
+      "audience": "paciente",
+      "intent": "account",
+      "category": "account",
+      "question": "Posso ter mais de um CPF na mesma conta?",
+      "answer": "Não. A conta é individual e vinculada a um único CPF por segurança e histórico médico.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "account",
+        "account"
+      ]
+    },
+    {
+      "id": "MAYA-QA-137",
+      "audience": "paciente",
+      "intent": "availability",
+      "category": "availability",
+      "question": "Vocês confirmam horário automaticamente?",
+      "answer": "A confirmação ocorre após o pagamento aprovado. Antes disso o horário fica em pré-reserva por alguns minutos.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "availability",
+        "availability",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-160",
+      "audience": "paciente",
+      "intent": "payments",
+      "category": "payments",
+      "question": "Posso dividir no cartão?",
+      "answer": "Depende do provedor e do valor. No checkout você verá as opções de parcelamento disponíveis.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "payments",
+        "payments",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-272",
+      "audience": "paciente",
+      "intent": "availability",
+      "category": "availability",
+      "question": "Tem horário no período da manhã?",
+      "answer": "Posso filtrar por manhã. Preferência entre 8h e 12h?",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "availability",
+        "availability",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-120",
+      "audience": "medico",
+      "intent": "doctor_docs_finance_chat",
+      "category": "documentos",
+      "question": "Como invalido uma receita emitida por engano?",
+      "answer": "Emita uma nova versão e marque a anterior como inválida. Eu notifico o paciente.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_docs_finance_chat",
+        "documentos",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "MAYA-QA-264",
+      "audience": "paciente",
+      "intent": "availability",
+      "category": "availability",
+      "question": "Quero ser avisado quando abrir vaga",
+      "answer": "Ativo um alerta e te notifico pelo WhatsApp assim que houver cancelamento ou nova vaga.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "availability",
+        "availability",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-043",
+      "audience": "paciente",
+      "intent": "reschedule_cancel_refund",
+      "category": "reschedule_cancel_refund",
+      "question": "Qual a política de reembolso?",
+      "answer": "Cancelamentos com antecedência são reembolsados integralmente. Após o horário, aplica-se política de não comparecimento.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "reschedule_cancel_refund",
+        "reschedule_cancel_refund"
+      ]
+    },
+    {
+      "id": "MAYA-QA-186",
+      "audience": "medico",
+      "intent": "doctor_agenda",
+      "category": "doctor_agenda",
+      "question": "Como vejo histórico do paciente antes da sessão?",
+      "answer": "Abra a ficha do paciente; eu mostro notas, alergias e consultas anteriores.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_agenda",
+        "doctor_agenda",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-104",
+      "audience": "medico",
+      "intent": "doctor_compliance_misc",
+      "category": "doctor_compliance_misc",
+      "question": "Como atualizar meu CRM no cadastro?",
+      "answer": "Envie o novo número/documento e eu atualizo após validação.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_compliance_misc",
+        "doctor_compliance_misc"
+      ]
+    },
+    {
+      "id": "MAYA-QA-246",
+      "audience": "paciente",
+      "intent": "reschedule_cancel_refund",
+      "category": "reschedule_cancel_refund",
+      "question": "É possível trocar de médico sem cancelar?",
+      "answer": "Sim, via remarcação. Eu movo o pagamento para o novo agendamento quando possível.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "reschedule_cancel_refund",
+        "reschedule_cancel_refund",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-174",
+      "audience": "paciente",
+      "intent": "availability",
+      "category": "availability",
+      "question": "Quero o primeiro horário de {date}",
+      "answer": "Ok. Vou reservar o primeiro slot livre nessa data e te enviar o checkout.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [
+        "{date}"
+      ],
+      "tags": [
+        "availability",
+        "availability",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-282",
+      "audience": "paciente",
+      "intent": "payments",
+      "category": "payments",
+      "question": "É possível dividir no cartão?",
+      "answer": "Depende do provedor e do valor. No checkout você verá as opções de parcelamento disponíveis.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "payments",
+        "payments",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-087",
+      "audience": "medico",
+      "intent": "doctor_agenda",
+      "category": "doctor_agenda",
+      "question": "Preciso ajustar a duração da consulta",
+      "answer": "Você pode definir a duração padrão (ex.: 20/30/45 minutos) e aplicar aos próximos slots.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_agenda",
+        "doctor_agenda"
+      ]
+    },
+    {
+      "id": "MAYA-QA-100",
+      "audience": "medico",
+      "intent": "doctor_docs_finance_chat",
+      "category": "doctor_docs_finance_chat",
+      "question": "Erro no link do Meet da minha consulta",
+      "answer": "Eu reemito a sala e atualizo o convite para ambos.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_docs_finance_chat",
+        "doctor_docs_finance_chat"
+      ]
+    },
+    {
+      "id": "MAYA-QA-008",
+      "audience": "paciente",
+      "intent": "account",
+      "category": "account",
+      "question": "Vocês pedem foto de documento?",
+      "answer": "Somente se houver divergência de dados. Eu peço pelo WhatsApp e armazeno de forma criptografada.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "account",
+        "account"
+      ]
+    },
+    {
+      "id": "MAYA-QA-242",
+      "audience": "paciente",
+      "intent": "payments",
+      "category": "payments",
+      "question": "É possível pagar depois?",
+      "answer": "O horário só é confirmado após o pagamento. Posso segurar por alguns minutos enquanto você paga.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "payments",
+        "payments",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-112",
+      "audience": "ambos",
+      "intent": "integrations_data",
+      "category": "integrations_data",
+      "question": "Onde ficam os dados?",
+      "answer": "Dados operacionais no Supabase (Postgres) e estado de sessão no SQLite do Agno.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "integrations_data",
+        "integrations_data"
+      ]
+    },
+    {
+      "id": "MAYA-QA-070",
+      "audience": "paciente",
+      "intent": "medical_records_privacy_feedback",
+      "category": "medical_records_privacy_feedback",
+      "question": "Posso vincular dependente?",
+      "answer": "Atendemos dependentes mediante CPF do responsável. Posso orientar o cadastro.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "medical_records_privacy_feedback",
+        "medical_records_privacy_feedback"
+      ]
+    },
+    {
+      "id": "MAYA-QA-243",
+      "audience": "paciente",
+      "intent": "booking_basics",
+      "category": "booking_basics",
+      "question": "Atendem telemedicina apenas?",
+      "answer": "Nosso fluxo principal é online via Google Meet. Quando houver presencial, eu aviso a opção.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "booking_basics",
+        "booking_basics",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-125",
+      "audience": "paciente",
+      "intent": "payments",
+      "category": "payments",
+      "question": "Como recebo nota fiscal?",
+      "answer": "Após a consulta, emitimos a NF e enviamos por e-mail cadastrado.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "payments",
+        "payments",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-057",
+      "audience": "paciente",
+      "intent": "meet_and_notifications",
+      "category": "meet_and_notifications",
+      "question": "O médico não entrou na sala",
+      "answer": "Eu notifico o médico e acompanho. Se precisar, abrimos nova sala em minutos.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "meet_and_notifications",
+        "meet_and_notifications"
+      ]
+    },
+    {
+      "id": "MAYA-QA-230",
+      "audience": "paciente",
+      "intent": "reschedule_cancel_refund",
+      "category": "reschedule_cancel_refund",
+      "question": "Não compareci. Tenho direito a reembolso?",
+      "answer": "Em 'no_show' normalmente não há reembolso, mas posso abrir exceção para análise do suporte.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "reschedule_cancel_refund",
+        "reschedule_cancel_refund",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-155",
+      "audience": "paciente",
+      "intent": "medical_records_privacy_feedback",
+      "category": "medical_records_privacy_feedback",
+      "question": "Posso vincular dependente?",
+      "answer": "Atendemos dependentes mediante CPF do responsável. Posso orientar o cadastro.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "medical_records_privacy_feedback",
+        "medical_records_privacy_feedback",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-205",
+      "audience": "ambos",
+      "intent": "integrations_data",
+      "category": "integrations_data",
+      "question": "Qual o SLA para respostas humanas?",
+      "answer": "Atendimento em até 1 dia útil, casos críticos com prioridade imediata.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "integrations_data",
+        "integrations_data",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-283",
+      "audience": "paciente",
+      "intent": "payments",
+      "category": "payments",
+      "question": "Quais formas de pagamento aceitam?",
+      "answer": "Aceitamos cartão e PIX via asaas, pagarme. Envio um link seguro para concluir.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "payments",
+        "payments",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-189",
+      "audience": "paciente",
+      "intent": "availability",
+      "category": "availability",
+      "question": "Agenda do fim de semana está aberta?",
+      "answer": "Depende do médico. Vou checar e retorno com a disponibilidade.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "availability",
+        "availability",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-192",
+      "audience": "paciente",
+      "intent": "booking_basics",
+      "category": "booking_basics",
+      "question": "Quanto custa a consulta?",
+      "answer": "O valor aparece junto ao nome do médico. Posso listar agora os profissionais e respectivos valores.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "booking_basics",
+        "booking_basics",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-138",
+      "audience": "paciente",
+      "intent": "meet_and_notifications",
+      "category": "meet_and_notifications",
+      "question": "Onde recebo o convite do Meet?",
+      "answer": "Aqui no WhatsApp e por e-mail, assim que o pagamento for confirmado.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "meet_and_notifications",
+        "meet_and_notifications",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-108",
+      "audience": "ambos",
+      "intent": "platform_support",
+      "category": "platform_support",
+      "question": "Erro de pagamento não chegou via webhook",
+      "answer": "Posso reconciliar consultando diretamente o provedor e atualizar o status manualmente.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "platform_support",
+        "platform_support"
+      ]
+    },
+    {
+      "id": "MAYA-QA-214",
+      "audience": "paciente",
+      "intent": "reschedule_cancel_refund",
+      "category": "reschedule_cancel_refund",
+      "question": "Como acompanho o status do meu reembolso?",
+      "answer": "Pergunte 'Status do reembolso'. Eu retorno com o status atual e o valor.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "reschedule_cancel_refund",
+        "reschedule_cancel_refund",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-260",
+      "audience": "paciente",
+      "intent": "meet_and_notifications",
+      "category": "meet_and_notifications",
+      "question": "Onde recebo o link da sala?",
+      "answer": "Aqui no WhatsApp e por e-mail, assim que o pagamento for confirmado.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "meet_and_notifications",
+        "meet_and_notifications",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-298",
+      "audience": "medico",
+      "intent": "doctor_agenda",
+      "category": "doctor_agenda",
+      "question": "É possível bloquear férias?",
+      "answer": "Sim. Envie o período de férias e eu fecho todos os slots automaticamente.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_agenda",
+        "doctor_agenda",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-300",
+      "audience": "medico",
+      "intent": "doctor_compliance_misc",
+      "category": "doctor_compliance_misc",
+      "question": "Como atualizar meu CRM no cadastro?",
+      "answer": "Envie o novo número/documento e eu atualizo após validação.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_compliance_misc",
+        "doctor_compliance_misc",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-263",
+      "audience": "paciente",
+      "intent": "account",
+      "category": "account",
+      "question": "Esqueci minha senha. E agora?",
+      "answer": "Use 'Esqueci a senha' na web ou me peça no WhatsApp. Eu envio um link seguro por SMS/e-mail.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "account",
+        "account",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-153",
+      "audience": "paciente",
+      "intent": "book_appointment",
+      "category": "booking_fluxo",
+      "question": "Quais são os passos para concluir meu agendamento?",
+      "answer": "Eu confirmo seus dados, mostro médicos e valores, gero o link de pagamento e, ao aprovar, envio o link do Meet.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "book_appointment",
+        "booking_fluxo",
+        "synthetic",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-181",
+      "audience": "medico",
+      "intent": "doctor_onboarding",
+      "category": "doctor_onboarding",
+      "question": "Posso pausar meu perfil?",
+      "answer": "Sim. Posso deixá-lo invisível temporariamente sem perder configurações.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_onboarding",
+        "doctor_onboarding",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-004",
+      "audience": "paciente",
+      "intent": "account",
+      "category": "account",
+      "question": "Posso atualizar meu e-mail?",
+      "answer": "Pode. Diga 'Atualizar e-mail: novo@exemplo.com' e eu atualizo no Supabase para você.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "account",
+        "account"
+      ]
+    },
+    {
+      "id": "MAYA-QA-245",
+      "audience": "paciente",
+      "intent": "reschedule_cancel_refund",
+      "category": "reschedule_cancel_refund",
+      "question": "Qual a política de reembolso?",
+      "answer": "Cancelamentos com antecedência são reembolsados integralmente. Após o horário, aplica-se política de não comparecimento.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "reschedule_cancel_refund",
+        "reschedule_cancel_refund",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-195",
+      "audience": "paciente",
+      "intent": "medical_records_privacy_feedback",
+      "category": "medical_records_privacy_feedback",
+      "question": "É possível exportar meus dados?",
+      "answer": "Pode solicitar a exportação via 'Baixar meus dados'. Envio um arquivo seguro por e-mail.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "medical_records_privacy_feedback",
+        "medical_records_privacy_feedback",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-011",
+      "audience": "paciente",
+      "intent": "booking_basics",
+      "category": "booking_basics",
+      "question": "Quero marcar uma consulta",
+      "answer": "Perfeito. Qual especialidade você prefere ou quer ver a lista de médicos disponíveis?",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "booking_basics",
+        "booking_basics"
+      ]
+    },
+    {
+      "id": "MAYA-QA-200",
+      "audience": "paciente",
+      "intent": "meet_and_notifications",
+      "category": "meet_and_notifications",
+      "question": "Posso entrar pelo celular?",
+      "answer": "Sim, o Meet funciona em celular e computador. Recomendo conexão estável e fones.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "meet_and_notifications",
+        "meet_and_notifications",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-216",
+      "audience": "medico",
+      "intent": "doctor_onboarding",
+      "category": "doctor_onboarding",
+      "question": "Como recebo os pagamentos?",
+      "answer": "Pagamentos caem no provedor e repassamos conforme contrato. Você vê relatórios no painel do médico.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_onboarding",
+        "doctor_onboarding",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-106",
+      "audience": "ambos",
+      "intent": "platform_support",
+      "category": "platform_support",
+      "question": "Quero falar com suporte",
+      "answer": "Te conecto ao time humano agora mesmo em horário comercial.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "platform_support",
+        "platform_support"
+      ]
+    },
+    {
+      "id": "MAYA-QA-032",
+      "audience": "paciente",
+      "intent": "payments",
+      "category": "payments",
+      "question": "Recebi um link de pagamento. É confiável?",
+      "answer": "Sim. O link é gerado por nosso provedor oficial e contém seu CPF e ID da consulta de forma segura.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "payments",
+        "payments"
+      ]
+    },
+    {
+      "id": "MAYA-QA-271",
+      "audience": "medico",
+      "intent": "doctor_onboarding",
+      "category": "doctor_onboarding",
+      "question": "Consigo emitir NF pelo sistema?",
+      "answer": "A nota do paciente é emitida pela plataforma. Seu repasse é consolidado no painel financeiro.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_onboarding",
+        "doctor_onboarding",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-239",
+      "audience": "medico",
+      "intent": "doctor_docs_finance_chat",
+      "category": "doctor_docs_finance_chat",
+      "question": "Como acompanho pagamentos das minhas consultas?",
+      "answer": "No painel financeiro você vê status (criado, pago, reembolsado) e repasses.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_docs_finance_chat",
+        "doctor_docs_finance_chat",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-170",
+      "audience": "paciente",
+      "intent": "medical_records_privacy_feedback",
+      "category": "medical_records_privacy_feedback",
+      "question": "Onde vejo minhas receitas e laudos?",
+      "answer": "Em 'Meus Documentos' no portal. Também posso te enviar por WhatsApp sob verificação de CPF.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "medical_records_privacy_feedback",
+        "medical_records_privacy_feedback",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-209",
+      "audience": "paciente",
+      "intent": "payments",
+      "category": "payments",
+      "question": "O pagamento expirou. E agora?",
+      "answer": "Posso gerar um novo link imediatamente. Quer que eu reenvie?",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "payments",
+        "payments",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-213",
+      "audience": "paciente",
+      "intent": "reschedule_cancel_refund",
+      "category": "reschedule_cancel_refund",
+      "question": "O médico atrasou. O que faço?",
+      "answer": "Eu notifico o médico e te atualizo. Se passar de 20min, posso remarcar ou reembolsar.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "reschedule_cancel_refund",
+        "reschedule_cancel_refund",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-033",
+      "audience": "paciente",
+      "intent": "payments",
+      "category": "payments",
+      "question": "O pagamento expirou. E agora?",
+      "answer": "Posso gerar um novo link imediatamente. Quer que eu reenvie?",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "payments",
+        "payments"
+      ]
+    },
+    {
+      "id": "MAYA-QA-110",
+      "audience": "ambos",
+      "intent": "platform_support",
+      "category": "platform_support",
+      "question": "Como denunciar abuso na plataforma?",
+      "answer": "Abra um ticket e marque como 'crítico'. A equipe de segurança assume o caso.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "platform_support",
+        "platform_support"
+      ]
+    },
+    {
+      "id": "MAYA-QA-079",
+      "audience": "medico",
+      "intent": "doctor_onboarding",
+      "category": "doctor_onboarding",
+      "question": "Posso atuar só por telemedicina?",
+      "answer": "Sim. Nosso fluxo padrão é online.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_onboarding",
+        "doctor_onboarding"
+      ]
+    },
+    {
+      "id": "MAYA-QA-197",
+      "audience": "paciente",
+      "intent": "account",
+      "category": "account",
+      "question": "Como crio minha conta como paciente?",
+      "answer": "No site ou WhatsApp, informe nome completo, CPF e telefone. Eu valido no Supabase e crio seu usuário em segundos.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "account",
+        "account",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-119",
+      "audience": "paciente",
+      "intent": "post_consult_chat",
+      "category": "pos_consulta",
+      "question": "Tenho dúvidas sobre a receita",
+      "answer": "Abro o chat com seu médico para esclarecer e, se necessário, emitir nova receita.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "post_consult_chat",
+        "pos_consulta",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "MAYA-QA-078",
+      "audience": "medico",
+      "intent": "doctor_onboarding",
+      "category": "doctor_onboarding",
+      "question": "Consigo emitir NF pelo sistema?",
+      "answer": "A nota do paciente é emitida pela plataforma. Seu repasse é consolidado no painel financeiro.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_onboarding",
+        "doctor_onboarding"
+      ]
+    },
+    {
+      "id": "MAYA-QA-071",
+      "audience": "medico",
+      "intent": "doctor_onboarding",
+      "category": "doctor_onboarding",
+      "question": "Quero me cadastrar como médico",
+      "answer": "Bem-vindo! Envie nome completo, CRM, especialidade e preço da consulta. A aprovação ocorre em até 24h.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_onboarding",
+        "doctor_onboarding"
+      ]
+    },
+    {
+      "id": "MAYA-QA-042",
+      "audience": "paciente",
+      "intent": "reschedule_cancel_refund",
+      "category": "reschedule_cancel_refund",
+      "question": "Quero cancelar minha consulta",
+      "answer": "Certo. Vou localizar seu agendamento ativo e confirmar o cancelamento com reembolso, se aplicável.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "reschedule_cancel_refund",
+        "reschedule_cancel_refund"
+      ]
+    },
+    {
+      "id": "MAYA-QA-277",
+      "audience": "paciente",
+      "intent": "medical_records_privacy_feedback",
+      "category": "medical_records_privacy_feedback",
+      "question": "É possível vincular dependente?",
+      "answer": "Atendemos dependentes mediante CPF do responsável. Posso orientar o cadastro.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "medical_records_privacy_feedback",
+        "medical_records_privacy_feedback",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-164",
+      "audience": "paciente",
+      "intent": "medical_records_privacy_feedback",
+      "category": "medical_records_privacy_feedback",
+      "question": "Meus dados ficam seguros?",
+      "answer": "Sim. LGPD: minimizamos dados, registramos consentimento e criptografamos informações sensíveis.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "medical_records_privacy_feedback",
+        "medical_records_privacy_feedback",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-172",
+      "audience": "paciente",
+      "intent": "booking_basics",
+      "category": "booking_basics",
+      "question": "Tem médico hoje ainda?",
+      "answer": "Vou checar horários livres de última hora e te envio as opções disponíveis.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "booking_basics",
+        "booking_basics",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-140",
+      "audience": "ambos",
+      "intent": "platform_support",
+      "category": "platform_support",
+      "question": "Erro de pagamento não chegou via webhook",
+      "answer": "Posso reconciliar consultando diretamente o provedor e atualizar o status manualmente.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "platform_support",
+        "platform_support",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-121",
+      "audience": "medico",
+      "intent": "doctor_agenda",
+      "category": "agenda_lote",
+      "question": "Consigo criar horários em lote?",
+      "answer": "Sim. Informe dias, faixa de horário e duração. Eu gero os slots automaticamente.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_agenda",
+        "agenda_lote",
+        "synthetic"
+      ]
+    },
+    {
+      "id": "MAYA-QA-147",
+      "audience": "medico",
+      "intent": "doctor_onboarding",
+      "category": "doctor_onboarding",
+      "question": "Como alterar minha bio e foto?",
+      "answer": "Envie a atualização e eu altero seu perfil imediatamente.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_onboarding",
+        "doctor_onboarding",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-040",
+      "audience": "paciente",
+      "intent": "payments",
+      "category": "payments",
+      "question": "Como recebo nota fiscal?",
+      "answer": "Após a consulta, emitimos a NF e enviamos por e-mail cadastrado.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "payments",
+        "payments"
+      ]
+    },
+    {
+      "id": "MAYA-QA-226",
+      "audience": "paciente",
+      "intent": "medical_records_privacy_feedback",
+      "category": "medical_records_privacy_feedback",
+      "question": "Quero avaliar o médico",
+      "answer": "Envie sua avaliação de 1 a 5 estrelas e um comentário. Eu registro e notifico a equipe.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "medical_records_privacy_feedback",
+        "medical_records_privacy_feedback",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-141",
+      "audience": "paciente",
+      "intent": "account",
+      "category": "account",
+      "question": "Esqueci minha senha. E agora?",
+      "answer": "Use 'Esqueci a senha' na web ou me peça no WhatsApp. Eu envio um link seguro por SMS/e-mail.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "account",
+        "account",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-123",
+      "audience": "paciente",
+      "intent": "reschedule_cancel_refund",
+      "category": "reschedule_cancel_refund",
+      "question": "Qual a política de reembolso?",
+      "answer": "Cancelamentos com antecedência são reembolsados integralmente. Após o horário, aplica-se política de não comparecimento.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "reschedule_cancel_refund",
+        "reschedule_cancel_refund",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-249",
+      "audience": "medico",
+      "intent": "doctor_compliance_misc",
+      "category": "doctor_compliance_misc",
+      "question": "É possível gravar a atendimento?",
+      "answer": "Gravação só com consentimento mútuo e em conformidade com LGPD.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_compliance_misc",
+        "doctor_compliance_misc",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-267",
+      "audience": "paciente",
+      "intent": "availability",
+      "category": "availability",
+      "question": "Quero um horário após as {time}",
+      "answer": "Busco opções a partir das {time} e retorno com até cinco alternativas.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [
+        "{time}"
+      ],
+      "tags": [
+        "availability",
+        "availability",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-142",
+      "audience": "paciente",
+      "intent": "availability",
+      "category": "availability",
+      "question": "Quero ser avisado quando abrir vaga",
+      "answer": "Ativo um alerta e te notifico pelo WhatsApp assim que houver cancelamento ou nova vaga.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "availability",
+        "availability",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-127",
+      "audience": "medico",
+      "intent": "doctor_compliance_misc",
+      "category": "doctor_compliance_misc",
+      "question": "Posso gravar a atendimento?",
+      "answer": "Gravação só com consentimento mútuo e em conformidade com LGPD.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_compliance_misc",
+        "doctor_compliance_misc",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-133",
+      "audience": "ambos",
+      "intent": "platform_support",
+      "category": "platform_support",
+      "question": "Quero falar com suporte",
+      "answer": "Te conecto ao time humano agora mesmo em horário comercial.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "platform_support",
+        "platform_support",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-231",
+      "audience": "paciente",
+      "intent": "meet_and_notifications",
+      "category": "meet_and_notifications",
+      "question": "Não recebi o link da sala",
+      "answer": "Vou reenviar o link agora e confirmar no seu e-mail também.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "meet_and_notifications",
+        "meet_and_notifications",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-244",
+      "audience": "paciente",
+      "intent": "meet_and_notifications",
+      "category": "meet_and_notifications",
+      "question": "Recebo arquivos depois da atendimento?",
+      "answer": "Sim. Enviamos documentos pertinentes no pós-consulta.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "meet_and_notifications",
+        "meet_and_notifications",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-082",
+      "audience": "medico",
+      "intent": "doctor_agenda",
+      "category": "doctor_agenda",
+      "question": "Como fechar um horário específico?",
+      "answer": "Informe a data e eu marco como indisponível, mantendo os demais slots ativos.",
+      "channel": "web",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "doctor_agenda",
+        "doctor_agenda"
+      ]
+    },
+    {
+      "id": "MAYA-QA-229",
+      "audience": "paciente",
+      "intent": "availability",
+      "category": "availability",
+      "question": "Como vejo todos os horários do mês?",
+      "answer": "Te envio um resumo com os dias e faixas disponíveis do médico escolhido.",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "availability",
+        "availability",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-281",
+      "audience": "paciente",
+      "intent": "booking_basics",
+      "category": "booking_basics",
+      "question": "Quero marcar uma consulta",
+      "answer": "Perfeito. Qual especialidade você prefere ou quer ver a lista de médicos disponíveis?",
+      "channel": "ambos",
+      "language": "pt-BR",
+      "placeholders": [],
+      "tags": [
+        "booking_basics",
+        "booking_basics",
+        "dup"
+      ]
+    },
+    {
+      "id": "MAYA-QA-219",
+      "audience": "paciente",
+      "intent": "availability",
+      "category": "availability",
+      "question": "Quais horários o Dr. {doctor_name} tem?",
+      "answer": "Vou buscar a agenda do {doctor_name} e te mostro os próximos slots disponíveis.",
+      "channel": "whatsapp",
+      "language": "pt-BR",
+      "placeholders": [
+        "{doctor_name}"
+      ],
+      "tags": [
+        "availability",
+        "availability",
+        "dup"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5301 @@
+{
+  "dataset": "maya_cannabis_brazil_use_cases",
+  "version": "1.0.0",
+  "generated_at": "2025-08-09T06:59:39.525400",
+  "count": 100,
+  "sources": {
+    "RDC327_2019": "ANVISA",
+    "RDC660_2022": "ANVISA",
+    "CFM_2324_2022": "CFM (suspensa)",
+    "Portaria_344_1998": "SVS/MS — receituários A/B"
+  },
+  "use_cases": [
+    {
+      "id": "CMC-001",
+      "audience": "paciente",
+      "scenario_title": "Natália Oliveira (Cuiabá-MT) busca avaliação para ansiedade insônia",
+      "persona": {
+        "name": "Natália Oliveira",
+        "city": "Cuiabá",
+        "state": "MT",
+        "age": 74,
+        "occupation": "atendente"
+      },
+      "channel": "web",
+      "intent": "pagar_checkout",
+      "clinical_context": {
+        "code": "ansiedade_insônia",
+        "description": "Adulto com ansiedade/insônia deseja orientação sobre elegibilidade"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "importacao_RDC660",
+        "autorizacao_validade_anos": 2,
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "cartao",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "tarde",
+        "datetime": "2025-08-12T15:30:00"
+      },
+      "constraints": [
+        "precisa de nota fiscal",
+        "quer PIX"
+      ],
+      "risk_flags": [],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-002",
+      "audience": "paciente",
+      "scenario_title": "Jéssica Ribeiro (Campinas-SP) busca avaliação para TPC paliativo",
+      "persona": {
+        "name": "Jéssica Ribeiro",
+        "city": "Campinas",
+        "state": "SP",
+        "age": 14,
+        "occupation": "empreendedor(a)"
+      },
+      "channel": "web",
+      "intent": "cancelar_consulta",
+      "clinical_context": {
+        "code": "TPC_paliativo",
+        "description": "Paciente oncológico em cuidados paliativos busca conforto sintomático"
+      },
+      "proposed_profile": "CBD_dominante_<=0.2THC",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "B"
+      },
+      "payment_preference": "cartao",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "manha",
+        "datetime": "2025-08-12T16:00:00"
+      },
+      "constraints": [
+        "internet instável; prefere WhatsApp",
+        "precisa de atestado",
+        "dificuldade com receituário físico"
+      ],
+      "risk_flags": [
+        "potencial_emergencia"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação B",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-003",
+      "audience": "paciente",
+      "scenario_title": "Rodrigo Gomes (Vitória-ES) busca avaliação para fibromialgia",
+      "persona": {
+        "name": "Rodrigo Gomes",
+        "city": "Vitória",
+        "state": "ES",
+        "age": 53,
+        "occupation": "médico(a)"
+      },
+      "channel": "web",
+      "intent": "agendar_consulta",
+      "clinical_context": {
+        "code": "fibromialgia",
+        "description": "Paciente com fibromialgia pede avaliação multiprofissional, inclusive canabinoides"
+      },
+      "proposed_profile": "CBD_dominante_<=0.2THC",
+      "legal": {
+        "legal_path": "importacao_RDC660",
+        "autorizacao_validade_anos": 2,
+        "notificacao_receita": "B"
+      },
+      "payment_preference": "cartao",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "manha",
+        "datetime": "2025-08-14T10:00:00"
+      },
+      "constraints": [
+        "prefere atendimento à noite",
+        "dificuldade com receituário físico"
+      ],
+      "risk_flags": [
+        "gestante"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação B",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-004",
+      "audience": "paciente",
+      "scenario_title": "Rodrigo Souza (Campinas-SP) busca avaliação para ansiedade insônia",
+      "persona": {
+        "name": "Rodrigo Souza",
+        "city": "Campinas",
+        "state": "SP",
+        "age": 65,
+        "occupation": "analista de sistemas"
+      },
+      "channel": "web",
+      "intent": "pagar_checkout",
+      "clinical_context": {
+        "code": "ansiedade_insônia",
+        "description": "Adulto com ansiedade/insônia deseja orientação sobre elegibilidade"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "cartao",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "manha",
+        "datetime": "2025-08-10T20:30:00"
+      },
+      "constraints": [
+        "internet instável; prefere WhatsApp",
+        "prefere atendimento à noite"
+      ],
+      "risk_flags": [],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-005",
+      "audience": "paciente",
+      "scenario_title": "Maria Lima (Natal-RN) busca avaliação para TPC paliativo",
+      "persona": {
+        "name": "Maria Lima",
+        "city": "Natal",
+        "state": "RN",
+        "age": 68,
+        "occupation": "motorista de app"
+      },
+      "channel": "web",
+      "intent": "agendar_consulta",
+      "clinical_context": {
+        "code": "TPC_paliativo",
+        "description": "Paciente oncológico em cuidados paliativos busca conforto sintomático"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "importacao_RDC660",
+        "autorizacao_validade_anos": 2,
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "cartao",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "noite",
+        "datetime": "2025-08-19T20:30:00"
+      },
+      "constraints": [
+        "precisa de nota fiscal",
+        "quer PIX"
+      ],
+      "risk_flags": [
+        "pediatrico"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-006",
+      "audience": "paciente",
+      "scenario_title": "Rogério Rodrigues (Maceió-AL) busca avaliação para esclerose multipla espasticidade",
+      "persona": {
+        "name": "Rogério Rodrigues",
+        "city": "Maceió",
+        "state": "AL",
+        "age": 30,
+        "occupation": "empreendedor(a)"
+      },
+      "channel": "whatsapp",
+      "intent": "cancelar_consulta",
+      "clinical_context": {
+        "code": "esclerose_multipla_espasticidade",
+        "description": "Relato de espasticidade e dor neuropática em EM"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "cartao",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "noite",
+        "datetime": "2025-08-15T16:30:00"
+      },
+      "constraints": [
+        "internet instável; prefere WhatsApp",
+        "dificuldade com receituário físico"
+      ],
+      "risk_flags": [],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-007",
+      "audience": "paciente",
+      "scenario_title": "Jéssica Carvalho (Niterói-RJ) busca avaliação para epilepsia refrataria pediatrica",
+      "persona": {
+        "name": "Jéssica Carvalho",
+        "city": "Niterói",
+        "state": "RJ",
+        "age": 17,
+        "occupation": "engenheiro(a)"
+      },
+      "channel": "whatsapp",
+      "intent": "agendar_consulta",
+      "clinical_context": {
+        "code": "epilepsia_refrataria_pediatrica",
+        "description": "Responsável busca avaliação para uso de CBD em crises refratárias"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "importacao_RDC660",
+        "autorizacao_validade_anos": 2,
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "cartao",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "manha",
+        "datetime": "2025-08-16T14:00:00"
+      },
+      "constraints": [
+        "dificuldade com receituário físico"
+      ],
+      "risk_flags": [],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-008",
+      "audience": "paciente",
+      "scenario_title": "Natália Almeida (Aracaju-SE) busca avaliação para TPC paliativo",
+      "persona": {
+        "name": "Natália Almeida",
+        "city": "Aracaju",
+        "state": "SE",
+        "age": 18,
+        "occupation": "aposentado(a)"
+      },
+      "channel": "web",
+      "intent": "pagar_checkout",
+      "clinical_context": {
+        "code": "TPC_paliativo",
+        "description": "Paciente oncológico em cuidados paliativos busca conforto sintomático"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "pix",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "manha",
+        "datetime": "2025-08-10T14:00:00"
+      },
+      "constraints": [
+        "prefere atendimento à noite",
+        "internet instável; prefere WhatsApp",
+        "precisa de nota fiscal"
+      ],
+      "risk_flags": [],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-009",
+      "audience": "paciente",
+      "scenario_title": "Jéssica Costa (Campinas-SP) busca avaliação para fibromialgia",
+      "persona": {
+        "name": "Jéssica Costa",
+        "city": "Campinas",
+        "state": "SP",
+        "age": 49,
+        "occupation": "empreendedor(a)"
+      },
+      "channel": "whatsapp",
+      "intent": "remarcar_consulta",
+      "clinical_context": {
+        "code": "fibromialgia",
+        "description": "Paciente com fibromialgia pede avaliação multiprofissional, inclusive canabinoides"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "importacao_RDC660",
+        "autorizacao_validade_anos": 2,
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "pix",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "noite",
+        "datetime": "2025-08-20T10:30:00"
+      },
+      "constraints": [
+        "quer PIX",
+        "dificuldade com receituário físico"
+      ],
+      "risk_flags": [
+        "uso_concomitante_benzodiazepinico"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-010",
+      "audience": "paciente",
+      "scenario_title": "Fernanda Gomes (Curitiba-PR) busca avaliação para autismo comorbilidades",
+      "persona": {
+        "name": "Fernanda Gomes",
+        "city": "Curitiba",
+        "state": "PR",
+        "age": 24,
+        "occupation": "atendente"
+      },
+      "channel": "web",
+      "intent": "pagar_checkout",
+      "clinical_context": {
+        "code": "autismo_comorbilidades",
+        "description": "Família relata irritabilidade/sono ruim em TEA e quer entender possibilidades"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "pix",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "tarde",
+        "datetime": "2025-08-20T14:00:00"
+      },
+      "constraints": [
+        "prefere atendimento à noite"
+      ],
+      "risk_flags": [],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-011",
+      "audience": "paciente",
+      "scenario_title": "Juliana Ferreira (Recife-PE) busca avaliação para parkinson tremor rigidez",
+      "persona": {
+        "name": "Juliana Ferreira",
+        "city": "Recife",
+        "state": "PE",
+        "age": 56,
+        "occupation": "engenheiro(a)"
+      },
+      "channel": "web",
+      "intent": "cancelar_consulta",
+      "clinical_context": {
+        "code": "parkinson_tremor_rigidez",
+        "description": "Idoso com doença de Parkinson busca manejo de sintomas"
+      },
+      "proposed_profile": "CBD_dominante_<=0.2THC",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "B"
+      },
+      "payment_preference": "pix",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "noite",
+        "datetime": "2025-08-18T14:00:00"
+      },
+      "constraints": [
+        "precisa de atestado",
+        "quer PIX"
+      ],
+      "risk_flags": [],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação B",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-012",
+      "audience": "paciente",
+      "scenario_title": "Rodrigo Santos (Salvador-BA) busca avaliação para ansiedade insônia",
+      "persona": {
+        "name": "Rodrigo Santos",
+        "city": "Salvador",
+        "state": "BA",
+        "age": 37,
+        "occupation": "aposentado(a)"
+      },
+      "channel": "web",
+      "intent": "remarcar_consulta",
+      "clinical_context": {
+        "code": "ansiedade_insônia",
+        "description": "Adulto com ansiedade/insônia deseja orientação sobre elegibilidade"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "cartao",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "tarde",
+        "datetime": "2025-08-12T20:00:00"
+      },
+      "constraints": [
+        "quer PIX"
+      ],
+      "risk_flags": [
+        "gestante"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-013",
+      "audience": "paciente",
+      "scenario_title": "Kleber Almeida (Uberlândia-MG) busca avaliação para fibromialgia",
+      "persona": {
+        "name": "Kleber Almeida",
+        "city": "Uberlândia",
+        "state": "MG",
+        "age": 58,
+        "occupation": "estudante"
+      },
+      "channel": "web",
+      "intent": "cancelar_consulta",
+      "clinical_context": {
+        "code": "fibromialgia",
+        "description": "Paciente com fibromialgia pede avaliação multiprofissional, inclusive canabinoides"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "pix",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "tarde",
+        "datetime": "2025-08-15T15:00:00"
+      },
+      "constraints": [
+        "prefere atendimento à noite"
+      ],
+      "risk_flags": [],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-014",
+      "audience": "paciente",
+      "scenario_title": "Luciana Almeida (Goiânia-GO) busca avaliação para enxaqueca",
+      "persona": {
+        "name": "Luciana Almeida",
+        "city": "Goiânia",
+        "state": "GO",
+        "age": 24,
+        "occupation": "bancário(a)"
+      },
+      "channel": "whatsapp",
+      "intent": "pagar_checkout",
+      "clinical_context": {
+        "code": "enxaqueca",
+        "description": "Crises de enxaqueca recorrentes, quer consulta para discutir opções"
+      },
+      "proposed_profile": "CBD_dominante_<=0.2THC",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "B"
+      },
+      "payment_preference": "cartao",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "manha",
+        "datetime": "2025-08-28T10:30:00"
+      },
+      "constraints": [
+        "precisa de nota fiscal"
+      ],
+      "risk_flags": [
+        "pediatrico"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação B",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-015",
+      "audience": "paciente",
+      "scenario_title": "Maria Ribeiro (Salvador-BA) busca avaliação para enxaqueca",
+      "persona": {
+        "name": "Maria Ribeiro",
+        "city": "Salvador",
+        "state": "BA",
+        "age": 76,
+        "occupation": "eletricista"
+      },
+      "channel": "web",
+      "intent": "cancelar_consulta",
+      "clinical_context": {
+        "code": "enxaqueca",
+        "description": "Crises de enxaqueca recorrentes, quer consulta para discutir opções"
+      },
+      "proposed_profile": "CBD_dominante_<=0.2THC",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "B"
+      },
+      "payment_preference": "pix",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "noite",
+        "datetime": "2025-08-24T14:30:00"
+      },
+      "constraints": [
+        "prefere atendimento à noite",
+        "internet instável; prefere WhatsApp"
+      ],
+      "risk_flags": [],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação B",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-016",
+      "audience": "paciente",
+      "scenario_title": "Renata Pereira (Sorocaba-SP) busca avaliação para epilepsia refrataria pediatrica",
+      "persona": {
+        "name": "Renata Pereira",
+        "city": "Sorocaba",
+        "state": "SP",
+        "age": 38,
+        "occupation": "designer"
+      },
+      "channel": "web",
+      "intent": "pagar_checkout",
+      "clinical_context": {
+        "code": "epilepsia_refrataria_pediatrica",
+        "description": "Responsável busca avaliação para uso de CBD em crises refratárias"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "cartao",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "noite",
+        "datetime": "2025-08-21T16:00:00"
+      },
+      "constraints": [
+        "prefere atendimento à noite"
+      ],
+      "risk_flags": [
+        "gestante"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-017",
+      "audience": "paciente",
+      "scenario_title": "Carla Gomes (Palmas-TO) busca avaliação para fibromialgia",
+      "persona": {
+        "name": "Carla Gomes",
+        "city": "Palmas",
+        "state": "TO",
+        "age": 21,
+        "occupation": "vendedor(a)"
+      },
+      "channel": "web",
+      "intent": "remarcar_consulta",
+      "clinical_context": {
+        "code": "fibromialgia",
+        "description": "Paciente com fibromialgia pede avaliação multiprofissional, inclusive canabinoides"
+      },
+      "proposed_profile": "CBD_dominante_<=0.2THC",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "B"
+      },
+      "payment_preference": "cartao",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "manha",
+        "datetime": "2025-08-19T09:30:00"
+      },
+      "constraints": [
+        "internet instável; prefere WhatsApp",
+        "dificuldade com receituário físico",
+        "prefere atendimento à noite"
+      ],
+      "risk_flags": [
+        "gestante"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação B",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-018",
+      "audience": "paciente",
+      "scenario_title": "Felipe Ferreira (Porto Alegre-RS) busca avaliação para epilepsia refrataria pediatrica",
+      "persona": {
+        "name": "Felipe Ferreira",
+        "city": "Porto Alegre",
+        "state": "RS",
+        "age": 45,
+        "occupation": "professor(a)"
+      },
+      "channel": "whatsapp",
+      "intent": "cancelar_consulta",
+      "clinical_context": {
+        "code": "epilepsia_refrataria_pediatrica",
+        "description": "Responsável busca avaliação para uso de CBD em crises refratárias"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "cartao",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "tarde",
+        "datetime": "2025-08-20T11:30:00"
+      },
+      "constraints": [
+        "dificuldade com receituário físico"
+      ],
+      "risk_flags": [
+        "uso_concomitante_benzodiazepinico"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-019",
+      "audience": "paciente",
+      "scenario_title": "Tamires Oliveira (Teresina-PI) busca avaliação para parkinson tremor rigidez",
+      "persona": {
+        "name": "Tamires Oliveira",
+        "city": "Teresina",
+        "state": "PI",
+        "age": 7,
+        "occupation": "analista de sistemas"
+      },
+      "channel": "web",
+      "intent": "remarcar_consulta",
+      "clinical_context": {
+        "code": "parkinson_tremor_rigidez",
+        "description": "Idoso com doença de Parkinson busca manejo de sintomas"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "cartao",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "noite",
+        "datetime": "2025-08-12T19:30:00"
+      },
+      "constraints": [
+        "precisa de atestado"
+      ],
+      "risk_flags": [
+        "uso_concomitante_benzodiazepinico"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-020",
+      "audience": "paciente",
+      "scenario_title": "Thiago Souza (Recife-PE) busca avaliação para TPC paliativo",
+      "persona": {
+        "name": "Thiago Souza",
+        "city": "Recife",
+        "state": "PE",
+        "age": 69,
+        "occupation": "estudante"
+      },
+      "channel": "web",
+      "intent": "agendar_consulta",
+      "clinical_context": {
+        "code": "TPC_paliativo",
+        "description": "Paciente oncológico em cuidados paliativos busca conforto sintomático"
+      },
+      "proposed_profile": "CBD_dominante_<=0.2THC",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "B"
+      },
+      "payment_preference": "pix",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "noite",
+        "datetime": "2025-08-16T11:30:00"
+      },
+      "constraints": [
+        "dificuldade com receituário físico",
+        "internet instável; prefere WhatsApp",
+        "precisa de nota fiscal"
+      ],
+      "risk_flags": [
+        "gestante"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação B",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-021",
+      "audience": "paciente",
+      "scenario_title": "Marcos Pereira (Recife-PE) busca avaliação para TPC paliativo",
+      "persona": {
+        "name": "Marcos Pereira",
+        "city": "Recife",
+        "state": "PE",
+        "age": 25,
+        "occupation": "cozinheiro(a)"
+      },
+      "channel": "whatsapp",
+      "intent": "pagar_checkout",
+      "clinical_context": {
+        "code": "TPC_paliativo",
+        "description": "Paciente oncológico em cuidados paliativos busca conforto sintomático"
+      },
+      "proposed_profile": "CBD_dominante_<=0.2THC",
+      "legal": {
+        "legal_path": "importacao_RDC660",
+        "autorizacao_validade_anos": 2,
+        "notificacao_receita": "B"
+      },
+      "payment_preference": "pix",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "noite",
+        "datetime": "2025-08-13T20:00:00"
+      },
+      "constraints": [
+        "prefere atendimento à noite",
+        "precisa de nota fiscal",
+        "quer PIX"
+      ],
+      "risk_flags": [
+        "potencial_emergencia"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação B",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-022",
+      "audience": "paciente",
+      "scenario_title": "Sabrina Ferreira (São Paulo-SP) busca avaliação para enxaqueca",
+      "persona": {
+        "name": "Sabrina Ferreira",
+        "city": "São Paulo",
+        "state": "SP",
+        "age": 43,
+        "occupation": "médico(a)"
+      },
+      "channel": "whatsapp",
+      "intent": "cancelar_consulta",
+      "clinical_context": {
+        "code": "enxaqueca",
+        "description": "Crises de enxaqueca recorrentes, quer consulta para discutir opções"
+      },
+      "proposed_profile": "CBD_dominante_<=0.2THC",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "B"
+      },
+      "payment_preference": "pix",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "tarde",
+        "datetime": "2025-08-16T11:00:00"
+      },
+      "constraints": [
+        "precisa de atestado",
+        "dificuldade com receituário físico",
+        "prefere atendimento à noite"
+      ],
+      "risk_flags": [
+        "uso_concomitante_benzodiazepinico"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação B",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-023",
+      "audience": "paciente",
+      "scenario_title": "Pedro Silva (Salvador-BA) busca avaliação para ansiedade insônia",
+      "persona": {
+        "name": "Pedro Silva",
+        "city": "Salvador",
+        "state": "BA",
+        "age": 53,
+        "occupation": "designer"
+      },
+      "channel": "whatsapp",
+      "intent": "pagar_checkout",
+      "clinical_context": {
+        "code": "ansiedade_insônia",
+        "description": "Adulto com ansiedade/insônia deseja orientação sobre elegibilidade"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "cartao",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "tarde",
+        "datetime": "2025-08-26T09:00:00"
+      },
+      "constraints": [
+        "internet instável; prefere WhatsApp"
+      ],
+      "risk_flags": [],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-024",
+      "audience": "paciente",
+      "scenario_title": "Hugo Pereira (Curitiba-PR) busca avaliação para ansiedade insônia",
+      "persona": {
+        "name": "Hugo Pereira",
+        "city": "Curitiba",
+        "state": "PR",
+        "age": 76,
+        "occupation": "motorista de app"
+      },
+      "channel": "whatsapp",
+      "intent": "agendar_consulta",
+      "clinical_context": {
+        "code": "ansiedade_insônia",
+        "description": "Adulto com ansiedade/insônia deseja orientação sobre elegibilidade"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "pix",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "manha",
+        "datetime": "2025-08-23T19:30:00"
+      },
+      "constraints": [
+        "internet instável; prefere WhatsApp",
+        "quer PIX"
+      ],
+      "risk_flags": [
+        "uso_concomitante_benzodiazepinico"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-025",
+      "audience": "paciente",
+      "scenario_title": "Tatiane Santos (Aracaju-SE) busca avaliação para parkinson tremor rigidez",
+      "persona": {
+        "name": "Tatiane Santos",
+        "city": "Aracaju",
+        "state": "SE",
+        "age": 46,
+        "occupation": "cozinheiro(a)"
+      },
+      "channel": "web",
+      "intent": "cancelar_consulta",
+      "clinical_context": {
+        "code": "parkinson_tremor_rigidez",
+        "description": "Idoso com doença de Parkinson busca manejo de sintomas"
+      },
+      "proposed_profile": "CBD_dominante_<=0.2THC",
+      "legal": {
+        "legal_path": "importacao_RDC660",
+        "autorizacao_validade_anos": 2,
+        "notificacao_receita": "B"
+      },
+      "payment_preference": "pix",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "manha",
+        "datetime": "2025-08-26T11:30:00"
+      },
+      "constraints": [
+        "quer PIX",
+        "dificuldade com receituário físico"
+      ],
+      "risk_flags": [
+        "pediatrico"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação B",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-026",
+      "audience": "paciente",
+      "scenario_title": "Daiane Santos (Curitiba-PR) busca avaliação para esclerose multipla espasticidade",
+      "persona": {
+        "name": "Daiane Santos",
+        "city": "Curitiba",
+        "state": "PR",
+        "age": 29,
+        "occupation": "cozinheiro(a)"
+      },
+      "channel": "web",
+      "intent": "cancelar_consulta",
+      "clinical_context": {
+        "code": "esclerose_multipla_espasticidade",
+        "description": "Relato de espasticidade e dor neuropática em EM"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "importacao_RDC660",
+        "autorizacao_validade_anos": 2,
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "cartao",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "tarde",
+        "datetime": "2025-08-22T16:30:00"
+      },
+      "constraints": [
+        "internet instável; prefere WhatsApp"
+      ],
+      "risk_flags": [
+        "gestante"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-027",
+      "audience": "paciente",
+      "scenario_title": "Larissa Rodrigues (Curitiba-PR) busca avaliação para autismo comorbilidades",
+      "persona": {
+        "name": "Larissa Rodrigues",
+        "city": "Curitiba",
+        "state": "PR",
+        "age": 73,
+        "occupation": "professor(a)"
+      },
+      "channel": "web",
+      "intent": "remarcar_consulta",
+      "clinical_context": {
+        "code": "autismo_comorbilidades",
+        "description": "Família relata irritabilidade/sono ruim em TEA e quer entender possibilidades"
+      },
+      "proposed_profile": "CBD_dominante_<=0.2THC",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "B"
+      },
+      "payment_preference": "pix",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "noite",
+        "datetime": "2025-08-15T15:30:00"
+      },
+      "constraints": [
+        "precisa de atestado",
+        "dificuldade com receituário físico",
+        "prefere atendimento à noite"
+      ],
+      "risk_flags": [
+        "gestante"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação B",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-028",
+      "audience": "paciente",
+      "scenario_title": "Isabela Ribeiro (Recife-PE) busca avaliação para endometriose dor",
+      "persona": {
+        "name": "Isabela Ribeiro",
+        "city": "Recife",
+        "state": "PE",
+        "age": 24,
+        "occupation": "microempresário(a)"
+      },
+      "channel": "web",
+      "intent": "agendar_consulta",
+      "clinical_context": {
+        "code": "endometriose_dor",
+        "description": "Paciente com dor pélvica crônica de endometriose quer entender alternativas"
+      },
+      "proposed_profile": "CBD_dominante_<=0.2THC",
+      "legal": {
+        "legal_path": "importacao_RDC660",
+        "autorizacao_validade_anos": 2,
+        "notificacao_receita": "B"
+      },
+      "payment_preference": "cartao",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "tarde",
+        "datetime": "2025-08-16T11:30:00"
+      },
+      "constraints": [
+        "internet instável; prefere WhatsApp",
+        "prefere atendimento à noite",
+        "precisa de nota fiscal"
+      ],
+      "risk_flags": [
+        "gestante"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação B",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-029",
+      "audience": "paciente",
+      "scenario_title": "Daiane Pereira (Niterói-RJ) busca avaliação para autismo comorbilidades",
+      "persona": {
+        "name": "Daiane Pereira",
+        "city": "Niterói",
+        "state": "RJ",
+        "age": 27,
+        "occupation": "motorista de app"
+      },
+      "channel": "web",
+      "intent": "pagar_checkout",
+      "clinical_context": {
+        "code": "autismo_comorbilidades",
+        "description": "Família relata irritabilidade/sono ruim em TEA e quer entender possibilidades"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "cartao",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "noite",
+        "datetime": "2025-08-10T15:00:00"
+      },
+      "constraints": [
+        "prefere atendimento à noite",
+        "quer PIX"
+      ],
+      "risk_flags": [],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-030",
+      "audience": "paciente",
+      "scenario_title": "Ana Souza (Rio Branco-AC) busca avaliação para endometriose dor",
+      "persona": {
+        "name": "Ana Souza",
+        "city": "Rio Branco",
+        "state": "AC",
+        "age": 19,
+        "occupation": "empreendedor(a)"
+      },
+      "channel": "whatsapp",
+      "intent": "remarcar_consulta",
+      "clinical_context": {
+        "code": "endometriose_dor",
+        "description": "Paciente com dor pélvica crônica de endometriose quer entender alternativas"
+      },
+      "proposed_profile": "CBD_dominante_<=0.2THC",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "B"
+      },
+      "payment_preference": "pix",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "noite",
+        "datetime": "2025-08-20T09:30:00"
+      },
+      "constraints": [
+        "quer PIX"
+      ],
+      "risk_flags": [],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação B",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-031",
+      "audience": "paciente",
+      "scenario_title": "Maria Oliveira (Campo Grande-MS) busca avaliação para TPC paliativo",
+      "persona": {
+        "name": "Maria Oliveira",
+        "city": "Campo Grande",
+        "state": "MS",
+        "age": 72,
+        "occupation": "publicitário(a)"
+      },
+      "channel": "whatsapp",
+      "intent": "remarcar_consulta",
+      "clinical_context": {
+        "code": "TPC_paliativo",
+        "description": "Paciente oncológico em cuidados paliativos busca conforto sintomático"
+      },
+      "proposed_profile": "CBD_dominante_<=0.2THC",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "B"
+      },
+      "payment_preference": "cartao",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "tarde",
+        "datetime": "2025-08-24T19:30:00"
+      },
+      "constraints": [
+        "quer PIX",
+        "dificuldade com receituário físico",
+        "prefere atendimento à noite"
+      ],
+      "risk_flags": [
+        "uso_concomitante_benzodiazepinico"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação B",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-032",
+      "audience": "paciente",
+      "scenario_title": "Leonardo Carvalho (Vitória-ES) busca avaliação para ansiedade insônia",
+      "persona": {
+        "name": "Leonardo Carvalho",
+        "city": "Vitória",
+        "state": "ES",
+        "age": 28,
+        "occupation": "microempresário(a)"
+      },
+      "channel": "web",
+      "intent": "cancelar_consulta",
+      "clinical_context": {
+        "code": "ansiedade_insônia",
+        "description": "Adulto com ansiedade/insônia deseja orientação sobre elegibilidade"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "cartao",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "manha",
+        "datetime": "2025-08-22T16:00:00"
+      },
+      "constraints": [
+        "prefere atendimento à noite"
+      ],
+      "risk_flags": [
+        "potencial_emergencia"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-033",
+      "audience": "paciente",
+      "scenario_title": "Felipe Oliveira (Sorocaba-SP) busca avaliação para esclerose multipla espasticidade",
+      "persona": {
+        "name": "Felipe Oliveira",
+        "city": "Sorocaba",
+        "state": "SP",
+        "age": 13,
+        "occupation": "microempresário(a)"
+      },
+      "channel": "web",
+      "intent": "agendar_consulta",
+      "clinical_context": {
+        "code": "esclerose_multipla_espasticidade",
+        "description": "Relato de espasticidade e dor neuropática em EM"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "cartao",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "tarde",
+        "datetime": "2025-08-12T14:30:00"
+      },
+      "constraints": [
+        "quer PIX",
+        "prefere atendimento à noite"
+      ],
+      "risk_flags": [
+        "potencial_emergencia"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-034",
+      "audience": "paciente",
+      "scenario_title": "Larissa Ferreira (Salvador-BA) busca avaliação para fibromialgia",
+      "persona": {
+        "name": "Larissa Ferreira",
+        "city": "Salvador",
+        "state": "BA",
+        "age": 14,
+        "occupation": "analista de sistemas"
+      },
+      "channel": "web",
+      "intent": "remarcar_consulta",
+      "clinical_context": {
+        "code": "fibromialgia",
+        "description": "Paciente com fibromialgia pede avaliação multiprofissional, inclusive canabinoides"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "pix",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "manha",
+        "datetime": "2025-08-23T19:00:00"
+      },
+      "constraints": [
+        "dificuldade com receituário físico"
+      ],
+      "risk_flags": [
+        "uso_concomitante_benzodiazepinico"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-035",
+      "audience": "paciente",
+      "scenario_title": "João Almeida (Fortaleza-CE) busca avaliação para parkinson tremor rigidez",
+      "persona": {
+        "name": "João Almeida",
+        "city": "Fortaleza",
+        "state": "CE",
+        "age": 30,
+        "occupation": "autônomo"
+      },
+      "channel": "web",
+      "intent": "pagar_checkout",
+      "clinical_context": {
+        "code": "parkinson_tremor_rigidez",
+        "description": "Idoso com doença de Parkinson busca manejo de sintomas"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "cartao",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "manha",
+        "datetime": "2025-08-21T20:30:00"
+      },
+      "constraints": [
+        "precisa de atestado"
+      ],
+      "risk_flags": [],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-036",
+      "audience": "paciente",
+      "scenario_title": "Isabela Araújo (Brasília-DF) busca avaliação para fibromialgia",
+      "persona": {
+        "name": "Isabela Araújo",
+        "city": "Brasília",
+        "state": "DF",
+        "age": 38,
+        "occupation": "motorista de app"
+      },
+      "channel": "web",
+      "intent": "remarcar_consulta",
+      "clinical_context": {
+        "code": "fibromialgia",
+        "description": "Paciente com fibromialgia pede avaliação multiprofissional, inclusive canabinoides"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "cartao",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "manha",
+        "datetime": "2025-08-18T10:30:00"
+      },
+      "constraints": [
+        "internet instável; prefere WhatsApp"
+      ],
+      "risk_flags": [],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-037",
+      "audience": "paciente",
+      "scenario_title": "Luciana Lima (Boa Vista-RR) busca avaliação para endometriose dor",
+      "persona": {
+        "name": "Luciana Lima",
+        "city": "Boa Vista",
+        "state": "RR",
+        "age": 54,
+        "occupation": "professor(a)"
+      },
+      "channel": "web",
+      "intent": "remarcar_consulta",
+      "clinical_context": {
+        "code": "endometriose_dor",
+        "description": "Paciente com dor pélvica crônica de endometriose quer entender alternativas"
+      },
+      "proposed_profile": "CBD_dominante_<=0.2THC",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "B"
+      },
+      "payment_preference": "pix",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "noite",
+        "datetime": "2025-08-10T15:30:00"
+      },
+      "constraints": [
+        "prefere atendimento à noite",
+        "precisa de nota fiscal"
+      ],
+      "risk_flags": [
+        "pediatrico"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação B",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-038",
+      "audience": "paciente",
+      "scenario_title": "Tamires Lima (Belo Horizonte-MG) busca avaliação para dor cronica",
+      "persona": {
+        "name": "Tamires Lima",
+        "city": "Belo Horizonte",
+        "state": "MG",
+        "age": 22,
+        "occupation": "médico(a)"
+      },
+      "channel": "whatsapp",
+      "intent": "agendar_consulta",
+      "clinical_context": {
+        "code": "dor_cronica",
+        "description": "Paciente adulto com dor crônica musculoesquelética busca alternativa complementar"
+      },
+      "proposed_profile": "CBD_dominante_<=0.2THC",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "B"
+      },
+      "payment_preference": "pix",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "tarde",
+        "datetime": "2025-08-22T10:00:00"
+      },
+      "constraints": [
+        "precisa de atestado",
+        "quer PIX"
+      ],
+      "risk_flags": [],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação B",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-039",
+      "audience": "paciente",
+      "scenario_title": "Marcos Costa (Belém-PA) busca avaliação para enxaqueca",
+      "persona": {
+        "name": "Marcos Costa",
+        "city": "Belém",
+        "state": "PA",
+        "age": 14,
+        "occupation": "vendedor(a)"
+      },
+      "channel": "web",
+      "intent": "agendar_consulta",
+      "clinical_context": {
+        "code": "enxaqueca",
+        "description": "Crises de enxaqueca recorrentes, quer consulta para discutir opções"
+      },
+      "proposed_profile": "CBD_dominante_<=0.2THC",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "B"
+      },
+      "payment_preference": "cartao",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "noite",
+        "datetime": "2025-08-19T14:00:00"
+      },
+      "constraints": [
+        "precisa de atestado",
+        "prefere atendimento à noite",
+        "precisa de nota fiscal"
+      ],
+      "risk_flags": [
+        "potencial_emergencia"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação B",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-040",
+      "audience": "paciente",
+      "scenario_title": "Bianca Rodrigues (Palmas-TO) busca avaliação para endometriose dor",
+      "persona": {
+        "name": "Bianca Rodrigues",
+        "city": "Palmas",
+        "state": "TO",
+        "age": 26,
+        "occupation": "eletricista"
+      },
+      "channel": "whatsapp",
+      "intent": "remarcar_consulta",
+      "clinical_context": {
+        "code": "endometriose_dor",
+        "description": "Paciente com dor pélvica crônica de endometriose quer entender alternativas"
+      },
+      "proposed_profile": "CBD_dominante_<=0.2THC",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "B"
+      },
+      "payment_preference": "cartao",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "tarde",
+        "datetime": "2025-08-19T09:00:00"
+      },
+      "constraints": [
+        "quer PIX",
+        "precisa de atestado",
+        "dificuldade com receituário físico"
+      ],
+      "risk_flags": [],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação B",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-041",
+      "audience": "paciente",
+      "scenario_title": "Jéssica Oliveira (Brasília-DF) busca avaliação para endometriose dor",
+      "persona": {
+        "name": "Jéssica Oliveira",
+        "city": "Brasília",
+        "state": "DF",
+        "age": 46,
+        "occupation": "publicitário(a)"
+      },
+      "channel": "web",
+      "intent": "agendar_consulta",
+      "clinical_context": {
+        "code": "endometriose_dor",
+        "description": "Paciente com dor pélvica crônica de endometriose quer entender alternativas"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "pix",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "noite",
+        "datetime": "2025-08-14T15:00:00"
+      },
+      "constraints": [
+        "prefere atendimento à noite"
+      ],
+      "risk_flags": [
+        "pediatrico"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-042",
+      "audience": "paciente",
+      "scenario_title": "Thiago Silva (Curitiba-PR) busca avaliação para endometriose dor",
+      "persona": {
+        "name": "Thiago Silva",
+        "city": "Curitiba",
+        "state": "PR",
+        "age": 75,
+        "occupation": "enfermeiro(a)"
+      },
+      "channel": "whatsapp",
+      "intent": "agendar_consulta",
+      "clinical_context": {
+        "code": "endometriose_dor",
+        "description": "Paciente com dor pélvica crônica de endometriose quer entender alternativas"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "pix",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "manha",
+        "datetime": "2025-08-26T15:30:00"
+      },
+      "constraints": [
+        "precisa de nota fiscal",
+        "precisa de atestado",
+        "prefere atendimento à noite"
+      ],
+      "risk_flags": [
+        "pediatrico"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-043",
+      "audience": "paciente",
+      "scenario_title": "Fernanda Santos (São Luís-MA) busca avaliação para ansiedade insônia",
+      "persona": {
+        "name": "Fernanda Santos",
+        "city": "São Luís",
+        "state": "MA",
+        "age": 65,
+        "occupation": "marceneiro(a)"
+      },
+      "channel": "web",
+      "intent": "agendar_consulta",
+      "clinical_context": {
+        "code": "ansiedade_insônia",
+        "description": "Adulto com ansiedade/insônia deseja orientação sobre elegibilidade"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "cartao",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "noite",
+        "datetime": "2025-08-27T19:30:00"
+      },
+      "constraints": [
+        "quer PIX"
+      ],
+      "risk_flags": [
+        "gestante"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-044",
+      "audience": "paciente",
+      "scenario_title": "Fábio Santos (Porto Alegre-RS) busca avaliação para alzheimer agitacao",
+      "persona": {
+        "name": "Fábio Santos",
+        "city": "Porto Alegre",
+        "state": "RS",
+        "age": 20,
+        "occupation": "designer"
+      },
+      "channel": "web",
+      "intent": "pagar_checkout",
+      "clinical_context": {
+        "code": "alzheimer_agitacao",
+        "description": "Cuidador relata agitação/sono ruim em demência; busca orientação médica"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "importacao_RDC660",
+        "autorizacao_validade_anos": 2,
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "pix",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "manha",
+        "datetime": "2025-08-21T14:00:00"
+      },
+      "constraints": [
+        "quer PIX",
+        "internet instável; prefere WhatsApp"
+      ],
+      "risk_flags": [
+        "uso_concomitante_benzodiazepinico"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-045",
+      "audience": "paciente",
+      "scenario_title": "Marcos Oliveira (Brasília-DF) busca avaliação para alzheimer agitacao",
+      "persona": {
+        "name": "Marcos Oliveira",
+        "city": "Brasília",
+        "state": "DF",
+        "age": 15,
+        "occupation": "estudante"
+      },
+      "channel": "web",
+      "intent": "pagar_checkout",
+      "clinical_context": {
+        "code": "alzheimer_agitacao",
+        "description": "Cuidador relata agitação/sono ruim em demência; busca orientação médica"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "importacao_RDC660",
+        "autorizacao_validade_anos": 2,
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "cartao",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "tarde",
+        "datetime": "2025-08-15T09:30:00"
+      },
+      "constraints": [
+        "precisa de atestado",
+        "prefere atendimento à noite",
+        "internet instável; prefere WhatsApp"
+      ],
+      "risk_flags": [
+        "uso_concomitante_benzodiazepinico"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-046",
+      "audience": "paciente",
+      "scenario_title": "Daiane Pereira (Florianópolis-SC) busca avaliação para epilepsia refrataria pediatrica",
+      "persona": {
+        "name": "Daiane Pereira",
+        "city": "Florianópolis",
+        "state": "SC",
+        "age": 61,
+        "occupation": "cozinheiro(a)"
+      },
+      "channel": "whatsapp",
+      "intent": "pagar_checkout",
+      "clinical_context": {
+        "code": "epilepsia_refrataria_pediatrica",
+        "description": "Responsável busca avaliação para uso de CBD em crises refratárias"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "pix",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "noite",
+        "datetime": "2025-08-15T14:30:00"
+      },
+      "constraints": [
+        "precisa de nota fiscal",
+        "internet instável; prefere WhatsApp",
+        "quer PIX"
+      ],
+      "risk_flags": [],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-047",
+      "audience": "paciente",
+      "scenario_title": "Hugo Pereira (Florianópolis-SC) busca avaliação para ansiedade insônia",
+      "persona": {
+        "name": "Hugo Pereira",
+        "city": "Florianópolis",
+        "state": "SC",
+        "age": 49,
+        "occupation": "autônomo"
+      },
+      "channel": "web",
+      "intent": "remarcar_consulta",
+      "clinical_context": {
+        "code": "ansiedade_insônia",
+        "description": "Adulto com ansiedade/insônia deseja orientação sobre elegibilidade"
+      },
+      "proposed_profile": "CBD_dominante_<=0.2THC",
+      "legal": {
+        "legal_path": "importacao_RDC660",
+        "autorizacao_validade_anos": 2,
+        "notificacao_receita": "B"
+      },
+      "payment_preference": "pix",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "tarde",
+        "datetime": "2025-08-22T16:00:00"
+      },
+      "constraints": [
+        "prefere atendimento à noite",
+        "precisa de atestado"
+      ],
+      "risk_flags": [],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação B",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-048",
+      "audience": "paciente",
+      "scenario_title": "Jéssica Santos (Recife-PE) busca avaliação para TPC paliativo",
+      "persona": {
+        "name": "Jéssica Santos",
+        "city": "Recife",
+        "state": "PE",
+        "age": 45,
+        "occupation": "engenheiro(a)"
+      },
+      "channel": "whatsapp",
+      "intent": "cancelar_consulta",
+      "clinical_context": {
+        "code": "TPC_paliativo",
+        "description": "Paciente oncológico em cuidados paliativos busca conforto sintomático"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "cartao",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "noite",
+        "datetime": "2025-08-25T16:00:00"
+      },
+      "constraints": [
+        "precisa de nota fiscal"
+      ],
+      "risk_flags": [],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-049",
+      "audience": "paciente",
+      "scenario_title": "José Costa (Cuiabá-MT) busca avaliação para fibromialgia",
+      "persona": {
+        "name": "José Costa",
+        "city": "Cuiabá",
+        "state": "MT",
+        "age": 57,
+        "occupation": "psicóloga"
+      },
+      "channel": "whatsapp",
+      "intent": "agendar_consulta",
+      "clinical_context": {
+        "code": "fibromialgia",
+        "description": "Paciente com fibromialgia pede avaliação multiprofissional, inclusive canabinoides"
+      },
+      "proposed_profile": "CBD_dominante_<=0.2THC",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "B"
+      },
+      "payment_preference": "cartao",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "noite",
+        "datetime": "2025-08-28T16:30:00"
+      },
+      "constraints": [
+        "precisa de nota fiscal"
+      ],
+      "risk_flags": [],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação B",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-050",
+      "audience": "paciente",
+      "scenario_title": "Carla Santos (Florianópolis-SC) busca avaliação para epilepsia refrataria pediatrica",
+      "persona": {
+        "name": "Carla Santos",
+        "city": "Florianópolis",
+        "state": "SC",
+        "age": 37,
+        "occupation": "microempresário(a)"
+      },
+      "channel": "whatsapp",
+      "intent": "remarcar_consulta",
+      "clinical_context": {
+        "code": "epilepsia_refrataria_pediatrica",
+        "description": "Responsável busca avaliação para uso de CBD em crises refratárias"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "cartao",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "noite",
+        "datetime": "2025-08-14T15:30:00"
+      },
+      "constraints": [
+        "internet instável; prefere WhatsApp",
+        "precisa de atestado",
+        "prefere atendimento à noite"
+      ],
+      "risk_flags": [
+        "gestante"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-051",
+      "audience": "paciente",
+      "scenario_title": "Tatiane Pereira (Cuiabá-MT) busca avaliação para parkinson tremor rigidez",
+      "persona": {
+        "name": "Tatiane Pereira",
+        "city": "Cuiabá",
+        "state": "MT",
+        "age": 26,
+        "occupation": "empreendedor(a)"
+      },
+      "channel": "web",
+      "intent": "cancelar_consulta",
+      "clinical_context": {
+        "code": "parkinson_tremor_rigidez",
+        "description": "Idoso com doença de Parkinson busca manejo de sintomas"
+      },
+      "proposed_profile": "CBD_dominante_<=0.2THC",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "B"
+      },
+      "payment_preference": "pix",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "noite",
+        "datetime": "2025-08-16T14:30:00"
+      },
+      "constraints": [
+        "internet instável; prefere WhatsApp",
+        "dificuldade com receituário físico",
+        "quer PIX"
+      ],
+      "risk_flags": [
+        "pediatrico"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação B",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-052",
+      "audience": "paciente",
+      "scenario_title": "Rafael Ribeiro (Cuiabá-MT) busca avaliação para TPC paliativo",
+      "persona": {
+        "name": "Rafael Ribeiro",
+        "city": "Cuiabá",
+        "state": "MT",
+        "age": 73,
+        "occupation": "psicóloga"
+      },
+      "channel": "whatsapp",
+      "intent": "agendar_consulta",
+      "clinical_context": {
+        "code": "TPC_paliativo",
+        "description": "Paciente oncológico em cuidados paliativos busca conforto sintomático"
+      },
+      "proposed_profile": "CBD_dominante_<=0.2THC",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "B"
+      },
+      "payment_preference": "cartao",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "noite",
+        "datetime": "2025-08-15T15:00:00"
+      },
+      "constraints": [
+        "prefere atendimento à noite"
+      ],
+      "risk_flags": [
+        "potencial_emergencia"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação B",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-053",
+      "audience": "paciente",
+      "scenario_title": "Sabrina Ferreira (Belo Horizonte-MG) busca avaliação para epilepsia refrataria pediatrica",
+      "persona": {
+        "name": "Sabrina Ferreira",
+        "city": "Belo Horizonte",
+        "state": "MG",
+        "age": 15,
+        "occupation": "designer"
+      },
+      "channel": "whatsapp",
+      "intent": "remarcar_consulta",
+      "clinical_context": {
+        "code": "epilepsia_refrataria_pediatrica",
+        "description": "Responsável busca avaliação para uso de CBD em crises refratárias"
+      },
+      "proposed_profile": "CBD_dominante_<=0.2THC",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "B"
+      },
+      "payment_preference": "pix",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "manha",
+        "datetime": "2025-08-26T20:00:00"
+      },
+      "constraints": [
+        "prefere atendimento à noite",
+        "dificuldade com receituário físico",
+        "internet instável; prefere WhatsApp"
+      ],
+      "risk_flags": [
+        "potencial_emergencia"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação B",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-054",
+      "audience": "paciente",
+      "scenario_title": "Patrícia Lima (Belém-PA) busca avaliação para ansiedade insônia",
+      "persona": {
+        "name": "Patrícia Lima",
+        "city": "Belém",
+        "state": "PA",
+        "age": 26,
+        "occupation": "enfermeiro(a)"
+      },
+      "channel": "whatsapp",
+      "intent": "pagar_checkout",
+      "clinical_context": {
+        "code": "ansiedade_insônia",
+        "description": "Adulto com ansiedade/insônia deseja orientação sobre elegibilidade"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "cartao",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "noite",
+        "datetime": "2025-08-13T10:00:00"
+      },
+      "constraints": [
+        "precisa de atestado"
+      ],
+      "risk_flags": [],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-055",
+      "audience": "paciente",
+      "scenario_title": "Marcelo Araújo (Campinas-SP) busca avaliação para ansiedade insônia",
+      "persona": {
+        "name": "Marcelo Araújo",
+        "city": "Campinas",
+        "state": "SP",
+        "age": 43,
+        "occupation": "analista de sistemas"
+      },
+      "channel": "web",
+      "intent": "agendar_consulta",
+      "clinical_context": {
+        "code": "ansiedade_insônia",
+        "description": "Adulto com ansiedade/insônia deseja orientação sobre elegibilidade"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "pix",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "tarde",
+        "datetime": "2025-08-14T20:00:00"
+      },
+      "constraints": [
+        "quer PIX",
+        "precisa de nota fiscal"
+      ],
+      "risk_flags": [],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-056",
+      "audience": "paciente",
+      "scenario_title": "Ana Rodrigues (Uberlândia-MG) busca avaliação para ansiedade insônia",
+      "persona": {
+        "name": "Ana Rodrigues",
+        "city": "Uberlândia",
+        "state": "MG",
+        "age": 70,
+        "occupation": "microempresário(a)"
+      },
+      "channel": "whatsapp",
+      "intent": "pagar_checkout",
+      "clinical_context": {
+        "code": "ansiedade_insônia",
+        "description": "Adulto com ansiedade/insônia deseja orientação sobre elegibilidade"
+      },
+      "proposed_profile": "CBD_dominante_<=0.2THC",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "B"
+      },
+      "payment_preference": "pix",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "manha",
+        "datetime": "2025-08-25T09:00:00"
+      },
+      "constraints": [
+        "quer PIX",
+        "prefere atendimento à noite"
+      ],
+      "risk_flags": [],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação B",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-057",
+      "audience": "paciente",
+      "scenario_title": "Rodrigo Santos (Palmas-TO) busca avaliação para epilepsia refrataria pediatrica",
+      "persona": {
+        "name": "Rodrigo Santos",
+        "city": "Palmas",
+        "state": "TO",
+        "age": 27,
+        "occupation": "empreendedor(a)"
+      },
+      "channel": "whatsapp",
+      "intent": "cancelar_consulta",
+      "clinical_context": {
+        "code": "epilepsia_refrataria_pediatrica",
+        "description": "Responsável busca avaliação para uso de CBD em crises refratárias"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "cartao",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "noite",
+        "datetime": "2025-08-20T10:00:00"
+      },
+      "constraints": [
+        "precisa de atestado"
+      ],
+      "risk_flags": [
+        "potencial_emergencia"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-058",
+      "audience": "paciente",
+      "scenario_title": "Bruno Silva (Rio Branco-AC) busca avaliação para dor cronica",
+      "persona": {
+        "name": "Bruno Silva",
+        "city": "Rio Branco",
+        "state": "AC",
+        "age": 48,
+        "occupation": "bancário(a)"
+      },
+      "channel": "web",
+      "intent": "pagar_checkout",
+      "clinical_context": {
+        "code": "dor_cronica",
+        "description": "Paciente adulto com dor crônica musculoesquelética busca alternativa complementar"
+      },
+      "proposed_profile": "CBD_dominante_<=0.2THC",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "B"
+      },
+      "payment_preference": "cartao",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "manha",
+        "datetime": "2025-08-10T11:00:00"
+      },
+      "constraints": [
+        "precisa de atestado"
+      ],
+      "risk_flags": [
+        "potencial_emergencia"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação B",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-059",
+      "audience": "paciente",
+      "scenario_title": "Bianca Lima (Cuiabá-MT) busca avaliação para alzheimer agitacao",
+      "persona": {
+        "name": "Bianca Lima",
+        "city": "Cuiabá",
+        "state": "MT",
+        "age": 22,
+        "occupation": "analista de sistemas"
+      },
+      "channel": "whatsapp",
+      "intent": "agendar_consulta",
+      "clinical_context": {
+        "code": "alzheimer_agitacao",
+        "description": "Cuidador relata agitação/sono ruim em demência; busca orientação médica"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "pix",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "manha",
+        "datetime": "2025-08-17T19:00:00"
+      },
+      "constraints": [
+        "precisa de atestado",
+        "internet instável; prefere WhatsApp",
+        "precisa de nota fiscal"
+      ],
+      "risk_flags": [
+        "pediatrico"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-060",
+      "audience": "paciente",
+      "scenario_title": "Daniela Ferreira (Cuiabá-MT) busca avaliação para endometriose dor",
+      "persona": {
+        "name": "Daniela Ferreira",
+        "city": "Cuiabá",
+        "state": "MT",
+        "age": 61,
+        "occupation": "marceneiro(a)"
+      },
+      "channel": "web",
+      "intent": "pagar_checkout",
+      "clinical_context": {
+        "code": "endometriose_dor",
+        "description": "Paciente com dor pélvica crônica de endometriose quer entender alternativas"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "pix",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "manha",
+        "datetime": "2025-08-20T09:30:00"
+      },
+      "constraints": [
+        "quer PIX"
+      ],
+      "risk_flags": [
+        "gestante"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-061",
+      "audience": "paciente",
+      "scenario_title": "Letícia Lima (Rio de Janeiro-RJ) busca avaliação para TPC paliativo",
+      "persona": {
+        "name": "Letícia Lima",
+        "city": "Rio de Janeiro",
+        "state": "RJ",
+        "age": 56,
+        "occupation": "publicitário(a)"
+      },
+      "channel": "web",
+      "intent": "agendar_consulta",
+      "clinical_context": {
+        "code": "TPC_paliativo",
+        "description": "Paciente oncológico em cuidados paliativos busca conforto sintomático"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "importacao_RDC660",
+        "autorizacao_validade_anos": 2,
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "cartao",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "noite",
+        "datetime": "2025-08-17T10:30:00"
+      },
+      "constraints": [
+        "precisa de atestado",
+        "prefere atendimento à noite"
+      ],
+      "risk_flags": [
+        "potencial_emergencia"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-062",
+      "audience": "paciente",
+      "scenario_title": "Ana Martins (Uberlândia-MG) busca avaliação para enxaqueca",
+      "persona": {
+        "name": "Ana Martins",
+        "city": "Uberlândia",
+        "state": "MG",
+        "age": 72,
+        "occupation": "publicitário(a)"
+      },
+      "channel": "web",
+      "intent": "cancelar_consulta",
+      "clinical_context": {
+        "code": "enxaqueca",
+        "description": "Crises de enxaqueca recorrentes, quer consulta para discutir opções"
+      },
+      "proposed_profile": "CBD_dominante_<=0.2THC",
+      "legal": {
+        "legal_path": "importacao_RDC660",
+        "autorizacao_validade_anos": 2,
+        "notificacao_receita": "B"
+      },
+      "payment_preference": "cartao",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "noite",
+        "datetime": "2025-08-23T16:00:00"
+      },
+      "constraints": [
+        "internet instável; prefere WhatsApp",
+        "precisa de atestado",
+        "dificuldade com receituário físico"
+      ],
+      "risk_flags": [
+        "pediatrico"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação B",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-063",
+      "audience": "paciente",
+      "scenario_title": "Elaine Silva (Goiânia-GO) busca avaliação para autismo comorbilidades",
+      "persona": {
+        "name": "Elaine Silva",
+        "city": "Goiânia",
+        "state": "GO",
+        "age": 44,
+        "occupation": "eletricista"
+      },
+      "channel": "whatsapp",
+      "intent": "cancelar_consulta",
+      "clinical_context": {
+        "code": "autismo_comorbilidades",
+        "description": "Família relata irritabilidade/sono ruim em TEA e quer entender possibilidades"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "pix",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "noite",
+        "datetime": "2025-08-22T14:00:00"
+      },
+      "constraints": [
+        "dificuldade com receituário físico",
+        "quer PIX",
+        "internet instável; prefere WhatsApp"
+      ],
+      "risk_flags": [
+        "gestante"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-064",
+      "audience": "paciente",
+      "scenario_title": "Vanessa Oliveira (Maceió-AL) busca avaliação para enxaqueca",
+      "persona": {
+        "name": "Vanessa Oliveira",
+        "city": "Maceió",
+        "state": "AL",
+        "age": 69,
+        "occupation": "advogado(a)"
+      },
+      "channel": "whatsapp",
+      "intent": "pagar_checkout",
+      "clinical_context": {
+        "code": "enxaqueca",
+        "description": "Crises de enxaqueca recorrentes, quer consulta para discutir opções"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "cartao",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "manha",
+        "datetime": "2025-08-13T20:30:00"
+      },
+      "constraints": [
+        "quer PIX",
+        "internet instável; prefere WhatsApp",
+        "dificuldade com receituário físico"
+      ],
+      "risk_flags": [
+        "gestante"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-065",
+      "audience": "paciente",
+      "scenario_title": "Felipe Lima (Belém-PA) busca avaliação para esclerose multipla espasticidade",
+      "persona": {
+        "name": "Felipe Lima",
+        "city": "Belém",
+        "state": "PA",
+        "age": 23,
+        "occupation": "autônomo"
+      },
+      "channel": "whatsapp",
+      "intent": "pagar_checkout",
+      "clinical_context": {
+        "code": "esclerose_multipla_espasticidade",
+        "description": "Relato de espasticidade e dor neuropática em EM"
+      },
+      "proposed_profile": "CBD_dominante_<=0.2THC",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "B"
+      },
+      "payment_preference": "pix",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "tarde",
+        "datetime": "2025-08-20T09:30:00"
+      },
+      "constraints": [
+        "precisa de atestado",
+        "dificuldade com receituário físico",
+        "prefere atendimento à noite"
+      ],
+      "risk_flags": [],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação B",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-066",
+      "audience": "paciente",
+      "scenario_title": "Mateus Ferreira (São Luís-MA) busca avaliação para endometriose dor",
+      "persona": {
+        "name": "Mateus Ferreira",
+        "city": "São Luís",
+        "state": "MA",
+        "age": 11,
+        "occupation": "bancário(a)"
+      },
+      "channel": "whatsapp",
+      "intent": "remarcar_consulta",
+      "clinical_context": {
+        "code": "endometriose_dor",
+        "description": "Paciente com dor pélvica crônica de endometriose quer entender alternativas"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "pix",
+      "plan": "particular",
+      "preferred_time": {
+        "label": "tarde",
+        "datetime": "2025-08-21T20:30:00"
+      },
+      "constraints": [
+        "precisa de atestado"
+      ],
+      "risk_flags": [],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-067",
+      "audience": "paciente",
+      "scenario_title": "Leonardo Martins (Belo Horizonte-MG) busca avaliação para dor cronica",
+      "persona": {
+        "name": "Leonardo Martins",
+        "city": "Belo Horizonte",
+        "state": "MG",
+        "age": 25,
+        "occupation": "cozinheiro(a)"
+      },
+      "channel": "web",
+      "intent": "pagar_checkout",
+      "clinical_context": {
+        "code": "dor_cronica",
+        "description": "Paciente adulto com dor crônica musculoesquelética busca alternativa complementar"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "cartao",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "tarde",
+        "datetime": "2025-08-23T20:30:00"
+      },
+      "constraints": [
+        "quer PIX",
+        "dificuldade com receituário físico"
+      ],
+      "risk_flags": [
+        "uso_concomitante_benzodiazepinico"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-068",
+      "audience": "paciente",
+      "scenario_title": "Camila Martins (Aracaju-SE) busca avaliação para esclerose multipla espasticidade",
+      "persona": {
+        "name": "Camila Martins",
+        "city": "Aracaju",
+        "state": "SE",
+        "age": 22,
+        "occupation": "engenheiro(a)"
+      },
+      "channel": "web",
+      "intent": "remarcar_consulta",
+      "clinical_context": {
+        "code": "esclerose_multipla_espasticidade",
+        "description": "Relato de espasticidade e dor neuropática em EM"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "pix",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "tarde",
+        "datetime": "2025-08-20T11:00:00"
+      },
+      "constraints": [
+        "precisa de atestado",
+        "prefere atendimento à noite"
+      ],
+      "risk_flags": [
+        "uso_concomitante_benzodiazepinico"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-069",
+      "audience": "paciente",
+      "scenario_title": "Diego Martins (São Paulo-SP) busca avaliação para ansiedade insônia",
+      "persona": {
+        "name": "Diego Martins",
+        "city": "São Paulo",
+        "state": "SP",
+        "age": 18,
+        "occupation": "psicóloga"
+      },
+      "channel": "whatsapp",
+      "intent": "agendar_consulta",
+      "clinical_context": {
+        "code": "ansiedade_insônia",
+        "description": "Adulto com ansiedade/insônia deseja orientação sobre elegibilidade"
+      },
+      "proposed_profile": "THC_alto_>0.2",
+      "legal": {
+        "legal_path": "importacao_RDC660",
+        "autorizacao_validade_anos": 2,
+        "notificacao_receita": "A"
+      },
+      "payment_preference": "pix",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "tarde",
+        "datetime": "2025-08-22T15:30:00"
+      },
+      "constraints": [
+        "precisa de nota fiscal",
+        "prefere atendimento à noite",
+        "precisa de atestado"
+      ],
+      "risk_flags": [
+        "uso_concomitante_benzodiazepinico"
+      ],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação A",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-070",
+      "audience": "paciente",
+      "scenario_title": "Gustavo Gomes (São Paulo-SP) busca avaliação para fibromialgia",
+      "persona": {
+        "name": "Gustavo Gomes",
+        "city": "São Paulo",
+        "state": "SP",
+        "age": 21,
+        "occupation": "marceneiro(a)"
+      },
+      "channel": "web",
+      "intent": "pagar_checkout",
+      "clinical_context": {
+        "code": "fibromialgia",
+        "description": "Paciente com fibromialgia pede avaliação multiprofissional, inclusive canabinoides"
+      },
+      "proposed_profile": "CBD_dominante_<=0.2THC",
+      "legal": {
+        "legal_path": "farmacia_RDC327",
+        "notificacao_receita": "B"
+      },
+      "payment_preference": "cartao",
+      "plan": "plano_saude",
+      "preferred_time": {
+        "label": "manha",
+        "datetime": "2025-08-25T09:00:00"
+      },
+      "constraints": [
+        "precisa de nota fiscal"
+      ],
+      "risk_flags": [],
+      "actions_expected": [
+        "validar identidade (nome+CPF mascarado) e consentimento (TCLE)",
+        "coletar histórico e medicações atuais",
+        "explicar vias legais (RDC 327/2019 em farmácia ou RDC 660/2022 para importação)",
+        "verificar tipo de receituário: Notificação B",
+        "gerar link de pagamento e reservar slot por 8min",
+        "após pagamento: criar link do Meet e enviar instruções em 2 mensagens"
+      ],
+      "success_criteria": "Consulta realizada, documentação regular (TCLE e receituário), orientação clara e link do Meet entregue.",
+      "compliance_notes": {
+        "tcle_obrigatorio": true,
+        "cannabis_in_natura_vedada": true,
+        "prescricao_exclusiva_medico": true,
+        "dispensacao_farmaceutico": true,
+        "observacao_cfm": "Resolução CFM 2.324/2022 (restritiva) foi suspensa; debate segue. Seguir boas práticas e TCLE."
+      },
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "TCLE"
+      ]
+    },
+    {
+      "id": "CMC-071",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Patrícia Rezende (Goiânia-GO) quer operar com importacao_RDC660, farmacia_RDC327",
+      "persona": {
+        "name": "Dr(a). Patrícia Rezende",
+        "city": "Goiânia",
+        "state": "GO",
+        "specialty": "Dor/Anestesiologia"
+      },
+      "channel": "web",
+      "intent": "atualizar_bio_foto",
+      "policy": {
+        "thc_policy": "misto",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "importacao_RDC660",
+        "farmacia_RDC327"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-072",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Rodrigo Castro (Salvador-BA) quer operar com farmacia_RDC327",
+      "persona": {
+        "name": "Dr(a). Rodrigo Castro",
+        "city": "Salvador",
+        "state": "BA",
+        "specialty": "Neurologia"
+      },
+      "channel": "whatsapp",
+      "intent": "abrir_slots",
+      "policy": {
+        "thc_policy": "atua_casos_alto_THC",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "farmacia_RDC327"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-073",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Paulo Antunes (Maceió-AL) quer operar com farmacia_RDC327",
+      "persona": {
+        "name": "Dr(a). Paulo Antunes",
+        "city": "Maceió",
+        "state": "AL",
+        "specialty": "Clínico Geral"
+      },
+      "channel": "web",
+      "intent": "ajustar_preco",
+      "policy": {
+        "thc_policy": "misto",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "farmacia_RDC327"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-074",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Elaine Castro (Aracaju-SE) quer operar com importacao_RDC660, farmacia_RDC327",
+      "persona": {
+        "name": "Dr(a). Elaine Castro",
+        "city": "Aracaju",
+        "state": "SE",
+        "specialty": "Clínico Geral"
+      },
+      "channel": "whatsapp",
+      "intent": "chat_pos_consulta",
+      "policy": {
+        "thc_policy": "atua_casos_alto_THC",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "importacao_RDC660",
+        "farmacia_RDC327"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-075",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Hugo Antunes (Belém-PA) quer operar com importacao_RDC660",
+      "persona": {
+        "name": "Dr(a). Hugo Antunes",
+        "city": "Belém",
+        "state": "PA",
+        "specialty": "Dor/Anestesiologia"
+      },
+      "channel": "whatsapp",
+      "intent": "onboarding_medico",
+      "policy": {
+        "thc_policy": "usa_ate_0_2",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "importacao_RDC660"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-076",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Kleber Almeida (Curitiba-PR) quer operar com farmacia_RDC327, importacao_RDC660",
+      "persona": {
+        "name": "Dr(a). Kleber Almeida",
+        "city": "Curitiba",
+        "state": "PR",
+        "specialty": "Neurologia"
+      },
+      "channel": "web",
+      "intent": "fechar_horarios",
+      "policy": {
+        "thc_policy": "usa_ate_0_2",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "farmacia_RDC327",
+        "importacao_RDC660"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-077",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Vanessa Castro (São Luís-MA) quer operar com importacao_RDC660, farmacia_RDC327",
+      "persona": {
+        "name": "Dr(a). Vanessa Castro",
+        "city": "São Luís",
+        "state": "MA",
+        "specialty": "Clínico Geral"
+      },
+      "channel": "whatsapp",
+      "intent": "abrir_slots",
+      "policy": {
+        "thc_policy": "atua_casos_alto_THC",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "importacao_RDC660",
+        "farmacia_RDC327"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-078",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Camila Almeida (Salvador-BA) quer operar com importacao_RDC660",
+      "persona": {
+        "name": "Dr(a). Camila Almeida",
+        "city": "Salvador",
+        "state": "BA",
+        "specialty": "Neurologia"
+      },
+      "channel": "whatsapp",
+      "intent": "chat_pos_consulta",
+      "policy": {
+        "thc_policy": "usa_ate_0_2",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "importacao_RDC660"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-079",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Pedro Barbosa (Florianópolis-SC) quer operar com farmacia_RDC327",
+      "persona": {
+        "name": "Dr(a). Pedro Barbosa",
+        "city": "Florianópolis",
+        "state": "SC",
+        "specialty": "Neurologia"
+      },
+      "channel": "whatsapp",
+      "intent": "ajustar_preco",
+      "policy": {
+        "thc_policy": "misto",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "farmacia_RDC327"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-080",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Eduardo Moraes (Belo Horizonte-MG) quer operar com farmacia_RDC327, importacao_RDC660",
+      "persona": {
+        "name": "Dr(a). Eduardo Moraes",
+        "city": "Belo Horizonte",
+        "state": "MG",
+        "specialty": "Pediatria"
+      },
+      "channel": "whatsapp",
+      "intent": "ferias",
+      "policy": {
+        "thc_policy": "usa_ate_0_2",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "farmacia_RDC327",
+        "importacao_RDC660"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-081",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Tatiane Rezende (João Pessoa-PB) quer operar com importacao_RDC660, farmacia_RDC327",
+      "persona": {
+        "name": "Dr(a). Tatiane Rezende",
+        "city": "João Pessoa",
+        "state": "PB",
+        "specialty": "Geriatria"
+      },
+      "channel": "whatsapp",
+      "intent": "ferias",
+      "policy": {
+        "thc_policy": "atua_casos_alto_THC",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "importacao_RDC660",
+        "farmacia_RDC327"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-082",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Hugo Rezende (São Paulo-SP) quer operar com farmacia_RDC327, importacao_RDC660",
+      "persona": {
+        "name": "Dr(a). Hugo Rezende",
+        "city": "São Paulo",
+        "state": "SP",
+        "specialty": "Pediatria"
+      },
+      "channel": "whatsapp",
+      "intent": "ferias",
+      "policy": {
+        "thc_policy": "usa_ate_0_2",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "farmacia_RDC327",
+        "importacao_RDC660"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-083",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Tamires Barbosa (Goiânia-GO) quer operar com importacao_RDC660, farmacia_RDC327",
+      "persona": {
+        "name": "Dr(a). Tamires Barbosa",
+        "city": "Goiânia",
+        "state": "GO",
+        "specialty": "Neurologia"
+      },
+      "channel": "whatsapp",
+      "intent": "chat_pos_consulta",
+      "policy": {
+        "thc_policy": "usa_ate_0_2",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "importacao_RDC660",
+        "farmacia_RDC327"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-084",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Elaine Castro (Natal-RN) quer operar com farmacia_RDC327, importacao_RDC660",
+      "persona": {
+        "name": "Dr(a). Elaine Castro",
+        "city": "Natal",
+        "state": "RN",
+        "specialty": "Psiquiatria"
+      },
+      "channel": "whatsapp",
+      "intent": "atualizar_bio_foto",
+      "policy": {
+        "thc_policy": "usa_ate_0_2",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "farmacia_RDC327",
+        "importacao_RDC660"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-085",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Juliana Santos (Campinas-SP) quer operar com farmacia_RDC327",
+      "persona": {
+        "name": "Dr(a). Juliana Santos",
+        "city": "Campinas",
+        "state": "SP",
+        "specialty": "Psiquiatria"
+      },
+      "channel": "whatsapp",
+      "intent": "fechar_horarios",
+      "policy": {
+        "thc_policy": "atua_casos_alto_THC",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "farmacia_RDC327"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-086",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Fernanda Antunes (Niterói-RJ) quer operar com farmacia_RDC327",
+      "persona": {
+        "name": "Dr(a). Fernanda Antunes",
+        "city": "Niterói",
+        "state": "RJ",
+        "specialty": "Pediatria"
+      },
+      "channel": "whatsapp",
+      "intent": "ver_repasses",
+      "policy": {
+        "thc_policy": "usa_ate_0_2",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "farmacia_RDC327"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-087",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Larissa Santos (Manaus-AM) quer operar com importacao_RDC660, farmacia_RDC327",
+      "persona": {
+        "name": "Dr(a). Larissa Santos",
+        "city": "Manaus",
+        "state": "AM",
+        "specialty": "Psiquiatria"
+      },
+      "channel": "web",
+      "intent": "atualizar_bio_foto",
+      "policy": {
+        "thc_policy": "misto",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "importacao_RDC660",
+        "farmacia_RDC327"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-088",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Juliana Rezende (São Paulo-SP) quer operar com importacao_RDC660, farmacia_RDC327",
+      "persona": {
+        "name": "Dr(a). Juliana Rezende",
+        "city": "São Paulo",
+        "state": "SP",
+        "specialty": "Dor/Anestesiologia"
+      },
+      "channel": "web",
+      "intent": "ajustar_preco",
+      "policy": {
+        "thc_policy": "atua_casos_alto_THC",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "importacao_RDC660",
+        "farmacia_RDC327"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-089",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Ana Antunes (Natal-RN) quer operar com farmacia_RDC327, importacao_RDC660",
+      "persona": {
+        "name": "Dr(a). Ana Antunes",
+        "city": "Natal",
+        "state": "RN",
+        "specialty": "Psiquiatria"
+      },
+      "channel": "web",
+      "intent": "onboarding_medico",
+      "policy": {
+        "thc_policy": "atua_casos_alto_THC",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "farmacia_RDC327",
+        "importacao_RDC660"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-090",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Renata Barbosa (Cuiabá-MT) quer operar com farmacia_RDC327",
+      "persona": {
+        "name": "Dr(a). Renata Barbosa",
+        "city": "Cuiabá",
+        "state": "MT",
+        "specialty": "Psiquiatria"
+      },
+      "channel": "whatsapp",
+      "intent": "onboarding_medico",
+      "policy": {
+        "thc_policy": "atua_casos_alto_THC",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "farmacia_RDC327"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-091",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Larissa Moraes (João Pessoa-PB) quer operar com farmacia_RDC327",
+      "persona": {
+        "name": "Dr(a). Larissa Moraes",
+        "city": "João Pessoa",
+        "state": "PB",
+        "specialty": "Psiquiatria"
+      },
+      "channel": "whatsapp",
+      "intent": "fechar_horarios",
+      "policy": {
+        "thc_policy": "usa_ate_0_2",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "farmacia_RDC327"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-092",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Eduardo Santos (Florianópolis-SC) quer operar com importacao_RDC660",
+      "persona": {
+        "name": "Dr(a). Eduardo Santos",
+        "city": "Florianópolis",
+        "state": "SC",
+        "specialty": "Geriatria"
+      },
+      "channel": "web",
+      "intent": "ver_repasses",
+      "policy": {
+        "thc_policy": "atua_casos_alto_THC",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "importacao_RDC660"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-093",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Maria Antunes (Natal-RN) quer operar com farmacia_RDC327, importacao_RDC660",
+      "persona": {
+        "name": "Dr(a). Maria Antunes",
+        "city": "Natal",
+        "state": "RN",
+        "specialty": "Psiquiatria"
+      },
+      "channel": "web",
+      "intent": "ajustar_preco",
+      "policy": {
+        "thc_policy": "usa_ate_0_2",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "farmacia_RDC327",
+        "importacao_RDC660"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-094",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Elaine Castro (Cuiabá-MT) quer operar com farmacia_RDC327",
+      "persona": {
+        "name": "Dr(a). Elaine Castro",
+        "city": "Cuiabá",
+        "state": "MT",
+        "specialty": "Psiquiatria"
+      },
+      "channel": "web",
+      "intent": "chat_pos_consulta",
+      "policy": {
+        "thc_policy": "usa_ate_0_2",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "farmacia_RDC327"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-095",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Cátia Almeida (Goiânia-GO) quer operar com farmacia_RDC327",
+      "persona": {
+        "name": "Dr(a). Cátia Almeida",
+        "city": "Goiânia",
+        "state": "GO",
+        "specialty": "Psiquiatria"
+      },
+      "channel": "web",
+      "intent": "emitir_documento",
+      "policy": {
+        "thc_policy": "atua_casos_alto_THC",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "farmacia_RDC327"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-096",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Rodrigo Rezende (São Luís-MA) quer operar com importacao_RDC660, farmacia_RDC327",
+      "persona": {
+        "name": "Dr(a). Rodrigo Rezende",
+        "city": "São Luís",
+        "state": "MA",
+        "specialty": "Psiquiatria"
+      },
+      "channel": "whatsapp",
+      "intent": "ferias",
+      "policy": {
+        "thc_policy": "usa_ate_0_2",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "importacao_RDC660",
+        "farmacia_RDC327"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-097",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Jéssica Barbosa (Belém-PA) quer operar com farmacia_RDC327",
+      "persona": {
+        "name": "Dr(a). Jéssica Barbosa",
+        "city": "Belém",
+        "state": "PA",
+        "specialty": "Pediatria"
+      },
+      "channel": "whatsapp",
+      "intent": "ajustar_preco",
+      "policy": {
+        "thc_policy": "misto",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "farmacia_RDC327"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-098",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Isabela Moraes (Vitória-ES) quer operar com importacao_RDC660, farmacia_RDC327",
+      "persona": {
+        "name": "Dr(a). Isabela Moraes",
+        "city": "Vitória",
+        "state": "ES",
+        "specialty": "Dor/Anestesiologia"
+      },
+      "channel": "web",
+      "intent": "abrir_slots",
+      "policy": {
+        "thc_policy": "usa_ate_0_2",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "importacao_RDC660",
+        "farmacia_RDC327"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-099",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Vanessa Santos (Florianópolis-SC) quer operar com importacao_RDC660, farmacia_RDC327",
+      "persona": {
+        "name": "Dr(a). Vanessa Santos",
+        "city": "Florianópolis",
+        "state": "SC",
+        "specialty": "Geriatria"
+      },
+      "channel": "whatsapp",
+      "intent": "ferias",
+      "policy": {
+        "thc_policy": "usa_ate_0_2",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "importacao_RDC660",
+        "farmacia_RDC327"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    },
+    {
+      "id": "CMC-100",
+      "audience": "medico",
+      "scenario_title": "Dr(a). Larissa Barbosa (João Pessoa-PB) quer operar com farmacia_RDC327, importacao_RDC660",
+      "persona": {
+        "name": "Dr(a). Larissa Barbosa",
+        "city": "João Pessoa",
+        "state": "PB",
+        "specialty": "Dor/Anestesiologia"
+      },
+      "channel": "whatsapp",
+      "intent": "abrir_slots",
+      "policy": {
+        "thc_policy": "misto",
+        "usa_TCLE": true,
+        "cannabis_in_natura_vedada": true
+      },
+      "legal_ops": [
+        "farmacia_RDC327",
+        "importacao_RDC660"
+      ],
+      "actions_expected": [
+        "validar CRM e termos de responsabilidade",
+        "configurar modelos de TCLE e receituário (A/B) conforme perfil de prescrição",
+        "abrir slots em lote e definir duração padrão (20–30min)",
+        "habilitar emissão de documentos (laudo/receita/atestado) pós-consulta",
+        "configurar notificações de pagamento e reconciliação via webhook"
+      ],
+      "success_criteria": "Perfil aprovado, agenda ativa, templates de TCLE e receituário corretos, webhooks funcionando.",
+      "tags": [
+        "cannabis",
+        "RDC327",
+        "RDC660",
+        "receituario_A_B"
+      ],
+      "timezone": "America/Sao_Paulo",
+      "language": "pt-BR"
+    }
+  ]
+}

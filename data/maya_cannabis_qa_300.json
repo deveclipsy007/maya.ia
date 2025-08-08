@@ -1,0 +1,4857 @@
+{
+  "agent": "Maya",
+  "domain": "cannabis_medicinal_brasil",
+  "version": "1.0.0",
+  "generated_at": "2025-08-09T07:03:28.774638",
+  "count": 300,
+  "legal_refs_map": {
+    "RDC327_2019": "Produtos de Cannabis para fins medicinais — ANVISA (RDC 327/2019)",
+    "RDC660_2022": "Importação excepcional por pessoa física — ANVISA (RDC 660/2022)",
+    "PORTARIA_344_1998": "Controle especial e receituários A/B — SVS/MS Portaria 344/1998",
+    "CFM_2324_2022_SUSP": "Resolução CFM 2.324/2022 (suspensa); boas práticas (TCLE) permanecem"
+  },
+  "qa": [
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Sou elegível para tratamento com produtos de cannabis?",
+      "answer": "A elegibilidade é avaliada pelo médico assistente, após esgotar opções terapêuticas convencionais e com Termo de Consentimento Livre e Esclarecido (TCLE). A decisão é individualizada, conforme quadro clínico e normas vigentes.",
+      "legal_refs": [
+        "RDC327_2019",
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "tcle",
+        "triagem"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-001"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Preciso de receita médica para comprar?",
+      "answer": "Sim. A prescrição é exclusiva de médico. O tipo de notificação (A ou B) depende do teor de THC informado no produto.",
+      "legal_refs": [
+        "RDC327_2019",
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "receituario",
+        "medico"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-002"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Vocês prescrevem cannabis in natura?",
+      "answer": "Não. A prescrição de cannabis in natura é vedada. A plataforma opera apenas com produtos regulares para uso medicinal.",
+      "legal_refs": [
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "proibicao_in_natura"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-003"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Tenho diagnóstico de dor crônica; posso agendar?",
+      "answer": "Sim, posso marcar uma avaliação com médico habilitado. Na consulta, ele avaliará histórico, tratamentos prévios e se há indicação clínica.",
+      "legal_refs": [
+        "RDC327_2019"
+      ],
+      "tags": [
+        "dor_cronica",
+        "agendamento"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-004"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Meu filho tem epilepsia refratária. A plataforma atende casos pediátricos?",
+      "answer": "Atendemos mediante responsável legal, com pediatra habilitado e TCLE. O médico definirá conduta e receituário adequado.",
+      "legal_refs": [
+        "RDC327_2019",
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "pediatrico",
+        "tcle"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-005"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Qual a diferença entre receita A e B para cannabis?",
+      "answer": "Em regra: produtos com até 0,2% de THC utilizam Notificação de Receita B (azul), e acima de 0,2% utilizam Notificação de Receita A (amarela).",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC327_2019"
+      ],
+      "tags": [
+        "receita_A",
+        "receita_B",
+        "thc_limite_0_2"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-006"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Quanto tempo a receita vale?",
+      "answer": "Depende do tipo. Em linhas gerais, Notificação B cobre até 60 dias de tratamento e Notificação A, até 30 dias, conforme orientação sanitária local e prescrição do médico.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "prazo_receita"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-007"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Recebi receita digital. É aceita na farmácia?",
+      "answer": "Farmácias/drogarias seguem regras específicas para controle especial. Algumas exigem receituário físico conforme tipo de produto. Podemos orientar a farmácia indicada pelo seu médico.",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC327_2019"
+      ],
+      "tags": [
+        "farmacia",
+        "digital_fisico"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-008"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Posso usar receita de outro médico na plataforma?",
+      "answer": "Sim, desde que válida e dentro dos requisitos. Para teleconsulta, o profissional pode revisar antes de orientar compra/dispensação.",
+      "legal_refs": [
+        "RDC327_2019"
+      ],
+      "tags": [
+        "segunda_opiniao"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-009"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Como o teor de THC impacta a receita?",
+      "answer": "Produtos até 0,2% THC tendem a Notificação B; acima de 0,2%, Notificação A. O rótulo/monografia do produto define o enquadramento.",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC327_2019"
+      ],
+      "tags": [
+        "thc",
+        "classificacao"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-010"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "Como funciona a importação excepcional pela Anvisa?",
+      "answer": "Pessoa física pode importar, para uso próprio, com prescrição de profissional habilitado e autorização válida por até 2 anos.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "importacao",
+        "validade_2_anos"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-011"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "A importação substitui a compra em farmácia?",
+      "answer": "São vias distintas. Produtos de farmácia seguem RDC 327/2019; importação excepcional segue RDC 660/2022 e não equivale a registro/aprovação de eficácia pela Anvisa.",
+      "legal_refs": [
+        "RDC327_2019",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "vias_distintas",
+        "nao_registro"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-012"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "Preciso renovar minha autorização de importação?",
+      "answer": "Sim, quando vencer o prazo da autorização (em geral, 2 anos) é necessário solicitar nova autorização se houver continuidade do tratamento.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "renovacao"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-013"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "Quais documentos para importar?",
+      "answer": "Geralmente: prescrição, laudo/relatório, documento pessoal e formulário no portal da Anvisa. Eu te guio no passo a passo após a consulta.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "documentos",
+        "passo_a_passo"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-014"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "Posso parcelar a compra importada?",
+      "answer": "O pagamento é feito diretamente ao fornecedor internacional. As opções de parcelamento variam por fornecedor.",
+      "legal_refs": [],
+      "tags": [
+        "pagamento_externo"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-015"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Quero marcar avaliação com especialista",
+      "answer": "Perfeito. Posso listar especialistas por cidade, preço e horários próximos. Após confirmar, envio o link de pagamento e, pago, o link do Meet.",
+      "legal_refs": [],
+      "tags": [
+        "agendamento",
+        "meet",
+        "pagamento"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-016"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Como remarcar sem perder a receita?",
+      "answer": "Remarco o horário mantendo seu cadastro e histórico. A validade da sua receita não muda; apenas o atendimento.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "remarcacao"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-017"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Quero cancelar e pedir reembolso",
+      "answer": "Sem problema. Aplico a política de cancelamento: reembolso integral com antecedência; após o horário, segue política de no-show.",
+      "legal_refs": [],
+      "tags": [
+        "cancelamento",
+        "reembolso"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-018"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Não recebi o link do Meet",
+      "answer": "Reenvio agora e confirmo por e-mail. Se persistir, reemito a sala.",
+      "legal_refs": [],
+      "tags": [
+        "meet",
+        "reenviar"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-019"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Preciso de nota fiscal",
+      "answer": "Emitimos NF após a consulta ou aquisição de serviço. Envio por e-mail.",
+      "legal_refs": [],
+      "tags": [
+        "nota_fiscal"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-020"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "Meus dados e prescrições ficam seguros?",
+      "answer": "Sim. Usamos minimização de dados, logs auditáveis e mascaramento de CPF. O acesso a documentos é restrito.",
+      "legal_refs": [],
+      "tags": [
+        "lgpd",
+        "seguranca"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-021"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "Posso solicitar exclusão dos meus dados?",
+      "answer": "Pode solicitar; mantemos apenas o que a lei exige por obrigação legal e auditoria sanitária.",
+      "legal_refs": [],
+      "tags": [
+        "lgpd",
+        "exclusao"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-022"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "Posso levar meu produto em viagem?",
+      "answer": "Viajar com produto exige portar receita e comprovação de origem. Para viagens internacionais, verifique regras do país de destino.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "viagem"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-023"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "A plataforma indica marcas específicas?",
+      "answer": "Não fazemos indicação comercial. O médico e o paciente decidem, e a dispensação é feita por farmácias ou via importação regular.",
+      "legal_refs": [
+        "RDC327_2019",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "independencia_comercial"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-024"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "Quem entrega o produto?",
+      "answer": "Para produtos de farmácia, a dispensação é exclusiva do farmacêutico. Na importação, o fornecedor envia ao paciente autorizado.",
+      "legal_refs": [
+        "RDC327_2019",
+        "PORTARIA_344_1998",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "dispensacao"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-025"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "É possível parcelar a compra importada?",
+      "answer": "O pagamento é feito diretamente ao fornecedor internacional. As opções de parcelamento variam por fornecedor.",
+      "legal_refs": [],
+      "tags": [
+        "pagamento_externo",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-026"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Preciso de receita médica para comprar?",
+      "answer": "Sim. A prescrição é exclusiva de médico. O tipo de notificação (A ou B) depende do teor de THC informado no produto.",
+      "legal_refs": [
+        "RDC327_2019",
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "receituario",
+        "medico",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-027"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Preciso de receita médica para comprar?",
+      "answer": "Sim. A prescrição é exclusiva de médico. O tipo de notificação (A ou B) depende do teor de THC informado no produto.",
+      "legal_refs": [
+        "RDC327_2019",
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "receituario",
+        "medico",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-028"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Qual a diferença entre receita A e B para cannabis?",
+      "answer": "Em regra: produtos com até 0,2% de THC utilizam Notificação de Receita B (azul), e acima de 0,2% utilizam Notificação de Receita A (amarela).",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC327_2019"
+      ],
+      "tags": [
+        "receita_A",
+        "receita_B",
+        "thc_limite_0_2",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-029"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "A importação substitui a compra em farmácia?",
+      "answer": "São vias distintas. Produtos de farmácia seguem RDC 327/2019; importação excepcional segue RDC 660/2022 e não equivale a registro/aprovação de eficácia pela Anvisa.",
+      "legal_refs": [
+        "RDC327_2019",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "vias_distintas",
+        "nao_registro",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-030"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "Quais documentos para importar?",
+      "answer": "Geralmente: prescrição, laudo/relatório, documento pessoal e formulário no portal da Anvisa. Eu te guio no passo a passo após a consulta.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "documentos",
+        "passo_a_passo",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-031"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Quanto tempo a receita vale?",
+      "answer": "Depende do tipo. Em linhas gerais, Notificação B cobre até 60 dias de tratamento e Notificação A, até 30 dias, conforme orientação sanitária local e prescrição do médico.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "prazo_receita",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-032"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "Posso parcelar a compra importada?",
+      "answer": "O pagamento é feito diretamente ao fornecedor internacional. As opções de parcelamento variam por fornecedor.",
+      "legal_refs": [],
+      "tags": [
+        "pagamento_externo",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-033"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Preciso de nota fiscal",
+      "answer": "Emitimos NF após a consulta ou aquisição de serviço. Envio por e-mail.",
+      "legal_refs": [],
+      "tags": [
+        "nota_fiscal",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-034"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Como remarcar sem perder a receita?",
+      "answer": "Remarco o horário mantendo seu cadastro e histórico. A validade da sua receita não muda; apenas o atendimento.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "remarcacao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-035"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "Quais documentos para importar?",
+      "answer": "Geralmente: prescrição, laudo/relatório, documento pessoal e formulário no portal da Anvisa. Eu te guio no passo a passo após a consulta.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "documentos",
+        "passo_a_passo",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-036"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "A importação substitui a compra em farmácia?",
+      "answer": "São vias distintas. Produtos de farmácia seguem RDC 327/2019; importação excepcional segue RDC 660/2022 e não equivale a registro/aprovação de eficácia pela Anvisa.",
+      "legal_refs": [
+        "RDC327_2019",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "vias_distintas",
+        "nao_registro",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-037"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Sou elegível para tratamento com produtos de cannabis?",
+      "answer": "A elegibilidade é avaliada pelo médico assistente, após esgotar opções terapêuticas convencionais e com Termo de Consentimento Livre e Esclarecido (TCLE). A decisão é individualizada, conforme quadro clínico e normas vigentes.",
+      "legal_refs": [
+        "RDC327_2019",
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "tcle",
+        "triagem",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-038"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Não recebi o link do Meet",
+      "answer": "Reenvio agora e confirmo por e-mail. Se persistir, reemito a sala.",
+      "legal_refs": [],
+      "tags": [
+        "meet",
+        "reenviar",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-039"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "A plataforma indica marcas específicas?",
+      "answer": "Não fazemos indicação comercial. O médico e o paciente decidem, e a dispensação é feita por farmácias ou via importação regular.",
+      "legal_refs": [
+        "RDC327_2019",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "independencia_comercial",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-040"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "É possível levar meu produto em viagem?",
+      "answer": "Viajar com produto exige portar receita e comprovação de origem. Para viagens internacionais, verifique regras do país de destino.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "viagem",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-041"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Gostaria de cancelar e pedir reembolso",
+      "answer": "Sem problema. Aplico a política de cancelamento: reembolso integral com antecedência; após o horário, segue política de no-show.",
+      "legal_refs": [],
+      "tags": [
+        "cancelamento",
+        "reembolso",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-042"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Meu filho tem epilepsia refratária. A plataforma atende casos pediátricos?",
+      "answer": "Atendemos mediante responsável legal, com pediatra habilitado e TCLE. O médico definirá conduta e receituário adequado.",
+      "legal_refs": [
+        "RDC327_2019",
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "pediatrico",
+        "tcle",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-043"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Qual a diferença entre receita A e B para cannabis?",
+      "answer": "Em regra: produtos com até 0,2% de THC utilizam Notificação de Receita B (azul), e acima de 0,2% utilizam Notificação de Receita A (amarela).",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC327_2019"
+      ],
+      "tags": [
+        "receita_A",
+        "receita_B",
+        "thc_limite_0_2",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-044"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "Dá para parcelar a compra importada?",
+      "answer": "O pagamento é feito diretamente ao fornecedor internacional. As opções de parcelamento variam por fornecedor.",
+      "legal_refs": [],
+      "tags": [
+        "pagamento_externo",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-045"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Sou elegível para tratamento com produtos de cannabis?",
+      "answer": "A elegibilidade é avaliada pelo médico assistente, após esgotar opções terapêuticas convencionais e com Termo de Consentimento Livre e Esclarecido (TCLE). A decisão é individualizada, conforme quadro clínico e normas vigentes.",
+      "legal_refs": [
+        "RDC327_2019",
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "tcle",
+        "triagem",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-046"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Não recebi o link do Meet",
+      "answer": "Reenvio agora e confirmo por e-mail. Se persistir, reemito a sala.",
+      "legal_refs": [],
+      "tags": [
+        "meet",
+        "reenviar",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-047"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Preciso de receita médica para comprar?",
+      "answer": "Sim. A prescrição é exclusiva de médico. O tipo de notificação (A ou B) depende do teor de THC informado no produto.",
+      "legal_refs": [
+        "RDC327_2019",
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "receituario",
+        "medico",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-048"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "Preciso renovar minha autorização de importação?",
+      "answer": "Sim, quando vencer o prazo da autorização (em geral, 2 anos) é necessário solicitar nova autorização se houver continuidade do tratamento.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "renovacao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-049"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Como remarcar sem perder a receita?",
+      "answer": "Remarco o horário mantendo seu cadastro e histórico. A validade da sua receita não muda; apenas o atendimento.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "remarcacao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-050"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Quanto tempo a receita vale?",
+      "answer": "Depende do tipo. Em linhas gerais, Notificação B cobre até 60 dias de tratamento e Notificação A, até 30 dias, conforme orientação sanitária local e prescrição do médico.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "prazo_receita",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-051"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Preciso cancelar e pedir reembolso",
+      "answer": "Sem problema. Aplico a política de cancelamento: reembolso integral com antecedência; após o horário, segue política de no-show.",
+      "legal_refs": [],
+      "tags": [
+        "cancelamento",
+        "reembolso",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-052"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Recebi receita digital. É aceita na farmácia?",
+      "answer": "Farmácias/drogarias seguem regras específicas para controle especial. Algumas exigem receituário físico conforme tipo de produto. Podemos orientar a farmácia indicada pelo seu médico.",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC327_2019"
+      ],
+      "tags": [
+        "farmacia",
+        "digital_fisico",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-053"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Preciso de nota fiscal",
+      "answer": "Emitimos NF após a consulta ou aquisição de serviço. Envio por e-mail.",
+      "legal_refs": [],
+      "tags": [
+        "nota_fiscal",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-054"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "É possível parcelar a compra importada?",
+      "answer": "O pagamento é feito diretamente ao fornecedor internacional. As opções de parcelamento variam por fornecedor.",
+      "legal_refs": [],
+      "tags": [
+        "pagamento_externo",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-055"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Vocês prescrevem cannabis in natura?",
+      "answer": "Não. A prescrição de cannabis in natura é vedada. A plataforma opera apenas com produtos regulares para uso medicinal.",
+      "legal_refs": [
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "proibicao_in_natura",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-056"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Preciso de receita médica para comprar?",
+      "answer": "Sim. A prescrição é exclusiva de médico. O tipo de notificação (A ou B) depende do teor de THC informado no produto.",
+      "legal_refs": [
+        "RDC327_2019",
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "receituario",
+        "medico",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-057"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Como remarcar sem perder a receita?",
+      "answer": "Remarco o horário mantendo seu cadastro e histórico. A validade da sua receita não muda; apenas o atendimento.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "remarcacao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-058"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "Preciso renovar minha autorização de importação?",
+      "answer": "Sim, quando vencer o prazo da autorização (em geral, 2 anos) é necessário solicitar nova autorização se houver continuidade do tratamento.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "renovacao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-059"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Como o teor de THC impacta a receita?",
+      "answer": "Produtos até 0,2% THC tendem a Notificação B; acima de 0,2%, Notificação A. O rótulo/monografia do produto define o enquadramento.",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC327_2019"
+      ],
+      "tags": [
+        "thc",
+        "classificacao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-060"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Tenho diagnóstico de dor crônica; posso agendar?",
+      "answer": "Sim, posso marcar uma avaliação com médico habilitado. Na consulta, ele avaliará histórico, tratamentos prévios e se há indicação clínica.",
+      "legal_refs": [
+        "RDC327_2019"
+      ],
+      "tags": [
+        "dor_cronica",
+        "agendamento",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-061"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Gostaria de marcar avaliação com especialista",
+      "answer": "Perfeito. Posso listar especialistas por cidade, preço e horários próximos. Após confirmar, envio o link de pagamento e, pago, o link do Meet.",
+      "legal_refs": [],
+      "tags": [
+        "agendamento",
+        "meet",
+        "pagamento",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-062"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Posso usar receita de outro médico na plataforma?",
+      "answer": "Sim, desde que válida e dentro dos requisitos. Para teleconsulta, o profissional pode revisar antes de orientar compra/dispensação.",
+      "legal_refs": [
+        "RDC327_2019"
+      ],
+      "tags": [
+        "segunda_opiniao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-063"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "É possível solicitar exclusão dos meus dados?",
+      "answer": "Pode solicitar; mantemos apenas o que a lei exige por obrigação legal e auditoria sanitária.",
+      "legal_refs": [],
+      "tags": [
+        "lgpd",
+        "exclusao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-064"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Preciso de nota fiscal",
+      "answer": "Emitimos NF após a consulta ou aquisição de serviço. Envio por e-mail.",
+      "legal_refs": [],
+      "tags": [
+        "nota_fiscal",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-065"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "A importação substitui a compra em farmácia?",
+      "answer": "São vias distintas. Produtos de farmácia seguem RDC 327/2019; importação excepcional segue RDC 660/2022 e não equivale a registro/aprovação de eficácia pela Anvisa.",
+      "legal_refs": [
+        "RDC327_2019",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "vias_distintas",
+        "nao_registro",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-066"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Meu filho tem epilepsia refratária. A plataforma atende casos pediátricos?",
+      "answer": "Atendemos mediante responsável legal, com pediatra habilitado e TCLE. O médico definirá conduta e receituário adequado.",
+      "legal_refs": [
+        "RDC327_2019",
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "pediatrico",
+        "tcle",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-067"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Preciso marcar avaliação com especialista",
+      "answer": "Perfeito. Posso listar especialistas por cidade, preço e horários próximos. Após confirmar, envio o link de pagamento e, pago, o link do Meet.",
+      "legal_refs": [],
+      "tags": [
+        "agendamento",
+        "meet",
+        "pagamento",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-068"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "A plataforma indica marcas específicas?",
+      "answer": "Não fazemos indicação comercial. O médico e o paciente decidem, e a dispensação é feita por farmácias ou via importação regular.",
+      "legal_refs": [
+        "RDC327_2019",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "independencia_comercial",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-069"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Recebi receita digital. É aceita na farmácia?",
+      "answer": "Farmácias/drogarias seguem regras específicas para controle especial. Algumas exigem receituário físico conforme tipo de produto. Podemos orientar a farmácia indicada pelo seu médico.",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC327_2019"
+      ],
+      "tags": [
+        "farmacia",
+        "digital_fisico",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-070"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "Meus dados e prescrições ficam seguros?",
+      "answer": "Sim. Usamos minimização de dados, logs auditáveis e mascaramento de CPF. O acesso a documentos é restrito.",
+      "legal_refs": [],
+      "tags": [
+        "lgpd",
+        "seguranca",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-071"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Quanto tempo a receita vale?",
+      "answer": "Depende do tipo. Em linhas gerais, Notificação B cobre até 60 dias de tratamento e Notificação A, até 30 dias, conforme orientação sanitária local e prescrição do médico.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "prazo_receita",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-072"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "Posso levar meu produto em viagem?",
+      "answer": "Viajar com produto exige portar receita e comprovação de origem. Para viagens internacionais, verifique regras do país de destino.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "viagem",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-073"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Como o teor de THC impacta a receita?",
+      "answer": "Produtos até 0,2% THC tendem a Notificação B; acima de 0,2%, Notificação A. O rótulo/monografia do produto define o enquadramento.",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC327_2019"
+      ],
+      "tags": [
+        "thc",
+        "classificacao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-074"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Meu filho tem epilepsia refratária. A plataforma atende casos pediátricos?",
+      "answer": "Atendemos mediante responsável legal, com pediatra habilitado e TCLE. O médico definirá conduta e receituário adequado.",
+      "legal_refs": [
+        "RDC327_2019",
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "pediatrico",
+        "tcle",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-075"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Sou elegível para tratamento com produtos de cannabis?",
+      "answer": "A elegibilidade é avaliada pelo médico assistente, após esgotar opções terapêuticas convencionais e com Termo de Consentimento Livre e Esclarecido (TCLE). A decisão é individualizada, conforme quadro clínico e normas vigentes.",
+      "legal_refs": [
+        "RDC327_2019",
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "tcle",
+        "triagem",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-076"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "Como funciona a importação excepcional pela Anvisa?",
+      "answer": "Pessoa física pode importar, para uso próprio, com prescrição de profissional habilitado e autorização válida por até 2 anos.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "importacao",
+        "validade_2_anos",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-077"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "Preciso renovar minha autorização de importação?",
+      "answer": "Sim, quando vencer o prazo da autorização (em geral, 2 anos) é necessário solicitar nova autorização se houver continuidade do tratamento.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "renovacao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-078"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "A importação substitui a compra em farmácia?",
+      "answer": "São vias distintas. Produtos de farmácia seguem RDC 327/2019; importação excepcional segue RDC 660/2022 e não equivale a registro/aprovação de eficácia pela Anvisa.",
+      "legal_refs": [
+        "RDC327_2019",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "vias_distintas",
+        "nao_registro",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-079"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Dá para usar receita de outro médico na plataforma?",
+      "answer": "Sim, desde que válida e dentro dos requisitos. Para teleconsulta, o profissional pode revisar antes de orientar compra/dispensação.",
+      "legal_refs": [
+        "RDC327_2019"
+      ],
+      "tags": [
+        "segunda_opiniao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-080"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Qual a diferença entre receita A e B para cannabis?",
+      "answer": "Em regra: produtos com até 0,2% de THC utilizam Notificação de Receita B (azul), e acima de 0,2% utilizam Notificação de Receita A (amarela).",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC327_2019"
+      ],
+      "tags": [
+        "receita_A",
+        "receita_B",
+        "thc_limite_0_2",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-081"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "Quem entrega o produto?",
+      "answer": "Para produtos de farmácia, a dispensação é exclusiva do farmacêutico. Na importação, o fornecedor envia ao paciente autorizado.",
+      "legal_refs": [
+        "RDC327_2019",
+        "PORTARIA_344_1998",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "dispensacao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-082"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "Quais documentos para importar?",
+      "answer": "Geralmente: prescrição, laudo/relatório, documento pessoal e formulário no portal da Anvisa. Eu te guio no passo a passo após a consulta.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "documentos",
+        "passo_a_passo",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-083"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "Dá para parcelar a compra importada?",
+      "answer": "O pagamento é feito diretamente ao fornecedor internacional. As opções de parcelamento variam por fornecedor.",
+      "legal_refs": [],
+      "tags": [
+        "pagamento_externo",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-084"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Como o teor de THC impacta a receita?",
+      "answer": "Produtos até 0,2% THC tendem a Notificação B; acima de 0,2%, Notificação A. O rótulo/monografia do produto define o enquadramento.",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC327_2019"
+      ],
+      "tags": [
+        "thc",
+        "classificacao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-085"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "Posso levar meu produto em viagem?",
+      "answer": "Viajar com produto exige portar receita e comprovação de origem. Para viagens internacionais, verifique regras do país de destino.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "viagem",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-086"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "A importação substitui a compra em farmácia?",
+      "answer": "São vias distintas. Produtos de farmácia seguem RDC 327/2019; importação excepcional segue RDC 660/2022 e não equivale a registro/aprovação de eficácia pela Anvisa.",
+      "legal_refs": [
+        "RDC327_2019",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "vias_distintas",
+        "nao_registro",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-087"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Vocês prescrevem cannabis in natura?",
+      "answer": "Não. A prescrição de cannabis in natura é vedada. A plataforma opera apenas com produtos regulares para uso medicinal.",
+      "legal_refs": [
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "proibicao_in_natura",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-088"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "Como funciona a importação excepcional pela Anvisa?",
+      "answer": "Pessoa física pode importar, para uso próprio, com prescrição de profissional habilitado e autorização válida por até 2 anos.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "importacao",
+        "validade_2_anos",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-089"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Preciso de nota fiscal",
+      "answer": "Emitimos NF após a consulta ou aquisição de serviço. Envio por e-mail.",
+      "legal_refs": [],
+      "tags": [
+        "nota_fiscal",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-090"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Não recebi o link do Meet",
+      "answer": "Reenvio agora e confirmo por e-mail. Se persistir, reemito a sala.",
+      "legal_refs": [],
+      "tags": [
+        "meet",
+        "reenviar",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-091"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "Preciso renovar minha autorização de importação?",
+      "answer": "Sim, quando vencer o prazo da autorização (em geral, 2 anos) é necessário solicitar nova autorização se houver continuidade do tratamento.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "renovacao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-092"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Vocês prescrevem cannabis in natura?",
+      "answer": "Não. A prescrição de cannabis in natura é vedada. A plataforma opera apenas com produtos regulares para uso medicinal.",
+      "legal_refs": [
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "proibicao_in_natura",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-093"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Recebi receita digital. É aceita na farmácia?",
+      "answer": "Farmácias/drogarias seguem regras específicas para controle especial. Algumas exigem receituário físico conforme tipo de produto. Podemos orientar a farmácia indicada pelo seu médico.",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC327_2019"
+      ],
+      "tags": [
+        "farmacia",
+        "digital_fisico",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-094"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "Dá para solicitar exclusão dos meus dados?",
+      "answer": "Pode solicitar; mantemos apenas o que a lei exige por obrigação legal e auditoria sanitária.",
+      "legal_refs": [],
+      "tags": [
+        "lgpd",
+        "exclusao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-095"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "A plataforma indica marcas específicas?",
+      "answer": "Não fazemos indicação comercial. O médico e o paciente decidem, e a dispensação é feita por farmácias ou via importação regular.",
+      "legal_refs": [
+        "RDC327_2019",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "independencia_comercial",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-096"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Quero marcar avaliação com especialista",
+      "answer": "Perfeito. Posso listar especialistas por cidade, preço e horários próximos. Após confirmar, envio o link de pagamento e, pago, o link do Meet.",
+      "legal_refs": [],
+      "tags": [
+        "agendamento",
+        "meet",
+        "pagamento",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-097"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Vocês prescrevem cannabis in natura?",
+      "answer": "Não. A prescrição de cannabis in natura é vedada. A plataforma opera apenas com produtos regulares para uso medicinal.",
+      "legal_refs": [
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "proibicao_in_natura",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-098"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "Quem entrega o produto?",
+      "answer": "Para produtos de farmácia, a dispensação é exclusiva do farmacêutico. Na importação, o fornecedor envia ao paciente autorizado.",
+      "legal_refs": [
+        "RDC327_2019",
+        "PORTARIA_344_1998",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "dispensacao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-099"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "Como funciona a importação excepcional pela Anvisa?",
+      "answer": "Pessoa física pode importar, para uso próprio, com prescrição de profissional habilitado e autorização válida por até 2 anos.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "importacao",
+        "validade_2_anos",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-100"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Posso usar receita de outro médico na plataforma?",
+      "answer": "Sim, desde que válida e dentro dos requisitos. Para teleconsulta, o profissional pode revisar antes de orientar compra/dispensação.",
+      "legal_refs": [
+        "RDC327_2019"
+      ],
+      "tags": [
+        "segunda_opiniao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-101"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "Dá para levar meu produto em viagem?",
+      "answer": "Viajar com produto exige portar receita e comprovação de origem. Para viagens internacionais, verifique regras do país de destino.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "viagem",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-102"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Quanto tempo a receita vale?",
+      "answer": "Depende do tipo. Em linhas gerais, Notificação B cobre até 60 dias de tratamento e Notificação A, até 30 dias, conforme orientação sanitária local e prescrição do médico.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "prazo_receita",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-103"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Como remarcar sem perder a receita?",
+      "answer": "Remarco o horário mantendo seu cadastro e histórico. A validade da sua receita não muda; apenas o atendimento.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "remarcacao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-104"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Meu filho tem epilepsia refratária. A plataforma atende casos pediátricos?",
+      "answer": "Atendemos mediante responsável legal, com pediatra habilitado e TCLE. O médico definirá conduta e receituário adequado.",
+      "legal_refs": [
+        "RDC327_2019",
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "pediatrico",
+        "tcle",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-105"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Sou elegível para tratamento com produtos de cannabis?",
+      "answer": "A elegibilidade é avaliada pelo médico assistente, após esgotar opções terapêuticas convencionais e com Termo de Consentimento Livre e Esclarecido (TCLE). A decisão é individualizada, conforme quadro clínico e normas vigentes.",
+      "legal_refs": [
+        "RDC327_2019",
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "tcle",
+        "triagem",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-106"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Tenho diagnóstico de dor crônica; posso agendar?",
+      "answer": "Sim, posso marcar uma avaliação com médico habilitado. Na consulta, ele avaliará histórico, tratamentos prévios e se há indicação clínica.",
+      "legal_refs": [
+        "RDC327_2019"
+      ],
+      "tags": [
+        "dor_cronica",
+        "agendamento",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-107"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "Quais documentos para importar?",
+      "answer": "Geralmente: prescrição, laudo/relatório, documento pessoal e formulário no portal da Anvisa. Eu te guio no passo a passo após a consulta.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "documentos",
+        "passo_a_passo",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-108"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "É possível solicitar exclusão dos meus dados?",
+      "answer": "Pode solicitar; mantemos apenas o que a lei exige por obrigação legal e auditoria sanitária.",
+      "legal_refs": [],
+      "tags": [
+        "lgpd",
+        "exclusao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-109"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Posso usar receita de outro médico na plataforma?",
+      "answer": "Sim, desde que válida e dentro dos requisitos. Para teleconsulta, o profissional pode revisar antes de orientar compra/dispensação.",
+      "legal_refs": [
+        "RDC327_2019"
+      ],
+      "tags": [
+        "segunda_opiniao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-110"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "A importação substitui a compra em farmácia?",
+      "answer": "São vias distintas. Produtos de farmácia seguem RDC 327/2019; importação excepcional segue RDC 660/2022 e não equivale a registro/aprovação de eficácia pela Anvisa.",
+      "legal_refs": [
+        "RDC327_2019",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "vias_distintas",
+        "nao_registro",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-111"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Preciso marcar avaliação com especialista",
+      "answer": "Perfeito. Posso listar especialistas por cidade, preço e horários próximos. Após confirmar, envio o link de pagamento e, pago, o link do Meet.",
+      "legal_refs": [],
+      "tags": [
+        "agendamento",
+        "meet",
+        "pagamento",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-112"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Como remarcar sem perder a receita?",
+      "answer": "Remarco o horário mantendo seu cadastro e histórico. A validade da sua receita não muda; apenas o atendimento.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "remarcacao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-113"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Quero marcar avaliação com especialista",
+      "answer": "Perfeito. Posso listar especialistas por cidade, preço e horários próximos. Após confirmar, envio o link de pagamento e, pago, o link do Meet.",
+      "legal_refs": [],
+      "tags": [
+        "agendamento",
+        "meet",
+        "pagamento",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-114"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Meu filho tem epilepsia refratária. A plataforma atende casos pediátricos?",
+      "answer": "Atendemos mediante responsável legal, com pediatra habilitado e TCLE. O médico definirá conduta e receituário adequado.",
+      "legal_refs": [
+        "RDC327_2019",
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "pediatrico",
+        "tcle",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-115"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Como remarcar sem perder a receita?",
+      "answer": "Remarco o horário mantendo seu cadastro e histórico. A validade da sua receita não muda; apenas o atendimento.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "remarcacao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-116"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "É possível usar receita de outro médico na plataforma?",
+      "answer": "Sim, desde que válida e dentro dos requisitos. Para teleconsulta, o profissional pode revisar antes de orientar compra/dispensação.",
+      "legal_refs": [
+        "RDC327_2019"
+      ],
+      "tags": [
+        "segunda_opiniao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-117"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "A importação substitui a compra em farmácia?",
+      "answer": "São vias distintas. Produtos de farmácia seguem RDC 327/2019; importação excepcional segue RDC 660/2022 e não equivale a registro/aprovação de eficácia pela Anvisa.",
+      "legal_refs": [
+        "RDC327_2019",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "vias_distintas",
+        "nao_registro",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-118"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Como remarcar sem perder a receita?",
+      "answer": "Remarco o horário mantendo seu cadastro e histórico. A validade da sua receita não muda; apenas o atendimento.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "remarcacao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-119"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Vocês prescrevem cannabis in natura?",
+      "answer": "Não. A prescrição de cannabis in natura é vedada. A plataforma opera apenas com produtos regulares para uso medicinal.",
+      "legal_refs": [
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "proibicao_in_natura",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-120"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Vocês prescrevem cannabis in natura?",
+      "answer": "Não. A prescrição de cannabis in natura é vedada. A plataforma opera apenas com produtos regulares para uso medicinal.",
+      "legal_refs": [
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "proibicao_in_natura",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-121"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "Meus dados e prescrições ficam seguros?",
+      "answer": "Sim. Usamos minimização de dados, logs auditáveis e mascaramento de CPF. O acesso a documentos é restrito.",
+      "legal_refs": [],
+      "tags": [
+        "lgpd",
+        "seguranca",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-122"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "Quais documentos para importar?",
+      "answer": "Geralmente: prescrição, laudo/relatório, documento pessoal e formulário no portal da Anvisa. Eu te guio no passo a passo após a consulta.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "documentos",
+        "passo_a_passo",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-123"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "Quais documentos para importar?",
+      "answer": "Geralmente: prescrição, laudo/relatório, documento pessoal e formulário no portal da Anvisa. Eu te guio no passo a passo após a consulta.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "documentos",
+        "passo_a_passo",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-124"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Sou elegível para tratamento com produtos de cannabis?",
+      "answer": "A elegibilidade é avaliada pelo médico assistente, após esgotar opções terapêuticas convencionais e com Termo de Consentimento Livre e Esclarecido (TCLE). A decisão é individualizada, conforme quadro clínico e normas vigentes.",
+      "legal_refs": [
+        "RDC327_2019",
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "tcle",
+        "triagem",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-125"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "Preciso renovar minha autorização de importação?",
+      "answer": "Sim, quando vencer o prazo da autorização (em geral, 2 anos) é necessário solicitar nova autorização se houver continuidade do tratamento.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "renovacao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-126"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Sou elegível para tratamento com produtos de cannabis?",
+      "answer": "A elegibilidade é avaliada pelo médico assistente, após esgotar opções terapêuticas convencionais e com Termo de Consentimento Livre e Esclarecido (TCLE). A decisão é individualizada, conforme quadro clínico e normas vigentes.",
+      "legal_refs": [
+        "RDC327_2019",
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "tcle",
+        "triagem",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-127"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Qual a diferença entre receita A e B para cannabis?",
+      "answer": "Em regra: produtos com até 0,2% de THC utilizam Notificação de Receita B (azul), e acima de 0,2% utilizam Notificação de Receita A (amarela).",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC327_2019"
+      ],
+      "tags": [
+        "receita_A",
+        "receita_B",
+        "thc_limite_0_2",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-128"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Quero cancelar e pedir reembolso",
+      "answer": "Sem problema. Aplico a política de cancelamento: reembolso integral com antecedência; após o horário, segue política de no-show.",
+      "legal_refs": [],
+      "tags": [
+        "cancelamento",
+        "reembolso",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-129"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Como o teor de THC impacta a receita?",
+      "answer": "Produtos até 0,2% THC tendem a Notificação B; acima de 0,2%, Notificação A. O rótulo/monografia do produto define o enquadramento.",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC327_2019"
+      ],
+      "tags": [
+        "thc",
+        "classificacao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-130"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Meu filho tem epilepsia refratária. A plataforma atende casos pediátricos?",
+      "answer": "Atendemos mediante responsável legal, com pediatra habilitado e TCLE. O médico definirá conduta e receituário adequado.",
+      "legal_refs": [
+        "RDC327_2019",
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "pediatrico",
+        "tcle",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-131"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Quanto tempo a receita vale?",
+      "answer": "Depende do tipo. Em linhas gerais, Notificação B cobre até 60 dias de tratamento e Notificação A, até 30 dias, conforme orientação sanitária local e prescrição do médico.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "prazo_receita",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-132"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Quanto tempo a receita vale?",
+      "answer": "Depende do tipo. Em linhas gerais, Notificação B cobre até 60 dias de tratamento e Notificação A, até 30 dias, conforme orientação sanitária local e prescrição do médico.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "prazo_receita",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-133"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Vocês prescrevem cannabis in natura?",
+      "answer": "Não. A prescrição de cannabis in natura é vedada. A plataforma opera apenas com produtos regulares para uso medicinal.",
+      "legal_refs": [
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "proibicao_in_natura",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-134"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "Posso parcelar a compra importada?",
+      "answer": "O pagamento é feito diretamente ao fornecedor internacional. As opções de parcelamento variam por fornecedor.",
+      "legal_refs": [],
+      "tags": [
+        "pagamento_externo",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-135"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "A plataforma indica marcas específicas?",
+      "answer": "Não fazemos indicação comercial. O médico e o paciente decidem, e a dispensação é feita por farmácias ou via importação regular.",
+      "legal_refs": [
+        "RDC327_2019",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "independencia_comercial",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-136"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "A importação substitui a compra em farmácia?",
+      "answer": "São vias distintas. Produtos de farmácia seguem RDC 327/2019; importação excepcional segue RDC 660/2022 e não equivale a registro/aprovação de eficácia pela Anvisa.",
+      "legal_refs": [
+        "RDC327_2019",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "vias_distintas",
+        "nao_registro",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-137"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Preciso de receita médica para comprar?",
+      "answer": "Sim. A prescrição é exclusiva de médico. O tipo de notificação (A ou B) depende do teor de THC informado no produto.",
+      "legal_refs": [
+        "RDC327_2019",
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "receituario",
+        "medico",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-138"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Como o teor de THC impacta a receita?",
+      "answer": "Produtos até 0,2% THC tendem a Notificação B; acima de 0,2%, Notificação A. O rótulo/monografia do produto define o enquadramento.",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC327_2019"
+      ],
+      "tags": [
+        "thc",
+        "classificacao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-139"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Preciso de nota fiscal",
+      "answer": "Emitimos NF após a consulta ou aquisição de serviço. Envio por e-mail.",
+      "legal_refs": [],
+      "tags": [
+        "nota_fiscal",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-140"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Como remarcar sem perder a receita?",
+      "answer": "Remarco o horário mantendo seu cadastro e histórico. A validade da sua receita não muda; apenas o atendimento.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "remarcacao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-141"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Tenho diagnóstico de dor crônica; posso agendar?",
+      "answer": "Sim, posso marcar uma avaliação com médico habilitado. Na consulta, ele avaliará histórico, tratamentos prévios e se há indicação clínica.",
+      "legal_refs": [
+        "RDC327_2019"
+      ],
+      "tags": [
+        "dor_cronica",
+        "agendamento",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-142"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "A importação substitui a compra em farmácia?",
+      "answer": "São vias distintas. Produtos de farmácia seguem RDC 327/2019; importação excepcional segue RDC 660/2022 e não equivale a registro/aprovação de eficácia pela Anvisa.",
+      "legal_refs": [
+        "RDC327_2019",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "vias_distintas",
+        "nao_registro",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-143"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "Como funciona a importação excepcional pela Anvisa?",
+      "answer": "Pessoa física pode importar, para uso próprio, com prescrição de profissional habilitado e autorização válida por até 2 anos.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "importacao",
+        "validade_2_anos",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-144"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "Quem entrega o produto?",
+      "answer": "Para produtos de farmácia, a dispensação é exclusiva do farmacêutico. Na importação, o fornecedor envia ao paciente autorizado.",
+      "legal_refs": [
+        "RDC327_2019",
+        "PORTARIA_344_1998",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "dispensacao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-145"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Sou elegível para tratamento com produtos de cannabis?",
+      "answer": "A elegibilidade é avaliada pelo médico assistente, após esgotar opções terapêuticas convencionais e com Termo de Consentimento Livre e Esclarecido (TCLE). A decisão é individualizada, conforme quadro clínico e normas vigentes.",
+      "legal_refs": [
+        "RDC327_2019",
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "tcle",
+        "triagem",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-146"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "Quais documentos para importar?",
+      "answer": "Geralmente: prescrição, laudo/relatório, documento pessoal e formulário no portal da Anvisa. Eu te guio no passo a passo após a consulta.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "documentos",
+        "passo_a_passo",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-147"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "Meus dados e prescrições ficam seguros?",
+      "answer": "Sim. Usamos minimização de dados, logs auditáveis e mascaramento de CPF. O acesso a documentos é restrito.",
+      "legal_refs": [],
+      "tags": [
+        "lgpd",
+        "seguranca",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-148"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Não recebi o link do Meet",
+      "answer": "Reenvio agora e confirmo por e-mail. Se persistir, reemito a sala.",
+      "legal_refs": [],
+      "tags": [
+        "meet",
+        "reenviar",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-149"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Preciso de receita médica para comprar?",
+      "answer": "Sim. A prescrição é exclusiva de médico. O tipo de notificação (A ou B) depende do teor de THC informado no produto.",
+      "legal_refs": [
+        "RDC327_2019",
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "receituario",
+        "medico",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-150"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "Preciso renovar minha autorização de importação?",
+      "answer": "Sim, quando vencer o prazo da autorização (em geral, 2 anos) é necessário solicitar nova autorização se houver continuidade do tratamento.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "renovacao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-151"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "Quem entrega o produto?",
+      "answer": "Para produtos de farmácia, a dispensação é exclusiva do farmacêutico. Na importação, o fornecedor envia ao paciente autorizado.",
+      "legal_refs": [
+        "RDC327_2019",
+        "PORTARIA_344_1998",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "dispensacao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-152"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Qual a diferença entre receita A e B para cannabis?",
+      "answer": "Em regra: produtos com até 0,2% de THC utilizam Notificação de Receita B (azul), e acima de 0,2% utilizam Notificação de Receita A (amarela).",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC327_2019"
+      ],
+      "tags": [
+        "receita_A",
+        "receita_B",
+        "thc_limite_0_2",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-153"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Recebi receita digital. É aceita na farmácia?",
+      "answer": "Farmácias/drogarias seguem regras específicas para controle especial. Algumas exigem receituário físico conforme tipo de produto. Podemos orientar a farmácia indicada pelo seu médico.",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC327_2019"
+      ],
+      "tags": [
+        "farmacia",
+        "digital_fisico",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-154"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "Dá para levar meu produto em viagem?",
+      "answer": "Viajar com produto exige portar receita e comprovação de origem. Para viagens internacionais, verifique regras do país de destino.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "viagem",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-155"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "Quais documentos para importar?",
+      "answer": "Geralmente: prescrição, laudo/relatório, documento pessoal e formulário no portal da Anvisa. Eu te guio no passo a passo após a consulta.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "documentos",
+        "passo_a_passo",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-156"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Quero marcar avaliação com especialista",
+      "answer": "Perfeito. Posso listar especialistas por cidade, preço e horários próximos. Após confirmar, envio o link de pagamento e, pago, o link do Meet.",
+      "legal_refs": [],
+      "tags": [
+        "agendamento",
+        "meet",
+        "pagamento",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-157"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "É possível usar receita de outro médico na plataforma?",
+      "answer": "Sim, desde que válida e dentro dos requisitos. Para teleconsulta, o profissional pode revisar antes de orientar compra/dispensação.",
+      "legal_refs": [
+        "RDC327_2019"
+      ],
+      "tags": [
+        "segunda_opiniao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-158"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Sou elegível para tratamento com produtos de cannabis?",
+      "answer": "A elegibilidade é avaliada pelo médico assistente, após esgotar opções terapêuticas convencionais e com Termo de Consentimento Livre e Esclarecido (TCLE). A decisão é individualizada, conforme quadro clínico e normas vigentes.",
+      "legal_refs": [
+        "RDC327_2019",
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "tcle",
+        "triagem",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-159"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "Preciso renovar minha autorização de importação?",
+      "answer": "Sim, quando vencer o prazo da autorização (em geral, 2 anos) é necessário solicitar nova autorização se houver continuidade do tratamento.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "renovacao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-160"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "Dá para levar meu produto em viagem?",
+      "answer": "Viajar com produto exige portar receita e comprovação de origem. Para viagens internacionais, verifique regras do país de destino.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "viagem",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-161"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Preciso de nota fiscal",
+      "answer": "Emitimos NF após a consulta ou aquisição de serviço. Envio por e-mail.",
+      "legal_refs": [],
+      "tags": [
+        "nota_fiscal",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-162"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Preciso de nota fiscal",
+      "answer": "Emitimos NF após a consulta ou aquisição de serviço. Envio por e-mail.",
+      "legal_refs": [],
+      "tags": [
+        "nota_fiscal",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-163"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Gostaria de marcar avaliação com especialista",
+      "answer": "Perfeito. Posso listar especialistas por cidade, preço e horários próximos. Após confirmar, envio o link de pagamento e, pago, o link do Meet.",
+      "legal_refs": [],
+      "tags": [
+        "agendamento",
+        "meet",
+        "pagamento",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-164"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Qual a diferença entre receita A e B para cannabis?",
+      "answer": "Em regra: produtos com até 0,2% de THC utilizam Notificação de Receita B (azul), e acima de 0,2% utilizam Notificação de Receita A (amarela).",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC327_2019"
+      ],
+      "tags": [
+        "receita_A",
+        "receita_B",
+        "thc_limite_0_2",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-165"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "Meus dados e prescrições ficam seguros?",
+      "answer": "Sim. Usamos minimização de dados, logs auditáveis e mascaramento de CPF. O acesso a documentos é restrito.",
+      "legal_refs": [],
+      "tags": [
+        "lgpd",
+        "seguranca",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-166"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Preciso de receita médica para comprar?",
+      "answer": "Sim. A prescrição é exclusiva de médico. O tipo de notificação (A ou B) depende do teor de THC informado no produto.",
+      "legal_refs": [
+        "RDC327_2019",
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "receituario",
+        "medico",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-167"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Preciso cancelar e pedir reembolso",
+      "answer": "Sem problema. Aplico a política de cancelamento: reembolso integral com antecedência; após o horário, segue política de no-show.",
+      "legal_refs": [],
+      "tags": [
+        "cancelamento",
+        "reembolso",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-168"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "Posso levar meu produto em viagem?",
+      "answer": "Viajar com produto exige portar receita e comprovação de origem. Para viagens internacionais, verifique regras do país de destino.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "viagem",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-169"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Posso usar receita de outro médico na plataforma?",
+      "answer": "Sim, desde que válida e dentro dos requisitos. Para teleconsulta, o profissional pode revisar antes de orientar compra/dispensação.",
+      "legal_refs": [
+        "RDC327_2019"
+      ],
+      "tags": [
+        "segunda_opiniao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-170"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Qual a diferença entre receita A e B para cannabis?",
+      "answer": "Em regra: produtos com até 0,2% de THC utilizam Notificação de Receita B (azul), e acima de 0,2% utilizam Notificação de Receita A (amarela).",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC327_2019"
+      ],
+      "tags": [
+        "receita_A",
+        "receita_B",
+        "thc_limite_0_2",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-171"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "Meus dados e prescrições ficam seguros?",
+      "answer": "Sim. Usamos minimização de dados, logs auditáveis e mascaramento de CPF. O acesso a documentos é restrito.",
+      "legal_refs": [],
+      "tags": [
+        "lgpd",
+        "seguranca",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-172"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Preciso de nota fiscal",
+      "answer": "Emitimos NF após a consulta ou aquisição de serviço. Envio por e-mail.",
+      "legal_refs": [],
+      "tags": [
+        "nota_fiscal",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-173"
+    },
+    {
+      "audience": "paciente",
+      "topic": "importacao",
+      "question": "A importação substitui a compra em farmácia?",
+      "answer": "São vias distintas. Produtos de farmácia seguem RDC 327/2019; importação excepcional segue RDC 660/2022 e não equivale a registro/aprovação de eficácia pela Anvisa.",
+      "legal_refs": [
+        "RDC327_2019",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "vias_distintas",
+        "nao_registro",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-174"
+    },
+    {
+      "audience": "paciente",
+      "topic": "eligibilidade",
+      "question": "Tenho diagnóstico de dor crônica; posso agendar?",
+      "answer": "Sim, posso marcar uma avaliação com médico habilitado. Na consulta, ele avaliará histórico, tratamentos prévios e se há indicação clínica.",
+      "legal_refs": [
+        "RDC327_2019"
+      ],
+      "tags": [
+        "dor_cronica",
+        "agendamento",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-175"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Como o teor de THC impacta a receita?",
+      "answer": "Produtos até 0,2% THC tendem a Notificação B; acima de 0,2%, Notificação A. O rótulo/monografia do produto define o enquadramento.",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC327_2019"
+      ],
+      "tags": [
+        "thc",
+        "classificacao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-176"
+    },
+    {
+      "audience": "paciente",
+      "topic": "receituario",
+      "question": "Qual a diferença entre receita A e B para cannabis?",
+      "answer": "Em regra: produtos com até 0,2% de THC utilizam Notificação de Receita B (azul), e acima de 0,2% utilizam Notificação de Receita A (amarela).",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC327_2019"
+      ],
+      "tags": [
+        "receita_A",
+        "receita_B",
+        "thc_limite_0_2",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-177"
+    },
+    {
+      "audience": "paciente",
+      "topic": "consulta_fluxo",
+      "question": "Preciso de nota fiscal",
+      "answer": "Emitimos NF após a consulta ou aquisição de serviço. Envio por e-mail.",
+      "legal_refs": [],
+      "tags": [
+        "nota_fiscal",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-178"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "Quem entrega o produto?",
+      "answer": "Para produtos de farmácia, a dispensação é exclusiva do farmacêutico. Na importação, o fornecedor envia ao paciente autorizado.",
+      "legal_refs": [
+        "RDC327_2019",
+        "PORTARIA_344_1998",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "dispensacao",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-179"
+    },
+    {
+      "audience": "paciente",
+      "topic": "seguranca_compliance",
+      "question": "Posso levar meu produto em viagem?",
+      "answer": "Viajar com produto exige portar receita e comprovação de origem. Para viagens internacionais, verifique regras do país de destino.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "viagem",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-180"
+    },
+    {
+      "audience": "medico",
+      "topic": "onboarding_e_compliance",
+      "question": "Quais documentos preciso para atuar na plataforma?",
+      "answer": "Nome, CRM, especialidade, preço e disponibilidade. Validamos CRM e termos de responsabilidade e habilitamos modelos de TCLE e receituário (A/B).",
+      "legal_refs": [
+        "RDC327_2019",
+        "PORTARIA_344_1998",
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "crm",
+        "tcle",
+        "receituario"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-181"
+    },
+    {
+      "audience": "medico",
+      "topic": "onboarding_e_compliance",
+      "question": "Posso prescrever cannabis in natura?",
+      "answer": "Não. É vedado prescrever cannabis in natura; utilize apenas produtos regulares para uso medicinal, com prescrição conforme teor de THC.",
+      "legal_refs": [
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "proibicao_in_natura"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-182"
+    },
+    {
+      "audience": "medico",
+      "topic": "onboarding_e_compliance",
+      "question": "Como configuro TCLE e modelos de receita?",
+      "answer": "Disponibilizamos templates de TCLE e modelos de Notificação A/B. Você pode personalizar campos clínicos e carimbo com CRM.",
+      "legal_refs": [
+        "CFM_2324_2022_SUSP",
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "tcle",
+        "modelos"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-183"
+    },
+    {
+      "audience": "medico",
+      "topic": "onboarding_e_compliance",
+      "question": "Quais vias legais devo indicar ao paciente?",
+      "answer": "Duas vias: (1) farmácia/drogaria sob RDC 327/2019; (2) importação excepcional (RDC 660/2022). Oriente de acordo com o caso.",
+      "legal_refs": [
+        "RDC327_2019",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "vias_legais"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-184"
+    },
+    {
+      "audience": "medico",
+      "topic": "onboarding_e_compliance",
+      "question": "A plataforma impõe marca específica?",
+      "answer": "Não. Você decide a prescrição e o paciente escolhe onde adquirir. Mantemos neutralidade comercial.",
+      "legal_refs": [
+        "RDC327_2019"
+      ],
+      "tags": [
+        "neutralidade"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-185"
+    },
+    {
+      "audience": "medico",
+      "topic": "receituario_A_B",
+      "question": "Quando usar Notificação B ou A?",
+      "answer": "Regra prática: até 0,2% THC → Notificação B (azul); acima de 0,2% → Notificação A (amarela).",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC327_2019"
+      ],
+      "tags": [
+        "thc_limite_0_2",
+        "receita"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-186"
+    },
+    {
+      "audience": "medico",
+      "topic": "receituario_A_B",
+      "question": "Por quanto tempo posso prescrever por receita?",
+      "answer": "Em geral, B: até 60 dias; A: até 30 dias de tratamento. Adeque ao caso e à normativa local.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "prazo"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-187"
+    },
+    {
+      "audience": "medico",
+      "topic": "receituario_A_B",
+      "question": "Como emitir receita digital com controle especial?",
+      "answer": "Siga exigências de controle especial e, se necessário, providencie via física conforme exigência da farmácia. A plataforma apoia com modelos.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "digital_fisico"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-188"
+    },
+    {
+      "audience": "medico",
+      "topic": "receituario_A_B",
+      "question": "Como registrar dispensação e acompanhamento?",
+      "answer": "A dispensação é do farmacêutico; registre orientações e retorno clínico. Acompanhe adesão e efeitos.",
+      "legal_refs": [
+        "RDC327_2019",
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "dispensacao",
+        "acompanhamento"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-189"
+    },
+    {
+      "audience": "medico",
+      "topic": "receituario_A_B",
+      "question": "Como referenciar o teor de THC no receituário?",
+      "answer": "Inclua concentração e posologia conforme produto indicado. O teor embasa o tipo de Notificação (A/B).",
+      "legal_refs": [
+        "RDC327_2019",
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "rotulo",
+        "posologia"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-190"
+    },
+    {
+      "audience": "medico",
+      "topic": "importacao_medico",
+      "question": "Como orientar importação para paciente?",
+      "answer": "Após avaliação e prescrição, o paciente pode solicitar autorização com validade de até 2 anos no portal da Anvisa.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "importacao",
+        "validade_2_anos"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-191"
+    },
+    {
+      "audience": "medico",
+      "topic": "importacao_medico",
+      "question": "A importação exige registro de eficácia na Anvisa?",
+      "answer": "Não. A importação excepcional não equivale a registro de eficácia/segurança pela Anvisa; oriente riscos e obtenha TCLE.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "nao_registro",
+        "tcle"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-192"
+    },
+    {
+      "audience": "medico",
+      "topic": "importacao_medico",
+      "question": "Posso recomendar fornecedor específico?",
+      "answer": "Evite conflito de interesse. Liste critérios técnicos (qualidade, teor, certificações) e deixe o paciente escolher.",
+      "legal_refs": [],
+      "tags": [
+        "conflito_interesse"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-193"
+    },
+    {
+      "audience": "medico",
+      "topic": "importacao_medico",
+      "question": "Como lidar com receita para importados com alto THC?",
+      "answer": "Aplique Notificação A (amarela) e detalhe concentração/posologia. Cheque legislação local e mantenha TCLE atualizado.",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "alto_thc",
+        "receita_A"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-194"
+    },
+    {
+      "audience": "medico",
+      "topic": "importacao_medico",
+      "question": "Acompanhamento de efeitos e adesão",
+      "answer": "Agende retorno para avaliar benefício/efeitos, ajuste de posologia e alternativa terapêutica quando necessário.",
+      "legal_refs": [
+        "RDC327_2019"
+      ],
+      "tags": [
+        "seguimento"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-195"
+    },
+    {
+      "audience": "medico",
+      "topic": "agenda_fluxo",
+      "question": "Como abrir slots em lote?",
+      "answer": "Use o painel para criar blocos por dias/horários e duração. Recomendo 20–30 min para primeira consulta.",
+      "legal_refs": [],
+      "tags": [
+        "agenda",
+        "lotes"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-196"
+    },
+    {
+      "audience": "medico",
+      "topic": "agenda_fluxo",
+      "question": "Como marcar no-show e política de reembolso?",
+      "answer": "Marque no-show e siga política de reembolso da plataforma. Ofereça remarcação quando apropriado.",
+      "legal_refs": [],
+      "tags": [
+        "no_show",
+        "reembolso"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-197"
+    },
+    {
+      "audience": "medico",
+      "topic": "agenda_fluxo",
+      "question": "Como emitir laudo/atestado pós-consulta?",
+      "answer": "Use o módulo de documentos. Novas versões invalidam as anteriores automaticamente, com notificação ao paciente.",
+      "legal_refs": [],
+      "tags": [
+        "documentos"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-198"
+    },
+    {
+      "audience": "medico",
+      "topic": "agenda_fluxo",
+      "question": "Posso pausar minha agenda?",
+      "answer": "Sim, deixe o perfil invisível temporariamente sem perder configurações.",
+      "legal_refs": [],
+      "tags": [
+        "pausa"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-199"
+    },
+    {
+      "audience": "medico",
+      "topic": "agenda_fluxo",
+      "question": "Onde vejo repasses?",
+      "answer": "No painel financeiro: status das consultas, valores e datas de repasse.",
+      "legal_refs": [],
+      "tags": [
+        "financeiro"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-200"
+    },
+    {
+      "audience": "medico",
+      "topic": "receituario_A_B",
+      "question": "Por quanto tempo posso prescrever por receita?",
+      "answer": "Em geral, B: até 60 dias; A: até 30 dias de tratamento. Adeque ao caso e à normativa local.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "prazo",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-201"
+    },
+    {
+      "audience": "medico",
+      "topic": "onboarding_e_compliance",
+      "question": "Posso prescrever cannabis in natura?",
+      "answer": "Não. É vedado prescrever cannabis in natura; utilize apenas produtos regulares para uso medicinal, com prescrição conforme teor de THC.",
+      "legal_refs": [
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "proibicao_in_natura",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-202"
+    },
+    {
+      "audience": "medico",
+      "topic": "agenda_fluxo",
+      "question": "Onde vejo repasses?",
+      "answer": "No painel financeiro: status das consultas, valores e datas de repasse.",
+      "legal_refs": [],
+      "tags": [
+        "financeiro",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-203"
+    },
+    {
+      "audience": "medico",
+      "topic": "receituario_A_B",
+      "question": "Como registrar dispensação e acompanhamento?",
+      "answer": "A dispensação é do farmacêutico; registre orientações e retorno clínico. Acompanhe adesão e efeitos.",
+      "legal_refs": [
+        "RDC327_2019",
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "dispensacao",
+        "acompanhamento",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-204"
+    },
+    {
+      "audience": "medico",
+      "topic": "receituario_A_B",
+      "question": "Como emitir receita digital com controle especial?",
+      "answer": "Siga exigências de controle especial e, se necessário, providencie via física conforme exigência da farmácia. A plataforma apoia com modelos.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "digital_fisico",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-205"
+    },
+    {
+      "audience": "medico",
+      "topic": "receituario_A_B",
+      "question": "Como emitir receita digital com controle especial?",
+      "answer": "Siga exigências de controle especial e, se necessário, providencie via física conforme exigência da farmácia. A plataforma apoia com modelos.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "digital_fisico",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-206"
+    },
+    {
+      "audience": "medico",
+      "topic": "importacao_medico",
+      "question": "Acompanhamento de efeitos e adesão",
+      "answer": "Agende retorno para avaliar benefício/efeitos, ajuste de posologia e alternativa terapêutica quando necessário.",
+      "legal_refs": [
+        "RDC327_2019"
+      ],
+      "tags": [
+        "seguimento",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-207"
+    },
+    {
+      "audience": "medico",
+      "topic": "receituario_A_B",
+      "question": "Quando usar Notificação B ou A?",
+      "answer": "Regra prática: até 0,2% THC → Notificação B (azul); acima de 0,2% → Notificação A (amarela).",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC327_2019"
+      ],
+      "tags": [
+        "thc_limite_0_2",
+        "receita",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-208"
+    },
+    {
+      "audience": "medico",
+      "topic": "receituario_A_B",
+      "question": "Por quanto tempo posso prescrever por receita?",
+      "answer": "Em geral, B: até 60 dias; A: até 30 dias de tratamento. Adeque ao caso e à normativa local.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "prazo",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-209"
+    },
+    {
+      "audience": "medico",
+      "topic": "receituario_A_B",
+      "question": "Como emitir receita digital com controle especial?",
+      "answer": "Siga exigências de controle especial e, se necessário, providencie via física conforme exigência da farmácia. A plataforma apoia com modelos.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "digital_fisico",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-210"
+    },
+    {
+      "audience": "medico",
+      "topic": "onboarding_e_compliance",
+      "question": "Como configuro TCLE e modelos de receita?",
+      "answer": "Disponibilizamos templates de TCLE e modelos de Notificação A/B. Você pode personalizar campos clínicos e carimbo com CRM.",
+      "legal_refs": [
+        "CFM_2324_2022_SUSP",
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "tcle",
+        "modelos",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-211"
+    },
+    {
+      "audience": "medico",
+      "topic": "agenda_fluxo",
+      "question": "Como marcar no-show e política de reembolso?",
+      "answer": "Marque no-show e siga política de reembolso da plataforma. Ofereça remarcação quando apropriado.",
+      "legal_refs": [],
+      "tags": [
+        "no_show",
+        "reembolso",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-212"
+    },
+    {
+      "audience": "medico",
+      "topic": "onboarding_e_compliance",
+      "question": "A plataforma impõe marca específica?",
+      "answer": "Não. Você decide a prescrição e o paciente escolhe onde adquirir. Mantemos neutralidade comercial.",
+      "legal_refs": [
+        "RDC327_2019"
+      ],
+      "tags": [
+        "neutralidade",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-213"
+    },
+    {
+      "audience": "medico",
+      "topic": "agenda_fluxo",
+      "question": "Como emitir laudo/atestado pós-consulta?",
+      "answer": "Use o módulo de documentos. Novas versões invalidam as anteriores automaticamente, com notificação ao paciente.",
+      "legal_refs": [],
+      "tags": [
+        "documentos",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-214"
+    },
+    {
+      "audience": "medico",
+      "topic": "agenda_fluxo",
+      "question": "Como abrir slots em lote?",
+      "answer": "Use o painel para criar blocos por dias/horários e duração. Recomendo 20–30 min para primeira consulta.",
+      "legal_refs": [],
+      "tags": [
+        "agenda",
+        "lotes",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-215"
+    },
+    {
+      "audience": "medico",
+      "topic": "onboarding_e_compliance",
+      "question": "Quais documentos preciso para atuar na plataforma?",
+      "answer": "Nome, CRM, especialidade, preço e disponibilidade. Validamos CRM e termos de responsabilidade e habilitamos modelos de TCLE e receituário (A/B).",
+      "legal_refs": [
+        "RDC327_2019",
+        "PORTARIA_344_1998",
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "crm",
+        "tcle",
+        "receituario",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-216"
+    },
+    {
+      "audience": "medico",
+      "topic": "importacao_medico",
+      "question": "Como lidar com receita para importados com alto THC?",
+      "answer": "Aplique Notificação A (amarela) e detalhe concentração/posologia. Cheque legislação local e mantenha TCLE atualizado.",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "alto_thc",
+        "receita_A",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-217"
+    },
+    {
+      "audience": "medico",
+      "topic": "agenda_fluxo",
+      "question": "Onde vejo repasses?",
+      "answer": "No painel financeiro: status das consultas, valores e datas de repasse.",
+      "legal_refs": [],
+      "tags": [
+        "financeiro",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-218"
+    },
+    {
+      "audience": "medico",
+      "topic": "onboarding_e_compliance",
+      "question": "É possível prescrever cannabis in natura?",
+      "answer": "Não. É vedado prescrever cannabis in natura; utilize apenas produtos regulares para uso medicinal, com prescrição conforme teor de THC.",
+      "legal_refs": [
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "proibicao_in_natura",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-219"
+    },
+    {
+      "audience": "medico",
+      "topic": "onboarding_e_compliance",
+      "question": "Quais vias legais devo indicar ao paciente?",
+      "answer": "Duas vias: (1) farmácia/drogaria sob RDC 327/2019; (2) importação excepcional (RDC 660/2022). Oriente de acordo com o caso.",
+      "legal_refs": [
+        "RDC327_2019",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "vias_legais",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-220"
+    },
+    {
+      "audience": "medico",
+      "topic": "receituario_A_B",
+      "question": "Como emitir receita digital com controle especial?",
+      "answer": "Siga exigências de controle especial e, se necessário, providencie via física conforme exigência da farmácia. A plataforma apoia com modelos.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "digital_fisico",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-221"
+    },
+    {
+      "audience": "medico",
+      "topic": "receituario_A_B",
+      "question": "Como referenciar o teor de THC no receituário?",
+      "answer": "Inclua concentração e posologia conforme produto indicado. O teor embasa o tipo de Notificação (A/B).",
+      "legal_refs": [
+        "RDC327_2019",
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "rotulo",
+        "posologia",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-222"
+    },
+    {
+      "audience": "medico",
+      "topic": "receituario_A_B",
+      "question": "Como registrar dispensação e acompanhamento?",
+      "answer": "A dispensação é do farmacêutico; registre orientações e retorno clínico. Acompanhe adesão e efeitos.",
+      "legal_refs": [
+        "RDC327_2019",
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "dispensacao",
+        "acompanhamento",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-223"
+    },
+    {
+      "audience": "medico",
+      "topic": "importacao_medico",
+      "question": "Como lidar com receita para importados com alto THC?",
+      "answer": "Aplique Notificação A (amarela) e detalhe concentração/posologia. Cheque legislação local e mantenha TCLE atualizado.",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "alto_thc",
+        "receita_A",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-224"
+    },
+    {
+      "audience": "medico",
+      "topic": "importacao_medico",
+      "question": "Como lidar com receita para importados com alto THC?",
+      "answer": "Aplique Notificação A (amarela) e detalhe concentração/posologia. Cheque legislação local e mantenha TCLE atualizado.",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "alto_thc",
+        "receita_A",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-225"
+    },
+    {
+      "audience": "medico",
+      "topic": "importacao_medico",
+      "question": "Como orientar importação para paciente?",
+      "answer": "Após avaliação e prescrição, o paciente pode solicitar autorização com validade de até 2 anos no portal da Anvisa.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "importacao",
+        "validade_2_anos",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-226"
+    },
+    {
+      "audience": "medico",
+      "topic": "receituario_A_B",
+      "question": "Quando usar Notificação B ou A?",
+      "answer": "Regra prática: até 0,2% THC → Notificação B (azul); acima de 0,2% → Notificação A (amarela).",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC327_2019"
+      ],
+      "tags": [
+        "thc_limite_0_2",
+        "receita",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-227"
+    },
+    {
+      "audience": "medico",
+      "topic": "onboarding_e_compliance",
+      "question": "Quais vias legais devo indicar ao paciente?",
+      "answer": "Duas vias: (1) farmácia/drogaria sob RDC 327/2019; (2) importação excepcional (RDC 660/2022). Oriente de acordo com o caso.",
+      "legal_refs": [
+        "RDC327_2019",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "vias_legais",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-228"
+    },
+    {
+      "audience": "medico",
+      "topic": "agenda_fluxo",
+      "question": "Onde vejo repasses?",
+      "answer": "No painel financeiro: status das consultas, valores e datas de repasse.",
+      "legal_refs": [],
+      "tags": [
+        "financeiro",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-229"
+    },
+    {
+      "audience": "medico",
+      "topic": "onboarding_e_compliance",
+      "question": "Como configuro TCLE e modelos de receita?",
+      "answer": "Disponibilizamos templates de TCLE e modelos de Notificação A/B. Você pode personalizar campos clínicos e carimbo com CRM.",
+      "legal_refs": [
+        "CFM_2324_2022_SUSP",
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "tcle",
+        "modelos",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-230"
+    },
+    {
+      "audience": "medico",
+      "topic": "receituario_A_B",
+      "question": "Como referenciar o teor de THC no receituário?",
+      "answer": "Inclua concentração e posologia conforme produto indicado. O teor embasa o tipo de Notificação (A/B).",
+      "legal_refs": [
+        "RDC327_2019",
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "rotulo",
+        "posologia",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-231"
+    },
+    {
+      "audience": "medico",
+      "topic": "agenda_fluxo",
+      "question": "Como emitir laudo/atestado pós-consulta?",
+      "answer": "Use o módulo de documentos. Novas versões invalidam as anteriores automaticamente, com notificação ao paciente.",
+      "legal_refs": [],
+      "tags": [
+        "documentos",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-232"
+    },
+    {
+      "audience": "medico",
+      "topic": "onboarding_e_compliance",
+      "question": "Quais vias legais devo indicar ao paciente?",
+      "answer": "Duas vias: (1) farmácia/drogaria sob RDC 327/2019; (2) importação excepcional (RDC 660/2022). Oriente de acordo com o caso.",
+      "legal_refs": [
+        "RDC327_2019",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "vias_legais",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-233"
+    },
+    {
+      "audience": "medico",
+      "topic": "receituario_A_B",
+      "question": "Como emitir receita digital com controle especial?",
+      "answer": "Siga exigências de controle especial e, se necessário, providencie via física conforme exigência da farmácia. A plataforma apoia com modelos.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "digital_fisico",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-234"
+    },
+    {
+      "audience": "medico",
+      "topic": "importacao_medico",
+      "question": "Acompanhamento de efeitos e adesão",
+      "answer": "Agende retorno para avaliar benefício/efeitos, ajuste de posologia e alternativa terapêutica quando necessário.",
+      "legal_refs": [
+        "RDC327_2019"
+      ],
+      "tags": [
+        "seguimento",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-235"
+    },
+    {
+      "audience": "medico",
+      "topic": "agenda_fluxo",
+      "question": "Como emitir laudo/atestado pós-consulta?",
+      "answer": "Use o módulo de documentos. Novas versões invalidam as anteriores automaticamente, com notificação ao paciente.",
+      "legal_refs": [],
+      "tags": [
+        "documentos",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-236"
+    },
+    {
+      "audience": "medico",
+      "topic": "onboarding_e_compliance",
+      "question": "É possível prescrever cannabis in natura?",
+      "answer": "Não. É vedado prescrever cannabis in natura; utilize apenas produtos regulares para uso medicinal, com prescrição conforme teor de THC.",
+      "legal_refs": [
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "proibicao_in_natura",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-237"
+    },
+    {
+      "audience": "medico",
+      "topic": "importacao_medico",
+      "question": "Como orientar importação para paciente?",
+      "answer": "Após avaliação e prescrição, o paciente pode solicitar autorização com validade de até 2 anos no portal da Anvisa.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "importacao",
+        "validade_2_anos",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-238"
+    },
+    {
+      "audience": "medico",
+      "topic": "importacao_medico",
+      "question": "Acompanhamento de efeitos e adesão",
+      "answer": "Agende retorno para avaliar benefício/efeitos, ajuste de posologia e alternativa terapêutica quando necessário.",
+      "legal_refs": [
+        "RDC327_2019"
+      ],
+      "tags": [
+        "seguimento",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-239"
+    },
+    {
+      "audience": "medico",
+      "topic": "onboarding_e_compliance",
+      "question": "Quais vias legais devo indicar ao paciente?",
+      "answer": "Duas vias: (1) farmácia/drogaria sob RDC 327/2019; (2) importação excepcional (RDC 660/2022). Oriente de acordo com o caso.",
+      "legal_refs": [
+        "RDC327_2019",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "vias_legais",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-240"
+    },
+    {
+      "audience": "medico",
+      "topic": "agenda_fluxo",
+      "question": "Onde vejo repasses?",
+      "answer": "No painel financeiro: status das consultas, valores e datas de repasse.",
+      "legal_refs": [],
+      "tags": [
+        "financeiro",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-241"
+    },
+    {
+      "audience": "medico",
+      "topic": "importacao_medico",
+      "question": "Como lidar com receita para importados com alto THC?",
+      "answer": "Aplique Notificação A (amarela) e detalhe concentração/posologia. Cheque legislação local e mantenha TCLE atualizado.",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "alto_thc",
+        "receita_A",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-242"
+    },
+    {
+      "audience": "medico",
+      "topic": "importacao_medico",
+      "question": "A importação exige registro de eficácia na Anvisa?",
+      "answer": "Não. A importação excepcional não equivale a registro de eficácia/segurança pela Anvisa; oriente riscos e obtenha TCLE.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "nao_registro",
+        "tcle",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-243"
+    },
+    {
+      "audience": "medico",
+      "topic": "importacao_medico",
+      "question": "A importação exige registro de eficácia na Anvisa?",
+      "answer": "Não. A importação excepcional não equivale a registro de eficácia/segurança pela Anvisa; oriente riscos e obtenha TCLE.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "nao_registro",
+        "tcle",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-244"
+    },
+    {
+      "audience": "medico",
+      "topic": "onboarding_e_compliance",
+      "question": "Dá para prescrever cannabis in natura?",
+      "answer": "Não. É vedado prescrever cannabis in natura; utilize apenas produtos regulares para uso medicinal, com prescrição conforme teor de THC.",
+      "legal_refs": [
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "proibicao_in_natura",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-245"
+    },
+    {
+      "audience": "medico",
+      "topic": "receituario_A_B",
+      "question": "Como emitir receita digital com controle especial?",
+      "answer": "Siga exigências de controle especial e, se necessário, providencie via física conforme exigência da farmácia. A plataforma apoia com modelos.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "digital_fisico",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-246"
+    },
+    {
+      "audience": "medico",
+      "topic": "importacao_medico",
+      "question": "Acompanhamento de efeitos e adesão",
+      "answer": "Agende retorno para avaliar benefício/efeitos, ajuste de posologia e alternativa terapêutica quando necessário.",
+      "legal_refs": [
+        "RDC327_2019"
+      ],
+      "tags": [
+        "seguimento",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-247"
+    },
+    {
+      "audience": "medico",
+      "topic": "onboarding_e_compliance",
+      "question": "Dá para prescrever cannabis in natura?",
+      "answer": "Não. É vedado prescrever cannabis in natura; utilize apenas produtos regulares para uso medicinal, com prescrição conforme teor de THC.",
+      "legal_refs": [
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "proibicao_in_natura",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-248"
+    },
+    {
+      "audience": "medico",
+      "topic": "importacao_medico",
+      "question": "Como lidar com receita para importados com alto THC?",
+      "answer": "Aplique Notificação A (amarela) e detalhe concentração/posologia. Cheque legislação local e mantenha TCLE atualizado.",
+      "legal_refs": [
+        "PORTARIA_344_1998",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "alto_thc",
+        "receita_A",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-249"
+    },
+    {
+      "audience": "medico",
+      "topic": "importacao_medico",
+      "question": "Dá para recomendar fornecedor específico?",
+      "answer": "Evite conflito de interesse. Liste critérios técnicos (qualidade, teor, certificações) e deixe o paciente escolher.",
+      "legal_refs": [],
+      "tags": [
+        "conflito_interesse",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-250"
+    },
+    {
+      "audience": "medico",
+      "topic": "agenda_fluxo",
+      "question": "Como emitir laudo/atestado pós-consulta?",
+      "answer": "Use o módulo de documentos. Novas versões invalidam as anteriores automaticamente, com notificação ao paciente.",
+      "legal_refs": [],
+      "tags": [
+        "documentos",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-251"
+    },
+    {
+      "audience": "medico",
+      "topic": "importacao_medico",
+      "question": "A importação exige registro de eficácia na Anvisa?",
+      "answer": "Não. A importação excepcional não equivale a registro de eficácia/segurança pela Anvisa; oriente riscos e obtenha TCLE.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "nao_registro",
+        "tcle",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-252"
+    },
+    {
+      "audience": "medico",
+      "topic": "onboarding_e_compliance",
+      "question": "Quais vias legais devo indicar ao paciente?",
+      "answer": "Duas vias: (1) farmácia/drogaria sob RDC 327/2019; (2) importação excepcional (RDC 660/2022). Oriente de acordo com o caso.",
+      "legal_refs": [
+        "RDC327_2019",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "vias_legais",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-253"
+    },
+    {
+      "audience": "medico",
+      "topic": "agenda_fluxo",
+      "question": "Onde vejo repasses?",
+      "answer": "No painel financeiro: status das consultas, valores e datas de repasse.",
+      "legal_refs": [],
+      "tags": [
+        "financeiro",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-254"
+    },
+    {
+      "audience": "medico",
+      "topic": "importacao_medico",
+      "question": "Posso recomendar fornecedor específico?",
+      "answer": "Evite conflito de interesse. Liste critérios técnicos (qualidade, teor, certificações) e deixe o paciente escolher.",
+      "legal_refs": [],
+      "tags": [
+        "conflito_interesse",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-255"
+    },
+    {
+      "audience": "medico",
+      "topic": "agenda_fluxo",
+      "question": "Como abrir slots em lote?",
+      "answer": "Use o painel para criar blocos por dias/horários e duração. Recomendo 20–30 min para primeira consulta.",
+      "legal_refs": [],
+      "tags": [
+        "agenda",
+        "lotes",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-256"
+    },
+    {
+      "audience": "medico",
+      "topic": "receituario_A_B",
+      "question": "Como registrar dispensação e acompanhamento?",
+      "answer": "A dispensação é do farmacêutico; registre orientações e retorno clínico. Acompanhe adesão e efeitos.",
+      "legal_refs": [
+        "RDC327_2019",
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "dispensacao",
+        "acompanhamento",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-257"
+    },
+    {
+      "audience": "medico",
+      "topic": "agenda_fluxo",
+      "question": "Como emitir laudo/atestado pós-consulta?",
+      "answer": "Use o módulo de documentos. Novas versões invalidam as anteriores automaticamente, com notificação ao paciente.",
+      "legal_refs": [],
+      "tags": [
+        "documentos",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-258"
+    },
+    {
+      "audience": "medico",
+      "topic": "importacao_medico",
+      "question": "Acompanhamento de efeitos e adesão",
+      "answer": "Agende retorno para avaliar benefício/efeitos, ajuste de posologia e alternativa terapêutica quando necessário.",
+      "legal_refs": [
+        "RDC327_2019"
+      ],
+      "tags": [
+        "seguimento",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-259"
+    },
+    {
+      "audience": "medico",
+      "topic": "importacao_medico",
+      "question": "A importação exige registro de eficácia na Anvisa?",
+      "answer": "Não. A importação excepcional não equivale a registro de eficácia/segurança pela Anvisa; oriente riscos e obtenha TCLE.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "nao_registro",
+        "tcle",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-260"
+    },
+    {
+      "audience": "medico",
+      "topic": "onboarding_e_compliance",
+      "question": "Quais vias legais devo indicar ao paciente?",
+      "answer": "Duas vias: (1) farmácia/drogaria sob RDC 327/2019; (2) importação excepcional (RDC 660/2022). Oriente de acordo com o caso.",
+      "legal_refs": [
+        "RDC327_2019",
+        "RDC660_2022"
+      ],
+      "tags": [
+        "vias_legais",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-261"
+    },
+    {
+      "audience": "medico",
+      "topic": "importacao_medico",
+      "question": "Dá para recomendar fornecedor específico?",
+      "answer": "Evite conflito de interesse. Liste critérios técnicos (qualidade, teor, certificações) e deixe o paciente escolher.",
+      "legal_refs": [],
+      "tags": [
+        "conflito_interesse",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-262"
+    },
+    {
+      "audience": "medico",
+      "topic": "agenda_fluxo",
+      "question": "Como abrir slots em lote?",
+      "answer": "Use o painel para criar blocos por dias/horários e duração. Recomendo 20–30 min para primeira consulta.",
+      "legal_refs": [],
+      "tags": [
+        "agenda",
+        "lotes",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-263"
+    },
+    {
+      "audience": "medico",
+      "topic": "receituario_A_B",
+      "question": "Como emitir receita digital com controle especial?",
+      "answer": "Siga exigências de controle especial e, se necessário, providencie via física conforme exigência da farmácia. A plataforma apoia com modelos.",
+      "legal_refs": [
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "digital_fisico",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-264"
+    },
+    {
+      "audience": "medico",
+      "topic": "onboarding_e_compliance",
+      "question": "Como configuro TCLE e modelos de receita?",
+      "answer": "Disponibilizamos templates de TCLE e modelos de Notificação A/B. Você pode personalizar campos clínicos e carimbo com CRM.",
+      "legal_refs": [
+        "CFM_2324_2022_SUSP",
+        "PORTARIA_344_1998"
+      ],
+      "tags": [
+        "tcle",
+        "modelos",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-265"
+    },
+    {
+      "audience": "medico",
+      "topic": "importacao_medico",
+      "question": "Como orientar importação para paciente?",
+      "answer": "Após avaliação e prescrição, o paciente pode solicitar autorização com validade de até 2 anos no portal da Anvisa.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "importacao",
+        "validade_2_anos",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-266"
+    },
+    {
+      "audience": "medico",
+      "topic": "agenda_fluxo",
+      "question": "Como emitir laudo/atestado pós-consulta?",
+      "answer": "Use o módulo de documentos. Novas versões invalidam as anteriores automaticamente, com notificação ao paciente.",
+      "legal_refs": [],
+      "tags": [
+        "documentos",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-267"
+    },
+    {
+      "audience": "medico",
+      "topic": "agenda_fluxo",
+      "question": "Posso pausar minha agenda?",
+      "answer": "Sim, deixe o perfil invisível temporariamente sem perder configurações.",
+      "legal_refs": [],
+      "tags": [
+        "pausa",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-268"
+    },
+    {
+      "audience": "medico",
+      "topic": "onboarding_e_compliance",
+      "question": "Quais documentos preciso para atuar na plataforma?",
+      "answer": "Nome, CRM, especialidade, preço e disponibilidade. Validamos CRM e termos de responsabilidade e habilitamos modelos de TCLE e receituário (A/B).",
+      "legal_refs": [
+        "RDC327_2019",
+        "PORTARIA_344_1998",
+        "CFM_2324_2022_SUSP"
+      ],
+      "tags": [
+        "crm",
+        "tcle",
+        "receituario",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-269"
+    },
+    {
+      "audience": "medico",
+      "topic": "importacao_medico",
+      "question": "A importação exige registro de eficácia na Anvisa?",
+      "answer": "Não. A importação excepcional não equivale a registro de eficácia/segurança pela Anvisa; oriente riscos e obtenha TCLE.",
+      "legal_refs": [
+        "RDC660_2022"
+      ],
+      "tags": [
+        "nao_registro",
+        "tcle",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-270"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "Quais pagamentos aceitam?",
+      "answer": "PIX e cartão. Após pagar, confirmo a consulta e envio o link do Meet.",
+      "legal_refs": [],
+      "tags": [
+        "pix",
+        "cartao",
+        "meet"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-271"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "O link do Meet vai por onde?",
+      "answer": "Envio pelo WhatsApp e e-mail, garantindo que o horário está no fuso do paciente.",
+      "legal_refs": [],
+      "tags": [
+        "meet",
+        "whatsapp"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-272"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "Como a plataforma trata meus dados?",
+      "answer": "Aplicamos LGPD com minimização, logs auditáveis e controle de acesso.",
+      "legal_refs": [],
+      "tags": [
+        "lgpd",
+        "seguranca"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-273"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "Posso falar com humano?",
+      "answer": "Sim, abro um ticket e te conecto ao suporte em horário comercial.",
+      "legal_refs": [],
+      "tags": [
+        "suporte"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-274"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "Tenho dúvida legal específica; vocês orientam?",
+      "answer": "Podemos explicar o fluxo regulatório geral. Para dúvidas jurídicas, indicamos consultar o profissional competente.",
+      "legal_refs": [],
+      "tags": [
+        "nao_consulta_juridica"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-275"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "Como a plataforma trata meus dados?",
+      "answer": "Aplicamos LGPD com minimização, logs auditáveis e controle de acesso.",
+      "legal_refs": [],
+      "tags": [
+        "lgpd",
+        "seguranca",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-276"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "O link do Meet vai por onde?",
+      "answer": "Envio pelo WhatsApp e e-mail, garantindo que o horário está no fuso do paciente.",
+      "legal_refs": [],
+      "tags": [
+        "meet",
+        "whatsapp",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-277"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "Tenho dúvida legal específica; vocês orientam?",
+      "answer": "Podemos explicar o fluxo regulatório geral. Para dúvidas jurídicas, indicamos consultar o profissional competente.",
+      "legal_refs": [],
+      "tags": [
+        "nao_consulta_juridica",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-278"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "Quais pagamentos aceitam?",
+      "answer": "PIX e cartão. Após pagar, confirmo a consulta e envio o link do Meet.",
+      "legal_refs": [],
+      "tags": [
+        "pix",
+        "cartao",
+        "meet",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-279"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "O link do Meet vai por onde?",
+      "answer": "Envio pelo WhatsApp e e-mail, garantindo que o horário está no fuso do paciente.",
+      "legal_refs": [],
+      "tags": [
+        "meet",
+        "whatsapp",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-280"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "Como a plataforma trata meus dados?",
+      "answer": "Aplicamos LGPD com minimização, logs auditáveis e controle de acesso.",
+      "legal_refs": [],
+      "tags": [
+        "lgpd",
+        "seguranca",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-281"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "O link do Meet vai por onde?",
+      "answer": "Envio pelo WhatsApp e e-mail, garantindo que o horário está no fuso do paciente.",
+      "legal_refs": [],
+      "tags": [
+        "meet",
+        "whatsapp",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-282"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "Quais pagamentos aceitam?",
+      "answer": "PIX e cartão. Após pagar, confirmo a consulta e envio o link do Meet.",
+      "legal_refs": [],
+      "tags": [
+        "pix",
+        "cartao",
+        "meet",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-283"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "Quais pagamentos aceitam?",
+      "answer": "PIX e cartão. Após pagar, confirmo a consulta e envio o link do Meet.",
+      "legal_refs": [],
+      "tags": [
+        "pix",
+        "cartao",
+        "meet",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-284"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "Como a plataforma trata meus dados?",
+      "answer": "Aplicamos LGPD com minimização, logs auditáveis e controle de acesso.",
+      "legal_refs": [],
+      "tags": [
+        "lgpd",
+        "seguranca",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-285"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "O link do Meet vai por onde?",
+      "answer": "Envio pelo WhatsApp e e-mail, garantindo que o horário está no fuso do paciente.",
+      "legal_refs": [],
+      "tags": [
+        "meet",
+        "whatsapp",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-286"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "É possível falar com humano?",
+      "answer": "Sim, abro um ticket e te conecto ao suporte em horário comercial.",
+      "legal_refs": [],
+      "tags": [
+        "suporte",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-287"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "Como a plataforma trata meus dados?",
+      "answer": "Aplicamos LGPD com minimização, logs auditáveis e controle de acesso.",
+      "legal_refs": [],
+      "tags": [
+        "lgpd",
+        "seguranca",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-288"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "É possível falar com humano?",
+      "answer": "Sim, abro um ticket e te conecto ao suporte em horário comercial.",
+      "legal_refs": [],
+      "tags": [
+        "suporte",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-289"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "Como a plataforma trata meus dados?",
+      "answer": "Aplicamos LGPD com minimização, logs auditáveis e controle de acesso.",
+      "legal_refs": [],
+      "tags": [
+        "lgpd",
+        "seguranca",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-290"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "É possível falar com humano?",
+      "answer": "Sim, abro um ticket e te conecto ao suporte em horário comercial.",
+      "legal_refs": [],
+      "tags": [
+        "suporte",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-291"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "Como a plataforma trata meus dados?",
+      "answer": "Aplicamos LGPD com minimização, logs auditáveis e controle de acesso.",
+      "legal_refs": [],
+      "tags": [
+        "lgpd",
+        "seguranca",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-292"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "Quais pagamentos aceitam?",
+      "answer": "PIX e cartão. Após pagar, confirmo a consulta e envio o link do Meet.",
+      "legal_refs": [],
+      "tags": [
+        "pix",
+        "cartao",
+        "meet",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-293"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "Tenho dúvida legal específica; vocês orientam?",
+      "answer": "Podemos explicar o fluxo regulatório geral. Para dúvidas jurídicas, indicamos consultar o profissional competente.",
+      "legal_refs": [],
+      "tags": [
+        "nao_consulta_juridica",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-294"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "Tenho dúvida legal específica; vocês orientam?",
+      "answer": "Podemos explicar o fluxo regulatório geral. Para dúvidas jurídicas, indicamos consultar o profissional competente.",
+      "legal_refs": [],
+      "tags": [
+        "nao_consulta_juridica",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-295"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "Tenho dúvida legal específica; vocês orientam?",
+      "answer": "Podemos explicar o fluxo regulatório geral. Para dúvidas jurídicas, indicamos consultar o profissional competente.",
+      "legal_refs": [],
+      "tags": [
+        "nao_consulta_juridica",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-296"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "Tenho dúvida legal específica; vocês orientam?",
+      "answer": "Podemos explicar o fluxo regulatório geral. Para dúvidas jurídicas, indicamos consultar o profissional competente.",
+      "legal_refs": [],
+      "tags": [
+        "nao_consulta_juridica",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-297"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "Como a plataforma trata meus dados?",
+      "answer": "Aplicamos LGPD com minimização, logs auditáveis e controle de acesso.",
+      "legal_refs": [],
+      "tags": [
+        "lgpd",
+        "seguranca",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-298"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "É possível falar com humano?",
+      "answer": "Sim, abro um ticket e te conecto ao suporte em horário comercial.",
+      "legal_refs": [],
+      "tags": [
+        "suporte",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "whatsapp",
+      "id": "MAYA-CBD-QA-299"
+    },
+    {
+      "audience": "ambos",
+      "topic": "pagamentos_meet_lgpd",
+      "question": "Como a plataforma trata meus dados?",
+      "answer": "Aplicamos LGPD com minimização, logs auditáveis e controle de acesso.",
+      "legal_refs": [],
+      "tags": [
+        "lgpd",
+        "seguranca",
+        "var"
+      ],
+      "language": "pt-BR",
+      "channel": "web",
+      "id": "MAYA-CBD-QA-300"
+    }
+  ]
+}
