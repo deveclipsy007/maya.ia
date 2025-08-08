@@ -17,29 +17,40 @@
 ## 🧭 Arquitetura
 
 ```mermaid
-flowchart LR
-  subgraph Front
-    W[WhatsApp / Web]-- Mensagens -->M[Maya (Coordinator)]
+flowchart TD
+  subgraph Front ["🎯 Interface"]
+    W[WhatsApp / Web]
+  end
+  
+  subgraph Agents ["🤖 Agentes"]
+    M[Maya Coordinator]
+    PA[Patient Agent]
+    DA[Doctor Agent]
+  end
+  
+  subgraph Tools ["🔧 Ferramentas"]
+    S[(Supabase<br/>Postgres)]
+    P[(Asaas /<br/>Pagar.me)]
+    G[(Google Calendar<br/>Meet)]
+    E[(Evolution API<br/>WhatsApp)]
+  end
+  
+  subgraph API ["🌐 API"]
+    F[FastAPI<br/>Webhooks]
   end
 
-  M-- Roteia --> PA[Patient Agent]
-  M-- Roteia --> DA[Doctor Agent]
-
-  subgraph Core Tools
-    S[(Supabase\nPostgres)]
-    P[(Asaas / Pagar.me)]
-    G[(Google Calendar\nMeet)]
-    E[(Evolution API\nWhatsApp)]
-  end
-
-  PA-- CRUD, buscas -->S
-  DA-- CRUD, agendas -->S
-  PA-- Criar checkout -->P
-  P-- Webhook pago -->API[FastAPI / Webhooks]
-  API-- Confirma status -->S
-  PA-- Criar sala -->G
-  PA-- Notificar link -->E
-  E-- Mensagem -->W
+  W -->|mensagens| M
+  M -->|roteia| PA
+  M -->|roteia| DA
+  
+  PA -->|CRUD, buscas| S
+  DA -->|CRUD, agendas| S
+  PA -->|criar checkout| P
+  P -->|webhook pago| F
+  F -->|confirma status| S
+  PA -->|criar sala| G
+  PA -->|notificar link| E
+  E -->|mensagem| W
 ```
 
 ### Time de agentes
@@ -191,50 +202,68 @@ curl -s -X POST http://localhost:8002/webhooks/asaas \
 
 ```mermaid
 sequenceDiagram
-  participant U as Paciente
-  participant M as Maya (coord)
-  participant P as Patient Agent
-  participant S as Supabase
-  participant Pay as Pagamentos
-  participant G as Google Meet
-  U->>M: Quero marcar consulta
-  M->>P: Classifica & encaminha
-  P->>S: Buscar médicos/horários
-  P-->>U: Opções (médico, preço, slots)
-  U->>P: Escolha + confirmação
-  P->>Pay: Criar link de pagamento
-  Pay-->>U: Checkout
-  Pay-->>API: Webhook pago
-  API->>S: status=confirmed
-  P->>G: Criar sala do Meet
-  P-->>U: Link do Meet + instruções
+    participant U as 👤 Paciente
+    participant M as 🤖 Maya
+    participant P as 👩‍⚕️ Patient Agent
+    participant S as 🗃️ Supabase
+    participant Pay as 💳 Pagamentos
+    participant G as 📅 Google Meet
+    participant W as 📱 WhatsApp
+
+    U->>M: "Quero marcar consulta"
+    M->>P: Classifica & encaminha
+    P->>S: Buscar médicos/horários
+    S-->>P: Lista disponível
+    P-->>U: Opções (médico, preço, slots)
+    U->>P: Escolha + confirmação
+    P->>Pay: Criar link de pagamento
+    Pay-->>U: 🔗 Checkout
+    Note over U,Pay: Paciente realiza pagamento
+    Pay->>API: 🔔 Webhook pago
+    API->>S: status=confirmed
+    P->>G: Criar sala do Meet
+    G-->>P: 🎥 Link da reunião
+    P->>W: Notificar link
+    W-->>U: 📩 Link do Meet + instruções
 ```
 
 ### Máquina de estados — `appointments.status`
 
 ```mermaid
 stateDiagram-v2
-  [*] --> awaiting_payment
-  awaiting_payment --> confirmed: webhook paid
-  awaiting_payment --> canceled: cancelamento
-  confirmed --> rescheduled: remarcação
-  confirmed --> completed: pós-consulta ok
-  confirmed --> no_show: paciente ausente
-  rescheduled --> confirmed
+    [*] --> awaiting_payment : Consulta criada
+    awaiting_payment --> confirmed : 💰 Webhook pago
+    awaiting_payment --> canceled : ❌ Cancelamento
+    confirmed --> rescheduled : 📅 Remarcação
+    confirmed --> completed : ✅ Pós-consulta OK
+    confirmed --> no_show : 👻 Paciente ausente
+    rescheduled --> confirmed : Nova data confirmada
+    canceled --> [*]
+    completed --> [*]
+    no_show --> [*]
+    
+    note right of awaiting_payment : Aguardando pagamento
+    note right of confirmed : Consulta confirmada
+    note right of completed : Consulta realizada
 ```
 
 ### Reconciliação de Webhook
 
 ```mermaid
-flowchart LR
-  P[Provedor] -- webhook --> W[Webhook API]
-  W -->|Valida assinatura| V{Assinatura ok?}
-  V -- Não --> R[Reject + log]
-  V -- Sim --> S[(Supabase)]
-  S --> C{Já confirmou?}
-  C -- Sim --> I[Ignora (idempotente)]
-  C -- Não --> U[Atualiza status -> confirmed]
-  U --> L[Cria log + notifica agente]
+flowchart TD
+    P[🏦 Provedor Pagamento] -->|webhook| W[🔔 Webhook API]
+    W --> V{🔐 Assinatura OK?}
+    V -->|❌ Não| R[🚫 Reject + log]
+    V -->|✅ Sim| S[🗃️ Supabase]
+    S --> C{📋 Já confirmou?}
+    C -->|✅ Sim| I[⏭️ Ignora<br/>idempotente]
+    C -->|❌ Não| U[📝 Atualiza status<br/>→ confirmed]
+    U --> L[📊 Cria log +<br/>notifica agente]
+    
+    style R fill:#ffebee
+    style I fill:#e8f5e8
+    style U fill:#fff3e0
+    style L fill:#e3f2fd
 ```
 
 ---
